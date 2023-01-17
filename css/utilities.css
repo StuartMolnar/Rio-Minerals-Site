@@ -149,6 +149,7 @@
     font-style: var(--ff-body);
     color: var(--clr-white);
     background-color: var(--clr-blue-dark);
+    border: 1px solid var(--clr-blue-dark);
     font: var(--ff-body);
     height: 73px;
     width: 210px;
@@ -159,11 +160,11 @@
     font-size: var(--fs-button);
     font-style: var(--ff-body);
     color: var(--clr-white);
-    border-color: var(--clr-white);
+    border: 1px solid var(--clr-white);
     background-color: transparent;
     font: var(--ff-body);
     height: 73px;
-    width:210px;
+    width: 210px;
 }
 
 .button-secondary {
@@ -172,7 +173,18 @@
     font-style: var(--ff-body);
     color: var(--clr-white);
     background-color: var(--clr-red-dark);
+    border: 1px solid var(--clr-red-dark);
     font: var(--ff-body);
     height: 73px;
     width:210px;
+}
+
+@media (max-width: 640px){
+    .button-primary,
+    .button-secondary,
+    .button-accent{
+            height: 44px;
+            width: 135px;
+
+    }
 }
