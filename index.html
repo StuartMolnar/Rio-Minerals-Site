@@ -12,12 +12,14 @@
 </head>
 <body class="min-h-screen bg-white-off text-white">
 
+  
+
   <!-- wraps the navbar and hero content together with 100vh -->
   <div id="hero-image">
-    <header id="navbar" class="fs-nav fw-400 text-black bg-white-off">
-      <section class="mx-auto flex items-center md:justify-around justify-between px-4 py-2">
-        <a href="#">
-          <img src="images/logonoshadow.svg" class="h-14 sm:h-28" alt="Rio Minerals Ltd.">
+    <header id="navbar" class="fs-nav fw-400 text-black-accent bg-white-off">
+      <section class="mx-auto flex items-center justify-between md:px-32 sm:px-16 px-8 py-2">
+        <a href="/index.html">
+          <img src="images/standard-rio-logo.svg" class="h-14 sm:h-28" alt="Rio Minerals Ltd.">
         </a>
         <div>
           <button id="hamburger-button" class="fw-500 md:hidden cursor-pointer">
@@ -25,10 +27,10 @@
           </button>
         </div>
         <nav class="hidden md:block space-x-8" aria-label="main">
-          <a href="#" class="underline hover:underline underline-offset-4">Home</a>
-          <a href="#" class="no-underline hover:underline underline-offset-4">About</a>
-          <a href="#" class="no-underline hover:underline underline-offset-4">Services</a>
-          <a href="#" class="no-underline hover:underline underline-offset-4">Contact</a>
+          <a href="/index.html" class="underline hover:underline underline-offset-4">Home</a>
+          <a href="/about.html" class="no-underline hover:underline underline-offset-4">About</a>
+          <a href="/services.html" class="no-underline hover:underline underline-offset-4">Services</a>
+          <a href="/contact.html" class="no-underline hover:underline underline-offset-4">Contact</a>
         </nav>
       </section>
       <section id="mobile-menu" class="absolute top-0 items-center w-full flex-col bg-blue-dark fs-nav fw-500 text-white origin-top hidden">
@@ -36,32 +38,47 @@
           &times;
         </button>
         <nav class="flex flex-col text-center min-h-screen py-8" aria-label="mobile">
-          <a href="#" class="w-full py-2 no-underline hover:underline underline-offset-4">Home</a>
-          <a href="#" class="w-full py-2 no-underline hover:underline underline-offset-4">About</a>
-          <a href="#" class="w-full py-2 no-underline hover:underline underline-offset-4">Services</a>
-          <a href="#" class="w-full py-2 no-underline hover:underline underline-offset-4">Contact</a>
-          <a href="#" class="h-14 my-20">
+          <a href="/index.html" class="w-full py-2 no-underline hover:underline underline-offset-4">Home</a>
+          <a href="/about.html" class="w-full py-2 no-underline hover:underline underline-offset-4">About</a>
+          <a href="/services.html" class="w-full py-2 no-underline hover:underline underline-offset-4">Services</a>
+          <a href="/contact.html" class="w-full py-2 no-underline hover:underline underline-offset-4">Contact</a>
+          <a href="/index.html" class="h-14 my-20">
             <img src="images/white-rio-logo 1.svg" alt="Rio Minerals Ltd.">
           </a>
         </nav>
       </section>
     </header>
 
-    <main class="sm:justify-around">
-      <section id="hero" class="bg-transparent">
-        <div class="max-w-md">
-          <h1 class="sm:px-16 sm:pt-8 pt-2 px-2 fs-heading-1 fw-700">Worldwide Exploration Consultants</h1>
-        </div>
-        <div class="max-w-2xl">
-          <h5 class="sm:px-16  px-2 fs-heading-5 fw-500">25+ years of experience, with the knowledge and determination to see your project succeed.</h5>
-        </div>
-        <div class="sm:px-16 px-2 py-8">
-          <button class="button-primary sm:mr-4">View Our Services</button>
-          <button class="button-accent">Contact Us Now</button>
-        </div>
-      </section>
-    </main>
+    <section id="hero" class="bg-transparent md:px-32 sm:px-16 px-8">
+        <h1 class="sm:pt-8 pt-2 fs-heading-1 fw-700">Worldwide<br>Exploration<br>Consultants</h1>      
+        <h5 class="fs-heading-5 fw-500">25+ years of experience, with the knowledge and<br>determination to see your project succeed.</h5>      
+      <div class="py-8">
+        <a href="/services.html">
+          <button class="button-primary sm:mr-4 fs-button">View Our Services</button>
+        </a>
+        <a href="/contact.html">
+          <button class="button-accent fs-button">Contact Us Now</button>
+        </a>
+      </div>
+    </section>
   </div>
+
+  <main class="min-h-screen bg-blue-dark">
+    <section class="flex flex-row">
+      <img src="images/index-h1.png" class="object-cover" alt="">
+      <div id="article-1-image">
+        <h3 class="fs-heading-3 fw-600">Proven capabilities in a variety of environments.</h3>
+        <p class="fw-400">RIO is a versatile mineral exploration and geotechnical consulting firm specializing in full project management, mineral-property acquisition, evaluation, exploration, and development. Over the last 25+ years, we have built a highly effective and efficient mineral exploration team. Our clients gain access to the skills of our staff and network of associates and contractors.</p>
+      </div>
+    </section>
+
+
+
+  </main>
+  
+
+  <!-- for the background image div use bg-fixed -->
+
   
 </body>
 </html>

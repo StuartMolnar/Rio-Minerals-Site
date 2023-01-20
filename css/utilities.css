@@ -4,6 +4,7 @@
     --clr-black: #1C1C1C;
     --clr-blue-dark: #232341;
     --clr-red-dark: #44140C;
+    --clr-gray-dark: #ABABAB;
 
     --ff-primary: 'Inter', sans-serif;
     --ff-header: var(--ff-primary);
@@ -31,6 +32,7 @@
     --fs-heading-4: var(--fs-25);
     --fs-heading-5: var(--fs-25);
     --fs-checkmark-text: var(--fs-18);
+    --fs-copywrite-text: var(--fs-16);
 }
 
 /* font-sizes for mobile */
@@ -53,6 +55,7 @@
         --fs-heading-4: var(--fs-20);
         --fs-heading-5: var(--fs-16);
         --fs-checkmark-text: var(--fs-16);
+        --fs-copywrite-text: var(--fs-14);
 
     }
 }
@@ -63,12 +66,16 @@
     color: var(--clr-white)
 }
 
-.text-black {
+.text-black-accent {
     color: var(--clr-black)
 }
 
 .text-blue-dark {
     color: var(--clr-blue-dark)
+}
+
+.text-gray-dark {
+    color: var(--clr-gray-dark);
 }
 
 .bg-white-off {
@@ -116,6 +123,16 @@
 
 .fs-nav {
     font-size: var(--fs-nav);
+    font-style: var(--ff-body);
+}
+
+.fs-button {    
+    font-size: var(--fs-button);
+    font-style: var(--ff-body);
+}
+
+.fs-copywrite-text {
+    font-size: var(--fs-copywrite-text);
     font-style: var(--ff-body);
 }
 
@@ -177,6 +194,18 @@
     font: var(--ff-body);
     height: 73px;
     width:210px;
+}
+
+.button-primary:hover, .button-accent:hover {
+    background-color: var(--clr-red-dark);
+    border: 1px solid var(--clr-red-dark);
+    box-shadow: 6px 6px 0px 0px black;
+}
+
+.button-secondary:hover {
+    background-color: var(--clr-blue-dark);
+    border: 1px solid var(--clr-blue-dark);
+    box-shadow: 6px 6px 0px 0px black;
 }
 
 @media (max-width: 640px){
