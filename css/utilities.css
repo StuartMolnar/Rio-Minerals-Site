@@ -217,3 +217,23 @@
 
     }
 }
+
+
+.checkmark {
+    background-image: url(../images/checkmark.svg)
+}
+
+
+.checkmark-disabled div {
+    background-image: url(../images/checkmark-disabled.svg)
+}
+
+.checkmark-disabled p {
+    color: #9C9C9C;
+}
+
+.divider-line {
+  height: 1px;
+  background: #ADADAD;
+  width: 100%;
+}

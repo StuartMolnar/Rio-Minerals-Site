@@ -27,6 +27,7 @@ html {
 #divider-line {
   height: 1px;
   background: #ADADAD;
+  width: 100%;
 }
 
 #email, #first_name, #last_name, #message {
