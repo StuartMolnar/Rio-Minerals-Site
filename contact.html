@@ -1,38 +1,50 @@
 <!DOCTYPE html>
-<html lang="en" class="sm:scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rio Minerals - About</title>    
+    <title>Rio Minerals - Contact Us</title>    
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
     <script type="module" src="css/tailwind.css"></script>
     <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js"></script>
 </head>
-<body class="min-h-screen bg-white-off text-white">
+<body class="min-h-screen bg-white-off text-black-accent">
 
-
+  <!-- !!!CHANGE API KEY RESTRICTIONS BEFORE PUBLISHING-->
 
   <header id="navbar" class="fs-nav fw-400 text-black bg-white-off">
-    <section class="mx-auto flex items-center md:justify-around justify-between sm:px-16 px-8 py-2">
-      <a href="index.html">
-        <img src="images/standard-rio-logo.svg" class="h-14 sm:h-28" alt="Rio Minerals Ltd.">
-      </a>
-      <div>
-        <button id="hamburger-button" class="fw-500 md:hidden cursor-pointer">
+    <section class="grid grid-cols-12 gap-4 mx-6 sm:mx-0 py-12 items-center">
+
+      <div class="hidden sm:block col-span-1"></div>
+
+      <a href="/index.html" class="sm:col-span-2 col-span-7">
+        <img src="images/standard-rio-logo.svg" class="h-14 sm:h-24" alt="Rio Minerals Ltd.">
+      </a>      
+
+      <div class="col-span-4"></div>
+        
+      <div class="md:hidden flex flex-row-reverse col-span-1">
+        <button id="hamburger-button" class="fw-500 cursor-pointer">
           &#9776;
         </button>
       </div>
-      <nav class="hidden md:block space-x-8" aria-label="main">
-        <a href="index.html" class="no-underline hover:underline underline-offset-4">Home</a>
-        <a href="/about.html" class="no-underline hover:underline underline-offset-4">About</a>
-        <a href="/services.html" class="no-underline hover:underline underline-offset-4">Services</a>
-        <a href="/contact.html" class="underline hover:underline underline-offset-4">Contact</a>
+      <nav class="hidden col-span-4 md:flex md:flex-row-reverse" aria-label="main">
+        <a href="/contact.html" class="px-4 underline hover:underline underline-offset-4">Contact</a>
+        <a href="/services.html" class="px-4 no-underline hover:underline underline-offset-4">Services</a>        
+        <a href="/about.html" class="px-4 no-underline hover:underline underline-offset-4">About</a>
+        <a href="/index.html" class="px-4 no-underline hover:underline underline-offset-4">Home</a>
       </nav>
+
+      <div class="hidden sm:block col-span-1"></div>
+
     </section>
     <section id="mobile-menu" class="absolute top-0 items-center w-full flex-col bg-blue-dark fs-nav fw-500 text-white origin-top hidden">
-      <button class="text-4xl self-end px-4 py-4 top-1">
+      <button class="text-4xl self-end px-5 pb-4 pt-14 top-1">
         &times;
       </button>
       <nav class="flex flex-col text-center min-h-screen py-8" aria-label="mobile">
@@ -40,13 +52,161 @@
         <a href="/about.html" class="w-full py-2 no-underline hover:underline underline-offset-4">About</a>
         <a href="/services.html" class="w-full py-2 no-underline hover:underline underline-offset-4">Services</a>
         <a href="/contact.html" class="w-full py-2 no-underline hover:underline underline-offset-4">Contact</a>
-        <a href="index.html" class="h-14 my-20">
+        <a href="/index.html" class="h-14 my-20">
           <img src="images/white-rio-logo 1.svg" alt="Rio Minerals Ltd.">
         </a>
       </nav>
+      
     </section>
   </header>
 
+  <main>
+    <section class="grid grid-cols-12 gap-4 mt-6 mx-6 sm:mx-0">
+      <div class="hidden sm:block col-span-1"></div>
+
+      <div class="fs-heading-2 fw-600 col-span-12 sm:col-span-3">
+        <h2 class="">Contact Us</h2>
+      </div>
+
+      <div class="hidden sm:block col-span-5"></div>
+
+      <div class="col-span-2 hidden sm:flex sm:flex-row-reverse">
+        <img class="h-16" src="images/blue-rio-logo 1.svg" alt="">
+      </div>
+
+      <div class="hidden sm:block col-span-1"></div>
+    </section>
+
+
+    <section class="grid grid-cols-12 gap-4 mt-6 mx-6 sm:mx-0">
+      <div class="hidden sm:block col-span-1"></div>
+
+      <div class="col-span-12 sm:col-span-5">
+        <p class="fw-400">
+          Interested in our services? Contact us now for project quotes and consultation. All inquiries are kept strictly confidential. References available upon request.
+        </p>
+
+        <div class="col-span-12 sm:col-span-4 flex flex-col gap-2 mt-8">
+          <div class="flex gap-2">
+              <img class="h-7 w-5 pt-1.5" src="images/location-pin.svg" alt="">
+              <a href="https://www.google.com/maps/place/800+W+Pender+St+%23615,+Vancouver,+BC+V6C+2V6/data=!4m2!3m1!1s0x548671820d72b67f:0x40a60cccd8063eab?sa=X&ved=2ahUKEwjj9_7q5NX8AhUbGTQIHaOICCEQ8gF6BAggEAI">615-800 W. Pender Street<br>Vancouver, BC<br>Canada V6C 2V6</a>
+          </div>
+          <div class="flex gap-2">
+                <img class="h-7 w-5 pt-1.5" src="images/phone.svg" alt="">
+              <a href="tel:+16046712245">604-671-2245</a>
+          </div>
+          <div class="flex gap-2">
+              <img class="h-7 w-5 pt-1.5" src="images/mail.svg" alt="">
+              <a href="mailto:info@riominerals.com">info@riominerals.com</a>
+          </div>
+      </div>
+      </div>
+
+      
+      <div class="hidden sm:block col-span-1"></div>   
+      
+      <div class="col-span-12 sm:col-span-4">
+        <form action="" method="post" class="text-black-accent fw-400">
+          <div class="flex flex-col sm:flex-row sm:space-x-6">
+            <div class="mt-2 sm:mt-0">
+              <label for="first_name" class="">First Name*</label>
+              <input type="text" id="first_name" name="first_name" class="w-full" placeholder="" required>
+            </div>             
+            <div class="mt-4 sm:mt-0">
+              <label for="last_name" class="">Last Name</label>
+              <input type="text" id="last_name" name="last_name" class="w-full" placeholder="">
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <label for="email" class="">Email*</label>
+            <input type="email" id="email" name="email" class="w-full" placerholder="">
+          </div>
+
+          <div class="mt-4">
+            <label for="message" class="">Message</label>
+            <textarea id="message" rows="4" class="w-full" placeholder=""></textarea>
+          </div>
+          
+
+            
+
+          <button class="button-primary fs-button h-[44px] w-[126px] sm:h-[73px] sm:w-[190px] mt-4">Send Message</button>
+
+        </form>
+      </div>
+
+      <div class="hidden sm:block col-span-1"></div>     
+    </section>
+    
+
+    <section class="grid grid-cols-12 gap-4 my-14 mx-6 sm:mx-0">
+      <div class="hidden sm:block col-span-1"></div> 
+
+      <div id="map" class="col-span-12 sm:col-span-10 w-full h-[410px]"></div>
+
+      <div class="hidden sm:block col-span-1"></div> 
+    </section>
+
+  </main>
+    
+
   
+
+    
+  <footer class="fw-400">
+    
+    <div id="divider-line" class="my-8 mx-0 bg-black-accent"></div>
+
+    <section class="grid grid-cols-1 sm:grid-cols-12 gap-4  mx-6 sm:mx-0 text-black-accent">
+
+        <div class="hidden sm:block col-span-1"></div>
+
+        <div class="col-span-2">
+            <img class="h-14 sm:h-24" src="images/blue-rio-logo 1.svg" alt="">
+        </div>
+
+        <div class="col-span-4 flex flex-col gap-2">
+            <div class="flex gap-2">
+                <img class="h-7 w-5 pt-1.5" src="images/location-pin.svg" alt="">
+                <a href="https://www.google.com/maps/place/800+W+Pender+St+%23615,+Vancouver,+BC+V6C+2V6/data=!4m2!3m1!1s0x548671820d72b67f:0x40a60cccd8063eab?sa=X&ved=2ahUKEwjj9_7q5NX8AhUbGTQIHaOICCEQ8gF6BAggEAI">615-800 W. Pender Street<br>Vancouver, BC<br>Canada V6C 2V6</a>
+            </div>
+            <div class="flex gap-2">
+                  <img class="h-7 w-5 pt-1.5" src="images/phone.svg" alt="">
+                <a href="tel:+16046712245">604-671-2245</a>
+            </div>
+            <div class="flex gap-2">
+                <img class="h-7 w-5 pt-1.5" src="images/mail.svg" alt="">
+                <a href="mailto:info@riominerals.com">info@riominerals.com</a>
+            </div>
+        </div>
+
+
+        <div class="col-span-4">
+            <p class="">Interested in our services? Contact us now for project quotes and consultation. All inquiries are kept strictly confidential. References available upon request.</p>
+            <div class="grid place-items-center mt-6">
+              <a href="/contact.html">
+                  <button class="button-secondary fs-button h-[44px] w-[137px] sm:h-[73px] sm:w-[215px]">Contact Us Now</button>
+              </a>
+            </div>
+        </div>
+
+        <div class="hidden sm:block col-span-1"></div>
+        
+    </section>
+
+    <div id="copywrite-text" class="grid place-items-center my-6 mx-6 sm:mx-0 fw-400-fs-copywrite-text text-gray-dark text-center">
+      <p>Copyright Rio Minerals Ltd. All Rights Reserved © 2022</p>
+    </div>
+  </footer>
+
+
+
+	<!--Add a script by google -->
+	<script src=
+"https://maps.googleapis.com/maps/api/js?key=AIzaSyDTCpBFfvmVLYiOt5lNpw-_dTsfuhbxLTc&callback=initMap&libraries=&v=weekly"
+		async>
+	</script>
+
 </body>
 </html>
