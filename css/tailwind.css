@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .checkmark-enabled div {
+        background-image: url(../images/checkmark.svg)
+    }
+
+    .checkmark-enabled p{
+        color: var(--clr-black-accent);
+    }
+}

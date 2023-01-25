@@ -168,8 +168,8 @@
     background-color: var(--clr-blue-dark);
     border: 1px solid var(--clr-blue-dark);
     font: var(--ff-body);
-    height: 73px;
-    width: 210px;
+    height: 50px;
+    width: 160px;
 }
 
 .button-accent {
@@ -180,8 +180,8 @@
     border: 1px solid var(--clr-white);
     background-color: transparent;
     font: var(--ff-body);
-    height: 73px;
-    width: 210px;
+    height: 50px;
+    width: 160px;
 }
 
 .button-secondary {
@@ -192,20 +192,20 @@
     background-color: var(--clr-red-dark);
     border: 1px solid var(--clr-red-dark);
     font: var(--ff-body);
-    height: 73px;
-    width:210px;
+    height: 50px;
+    width:160px;
 }
 
 .button-primary:hover, .button-accent:hover {
     background-color: var(--clr-red-dark);
     border: 1px solid var(--clr-red-dark);
-    box-shadow: 6px 6px 0px 0px black;
+    box-shadow: 3px 3px 0px 0px black;
 }
 
 .button-secondary:hover {
     background-color: var(--clr-blue-dark);
     border: 1px solid var(--clr-blue-dark);
-    box-shadow: 6px 6px 0px 0px black;
+    box-shadow: 3px 3px 0px 0px black;
 }
 
 @media (max-width: 640px){
@@ -220,20 +220,22 @@
 
 
 .checkmark {
-    background-image: url(../images/checkmark.svg)
-}
-
-
-.checkmark-disabled div {
     background-image: url(../images/checkmark-disabled.svg)
 }
 
-.checkmark-disabled p {
+.checkmark-text{
     color: #9C9C9C;
 }
+
 
 .divider-line {
   height: 1px;
   background: #ADADAD;
   width: 100%;
+}
+
+.border {
+    border: 2px;
+    border-style: solid;
+    border-color: var(--clr-black-accent);
 }

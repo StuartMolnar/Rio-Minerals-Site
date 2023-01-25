@@ -33,3 +33,11 @@ html {
 #email, #first_name, #last_name, #message {
     border: 1px solid #232341;
 }
+
+#services-description-background {
+    background-image: url('../images/services-background-1.png');
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
