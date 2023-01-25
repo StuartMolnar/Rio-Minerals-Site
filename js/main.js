@@ -1,13 +1,13 @@
-let PHOTOS_IN = {'service_1' : 6,
-                 'service_2' : 4,
+let PHOTOS_IN = {'service_1' : 4,
+                 'service_2' : 3,
                  'service_3' : 4,
-                 'service_4' : 4,
-                 'service_5' : 4,
-                 'service_6' : 4,
-                 'service_7' : 4,
-                 'service_8' : 4,
+                 'service_4' : 3,
+                 'service_5' : 2,
+                 'service_6' : 3,
+                 'service_7' : 3,
+                 'service_8' : 3,
                  'service_9' : 4,
-                 'service_10' : 4,
+                 'service_10' : 3,
 
 }
 
@@ -27,7 +27,7 @@ const initMobileMenu = () => {
 
 }
 
-document.addEventListener('DOMContentLoaded', initMobileMenu);
+//document.addEventListener('DOMContentLoaded', initMobileMenu);
 
 //contact page map
 function initMap() {
@@ -84,26 +84,41 @@ function setServiceMobile(serviceString){
   // document.getElementById('service-1').textContent = tempService;
 }
 
+function setServiceDesktop(serviceString){
+  var serviceList = document.getElementById('services-menu-desktop');
+  for (var i=0; i<serviceList.children.length; i++){
+    console.log(serviceList.children[i]);
+    serviceList.children[i].classList.remove('checkmark-enabled');
+  }
+
+  document.getElementById('service-desktop-' + serviceString).classList.add('checkmark-enabled');
+
+  //document.getElementById()
+}
+
 function changeService(serviceString){
   /* disregard this and just write it in html
      turn this into a function that hides and unhides relevant html image list */
-  const container = document.createElement('div');
-  container.className += 'flex flex-wrap w-1/2 p-1 sm:w-1/3 sm:p-2';
 
-  const div = document.createElement('div');
-  div.className += 'w-full';
-
-  const img = document.createElement('img');
-  img.className += 'block object-cover object-center w-full h-full';
+  
+  document.getElementById('services-image-grid').innerHTML = '';
+  
 
   for (var i=1; i<=PHOTOS_IN['service_' + serviceString]; i++){
-    img.src = 'images/services-' + serviceString + '-images/' + i + '.png';
+
+    const container = document.createElement('div');
+    container.className += 'flex flex-wrap w-1/2 p-1 sm:w-1/3 sm:p-2';
+
+    const div = document.createElement('div');
+    div.className += 'w-full';
+
+    const img = document.createElement('img');
+    img.className += 'block object-cover object-center w-full h-full';
+    img.src = 'images/service-' + serviceString + '-images/' + i + '.png';
+
     div.appendChild(img);
     container.appendChild(div);
     document.getElementById('services-image-grid').appendChild(container);
-    console.log(container);
-    console.log(img.src);
-
   }
 }
 

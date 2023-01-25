@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js"></script>
 </head>
-<body class="min-h-screen bg-white-off text-black-accent">
+<body onload="changeService('1'); initMobileMenu()" class="min-h-screen bg-white-off text-black-accent">
 
   <!-- !!!CHANGE API KEY RESTRICTIONS BEFORE PUBLISHING-->
 
@@ -74,30 +74,30 @@
 
 
     <section name="services-menu-desktop" class="hidden sm:block">
-      <container class="grid grid-cols-12 gap-4 mx-0 my-6 mt-12">
+      <container id="services-menu-desktop" class="grid grid-cols-12 gap-4 mx-0 my-6 mt-12">
         <div class="col-span-1"></div>
 
-        <div onclick="changeService(1)" class="flex items-center col-span-2 gap-2 cursor-pointer hover:checkmark-enabled checkmark-enabled fs-checkmark-text fw-500">
+        <div id="service-desktop-1" onclick="changeService('1'); setServiceDesktop('1')" class="flex items-center col-span-2 gap-2 cursor-pointer hover:checkmark-enabled checkmark-enabled fs-checkmark-text fw-500">
           <div class="checkmark h-[21px] w-[21px]"></div>
           <p class="checkmark-text">Geology</p>
         </div>
 
-        <div class="flex items-center col-span-2 gap-2 cursor-pointer hover:checkmark-enabled fs-checkmark-text fw-500">
+        <div id="service-desktop-2" onclick="changeService('2'); setServiceDesktop('2')" class="flex items-center col-span-2 gap-2 cursor-pointer hover:checkmark-enabled fs-checkmark-text fw-500">
           <div class="checkmark h-[21px] w-[21px]"></div>
           <p class="checkmark-text">Geochemistry</p>
         </div>
 
-        <div class="flex items-center col-span-2 gap-2 cursor-pointer hover:checkmark-enabled fs-checkmark-text fw-500">
+        <div id="service-desktop-3" onclick="changeService('3'); setServiceDesktop('3')" class="flex items-center col-span-2 gap-2 cursor-pointer hover:checkmark-enabled fs-checkmark-text fw-500">
           <div class="checkmark h-[21px] w-[21px]"></div>
           <p class="checkmark-text">Geophysics</p>
         </div>
 
-        <div class="flex items-center col-span-2 gap-2 cursor-pointer hover:checkmark-enabled fs-checkmark-text fw-500">
+        <div id="service-desktop-4" onclick="changeService('4'); setServiceDesktop('4')" class="flex items-center col-span-2 gap-2 cursor-pointer hover:checkmark-enabled fs-checkmark-text fw-500">
           <div class="checkmark h-[21px] w-[21px]"></div>
           <p class="checkmark-text">Tenure Acquisition</p>
         </div>
 
-        <div class="flex items-center col-span-2 gap-2 cursor-pointer hover:checkmark-enabled fs-checkmark-text fw-500">
+        <div id="service-desktop-5" onclick="changeService('5'); setServiceDesktop('5')" class="flex items-center col-span-2 gap-2 cursor-pointer hover:checkmark-enabled fs-checkmark-text fw-500">
           <div class="checkmark h-[21px] w-[21px]"></div>
           <p class="checkmark-text">Line Cutting</p>
         </div>
@@ -108,27 +108,27 @@
       <container class="grid grid-cols-12 gap-4 mx-0 my-6">
         <div class="col-span-1"></div>
 
-        <div class="flex items-center col-span-2 gap-2 cursor-pointer hover:checkmark-enabled fs-checkmark-text fw-500">
+        <div id="service-desktop-6" onclick="changeService('6'); setServiceDesktop('6')" class="flex items-center col-span-2 gap-2 cursor-pointer hover:checkmark-enabled fs-checkmark-text fw-500">
           <div class="checkmark h-[21px] w-[21px]"></div>
           <p class="checkmark-text">Trenching</p>
         </div>
 
-        <div class="flex items-center col-span-2 gap-2 cursor-pointer hover:checkmark-enabled fs-checkmark-text fw-500">
+        <div id="service-desktop-7" onclick="changeService('7'); setServiceDesktop('7')" class="flex items-center col-span-2 gap-2 cursor-pointer hover:checkmark-enabled fs-checkmark-text fw-500">
           <div class="checkmark h-[21px] w-[21px]"></div>
           <p class="checkmark-text">Drill Programs</p>
         </div>
 
-        <div class="flex items-center col-span-2 gap-2 cursor-pointer hover:checkmark-enabled fs-checkmark-text fw-500">
+        <div id="service-desktop-8" onclick="changeService('8'); setServiceDesktop('8')" class="flex items-center col-span-2 gap-2 cursor-pointer hover:checkmark-enabled fs-checkmark-text fw-500">
           <div class="checkmark h-[21px] w-[21px]"></div>
           <p class="checkmark-text">Project Management</p>
         </div>
 
-        <div class="flex items-center col-span-2 gap-2 cursor-pointer hover:checkmark-enabled fs-checkmark-text fw-500">
+        <div id="service-desktop-9" onclick="changeService('9'); setServiceDesktop('9')" class="flex items-center col-span-2 gap-2 cursor-pointer hover:checkmark-enabled fs-checkmark-text fw-500">
           <div class="checkmark h-[21px] w-[21px]"></div>
           <p class="checkmark-text">Camp Building</p>
         </div>
         
-        <div class="flex items-center col-span-2 gap-2 cursor-pointer hover:checkmark-enabled fs-checkmark-text fw-500">
+        <div id="service-desktop-10" onclick="changeService('10'); setServiceDesktop('10')" class="flex items-center col-span-2 gap-2 cursor-pointer hover:checkmark-enabled fs-checkmark-text fw-500">
           <div class="checkmark h-[21px] w-[21px]"></div>
           <p class="checkmark-text">Pad Building</p>
         </div>
@@ -138,8 +138,8 @@
       </container>      
     </section>
 
-    <section name="services-menu-mobile cursor-pointer" class="block sm:hidden">
-      <container class="grid grid-cols-2 mx-6 my-6">
+    <section name="services-menu-mobile" class="block cursor-pointer sm:hidden">
+      <container id="services-menu-mobile" class="grid grid-cols-2 mx-6 my-6">
         <div class="flex flex-col col-span-1 gap-4">
           <div class="flex items-center gap-2 checkmark-enabled fs-checkmark-text fw-500">
             <div class="checkmark h-[21px] w-[21px]"></div>
@@ -210,20 +210,20 @@
           <img src="images/menu-arrow.png" class="my-2 w-[20px] h-[20px]" alt="">
         </div>
         
-        <div id="services-dropdown-list" onclick="toggleDropdown()" class="flex flex-col hidden p-2 space-y-2 border">
-          <div id="service-mobile-text-1" onclick="setServiceMobile('1')" class="flex cursor-pointer fw-600">
+        <div id="services-dropdown-list" onclick="toggleDropdown()" class="flex flex-col hidden p-2 border">
+          <div id="service-mobile-text-1" onclick="changeService('1'); setServiceMobile('1')" class="flex py-1 cursor-pointer fw-600">
             <p class="basis-11/12 text-start">Geology</p>
             <img src="images/menu-arrow.png" class="my-1 rotate-180 w-[20px] h-[20px]" alt="">       
           </div>
-          <p id="service-mobile-text-2" onclick="setServiceMobile('2')" class="">Geochemistry</p>
-          <p id="service-mobile-text-3" onclick="setServiceMobile('3')" class="">Geophysics</p>
-          <p id="service-mobile-text-4" onclick="setServiceMobile('4')" class="">Line Cutting</p>
-          <p id="service-mobile-text-5" onclick="setServiceMobile('5')" class="">Tenure Acquisition</p>
-          <p id="service-mobile-text-6" onclick="setServiceMobile('6')" class="">Project Management</p>
-          <p id="service-mobile-text-7" onclick="setServiceMobile('7')" class="">Trenching</p>
-          <p id="service-mobile-text-8" onclick="setServiceMobile('8')" class="">Drill Programs</p>
-          <p id="service-mobile-text-9" onclick="setServiceMobile('9')" class="">Camp Building</p>
-          <p id="service-mobile-text-10" onclick="setServiceMobile('10')" class="">Pad Building</p>
+          <p id="service-mobile-text-2" onclick="changeService('2'); setServiceMobile('2')" class="py-1">Geochemistry</p>
+          <p id="service-mobile-text-3" onclick="changeService('3'); setServiceMobile('3')" class="py-1">Geophysics</p>
+          <p id="service-mobile-text-4" onclick="changeService('4'); setServiceMobile('4')" class="py-1">Line Cutting</p>
+          <p id="service-mobile-text-5" onclick="changeService('5'); setServiceMobile('5')" class="py-1">Tenure Acquisition</p>
+          <p id="service-mobile-text-6" onclick="changeService('6'); setServiceMobile('6')" class="py-1">Project Management</p>
+          <p id="service-mobile-text-7" onclick="changeService('7'); setServiceMobile('7')" class="py-1">Trenching</p>
+          <p id="service-mobile-text-8" onclick="changeService('8'); setServiceMobile('8')" class="py-1">Drill Programs</p>
+          <p id="service-mobile-text-9" onclick="changeService('9'); setServiceMobile('9')" class="py-1">Camp Building</p>
+          <p id="service-mobile-text-10" onclick="changeService('10'); setServiceMobile('10')" class="py-1">Pad Building</p>
         </div>
       </div> 
     </section>
@@ -251,21 +251,10 @@
         <div class="container col-span-12 py-2 sm:col-span-10">
           <div id="services-image-grid" class="flex flex-wrap">
             
-            <div class="flex flex-wrap w-1/2 p-1 sm:w-1/3 sm:p-2">
-              <div class="w-full">
-                <img alt="gallery" class="block object-cover object-center w-full h-full"
-                  src="images/service-1-images/1.png">
-              </div>
-            </div>
 
           </div>
         </div>
-
-      
-
-  
-
-
+        
       <div class="hidden col-span-1 sm:block"></div> 
       </container>
     </section>
@@ -320,78 +309,6 @@
       <p>Copyright Rio Minerals Ltd. All Rights Reserved © 2022</p>
     </div>
   </footer>
-
-  
-    <div class="container px-5 py-2 ">
-      <div class="flex flex-wrap">
-        <div class="flex flex-wrap w-1/2 sm:w-1/3">
-          <div class="w-full">
-            <img alt="gallery" class="block object-cover object-center w-full h-full"
-              src="images/service-1-images/services-test-photo - Copy (2).png">
-          </div>
-        </div>
-        <div class="flex flex-wrap w-1/2 sm:w-1/3">
-          <div class="w-full p-1 sm:p-2">
-            <img alt="gallery" class="block object-cover object-center w-full h-full"
-              src="images/service-1-images/services-test-photo - Copy (2).png">
-          </div>
-        </div>
-        <div class="flex flex-wrap w-1/2 sm:w-1/3">
-          <div class="w-full p-1 sm:p-2">
-            <img alt="gallery" class="block object-cover object-center w-full h-full"
-              src="images/service-1-images/services-test-photo - Copy (2).png">
-          </div>
-        </div>
-        <div class="flex flex-wrap w-1/2 sm:w-1/3">
-          <div class="w-full p-1 sm:p-2">
-            <img alt="gallery" class="block object-cover object-center w-full h-full"
-              src="images/service-1-images/services-test-photo - Copy (2).png">
-          </div>
-        </div>
-        <div class="flex flex-wrap w-1/2 sm:w-1/3">
-          <div class="w-full p-1 sm:p-2">
-            <img alt="gallery" class="block object-cover object-center w-full h-full"
-              src="images/service-1-images/services-test-photo - Copy (2).png">
-          </div>
-        </div>
-        <div class="flex flex-wrap w-1/2 sm:w-1/3">
-          <div class="w-full p-1 sm:p-2">
-            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-              src="images/service-1-images/services-test-photo - Copy (2).png">
-          </div>
-        </div>
-        <div class="flex flex-wrap w-1/2 sm:w-1/3">
-          <div class="w-full p-1 sm:p-2">
-            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-              src="images/service-1-images/services-test-photo - Copy (2).png">
-          </div>
-        </div>
-        <div class="flex flex-wrap w-1/2 sm:w-1/3">
-          <div class="w-full p-1 sm:p-2">
-            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-              src="images/service-1-images/services-test-photo - Copy (2).png">
-          </div>
-        </div>
-        <div class="flex flex-wrap w-1/2 sm:w-1/3">
-          <div class="w-full p-1 sm:p-2">
-            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-              src="images/service-1-images/services-test-photo - Copy (2).png">
-          </div>
-        </div>
-        <div class="flex flex-wrap w-1/2 sm:w-1/3">
-          <div class="w-full p-1 sm:p-2">
-            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-              src="images/service-1-images/services-test-photo - Copy (2).png">
-          </div>
-        </div>
-        <div class="flex flex-wrap w-1/2 sm:w-1/3">
-          <div class="w-full p-1 sm:p-2">
-            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-              src="images/service-1-images/services-test-photo - Copy (2).png">
-          </div>
-        </div>
-      </div>
-    </div>
 
 </body>
 </html>
