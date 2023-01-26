@@ -37,7 +37,6 @@ let PHOTOS_IN = {'geology': 101,
 /* TODO
 RESTRICT GOOGLE API KEY BEFORE PUBLISHING
 use node.closest(node) to close menu when clicking outside of it
-the function 'changeService' breaks when we add "sm:" breakpoints to the javascript class addition 
 adjust services to masonry grid: https://prototypr.io/post/masonry-layout-css-tailwind
 add image gallery lightbox
 update the base images in /images with the ones from wordpress in /site-downloads
@@ -142,7 +141,7 @@ function changeService(serviceString){
   for (var i=1; i<=PHOTOS_IN[serviceString]; i++){
 
     const img = document.createElement('img');
-    img.className += "object-cover w-full mb-8";
+    img.className = "object-cover w-full mb-6";
     img.src = 'images/' + serviceString + '/' + i + '.jpeg';
 
     document.getElementById('services-image-grid').appendChild(img);
