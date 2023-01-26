@@ -1,4 +1,4 @@
-let SERVICES = {'geology': 'We provide a variety of geological expertise including mapping, prospecting, assessment report writing, and designing exploration programs.',
+let SERVICE_DESCRIPTION = {'geology': 'We provide a variety of geological expertise including mapping, prospecting, assessment report writing, and designing exploration programs.',
                 'geochemistry': 'Each crew member is trained in the proper sampling techniques and handling of your samples. Samples are properly labeled, sorted, plotted, and shipped to ensure minimal contamination and to avoid the dreaded “missing sample” syndrome.',
                 'geophysics': 'Our crews have performed countless kilometers of Mag/VLF . We also manage I.P. programs worldwide.',
                 'line_cutting': 'We strive for accuracy on our grids, and ease of movement for your personnel through the bush, check out the photos.',
@@ -9,6 +9,40 @@ let SERVICES = {'geology': 'We provide a variety of geological expertise includi
                 'camp_building': 'Convenient, safe, minimal disturbance, and most of all functional. We will build a camp anywhere tailored to your specifications.',
                 'pad_building': 'We have many years experience building solid helicopter and drill pads around the world, providing a stable and safe platform to perform your work.'
 }
+
+let SERVICE_TITLES = {'geology': 'Geology',
+                      'geochemistry': 'Geochemistry',
+                      'geophysics': 'Geophysics',
+                      'line_cutting': 'Line Cutting',
+                      'tenure_acquisition': 'Tenure Acquisition',
+                      'project_management': 'Project Management',
+                      'trenching': 'Trenching',
+                      'drill_programs': 'Drill Programs',
+                      'camp_building': 'Camp Building',
+                      'pad_building': 'Pad Building'
+}
+
+let PHOTOS_IN = {'geology': 101,
+                 'geochemistry': 55,
+                 'geophysics': 16,
+                 'line_cutting': 20,
+                 'tenure_acquisition': 11,
+                 'project_management': 18,
+                 'trenching': 35,
+                 'drill_programs': 43,
+                 'camp_building': 49,
+                 'pad_building': 14
+}
+
+/* TODO
+RESTRICT GOOGLE API KEY BEFORE PUBLISHING
+use node.closest(node) to close menu when clicking outside of it
+the function 'changeService' breaks when we add "sm:" breakpoints to the javascript class addition 
+adjust services to masonry grid: https://prototypr.io/post/masonry-layout-css-tailwind
+add image gallery lightbox
+update the base images in /images with the ones from wordpress in /site-downloads
+*/
+
 
 const initMobileMenu = () => {
     //mobile menu
@@ -73,7 +107,7 @@ function setServiceMobile(serviceString){
   /* adds bold font to the service that was clicked */
   document.getElementById('service-mobile-text-' + serviceString).classList.add('fw-600');
 
-  //use node.closest(node) to close menu when clicking outside of it
+
 
 
 
@@ -96,28 +130,22 @@ function setServiceDesktop(serviceString){
   //document.getElementById()
 }
 
-/* the function breaks when we add "sm:" breakpoints to the javascript class addition */
 function changeService(serviceString){
+
+  document.getElementById('service-title').textContent = SERVICE_TITLES[serviceString];
+  document.getElementById('service-description').textContent = SERVICE_DESCRIPTION[serviceString];
 
   
   document.getElementById('services-image-grid').innerHTML = '';
   
 
-  for (var i=1; i<=PHOTOS_IN['service_' + serviceString]; i++){
-
-    const container = document.createElement('div');
-    container.className += 'flex flex-wrap w-1/3 p-1';
-
-    const div = document.createElement('div');
-    div.className += 'w-full';
+  for (var i=1; i<=PHOTOS_IN[serviceString]; i++){
 
     const img = document.createElement('img');
-    img.className += 'block object-cover object-center w-full h-full';
+    img.className += "object-cover w-full mb-8";
     img.src = 'images/' + serviceString + '/' + i + '.jpeg';
 
-    div.appendChild(img);
-    container.appendChild(div);
-    document.getElementById('services-image-grid').appendChild(container);
+    document.getElementById('services-image-grid').appendChild(img);
   }
 }
 
@@ -126,12 +154,24 @@ function changeService(serviceString){
 
 /* 
             
-            <div class="flex flex-wrap w-1/3">
-              <div class="w-full p-1 md:p-2">
-                <img class="block object-cover object-center w-full h-full"
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">
-              </div>
-            </div>
+            
+          <div class="grid grid-cols-12">
+          <div class="hidden col-span-1 sm:block"></div>
+
+          <div id="services-image-grid" class="col-span-10 gap-8 columns-3">
+            <img class="object-cover w-full mb-6" src="images/geology/1.jpeg" />
+            <img class="object-cover w-full mb-6" src="images/geology/2.jpeg" />
+            <img class="object-cover w-full mb-6" src="images/geology/3.jpeg" />
+            <img class="object-cover w-full mb-6" src="images/geology/4.jpeg" />
+            <img class="object-cover w-full mb-6" src="images/geology/5.jpeg" />
+            <img class="object-cover w-full mb-6" src="images/geology/6.jpeg" />
+            <img class="object-cover w-full mb-6" src="images/geology/7.jpeg" />
+            <img class="object-cover w-full mb-6" src="images/geology/8.jpeg" />
+            <img class="object-cover w-full mb-6" src="images/geology/9.jpeg" />
+          </div>
+
+          <div class="hidden col-span-1 sm:block"></div>
+        </div>
 */
 
 
