@@ -37,9 +37,10 @@ let PHOTOS_IN = {'geology': 101,
 /* TODO
 RESTRICT GOOGLE API KEY BEFORE PUBLISHING
 use node.closest(node) to close menu when clicking outside of it
-adjust services to masonry grid: https://prototypr.io/post/masonry-layout-css-tailwind
 add image gallery lightbox
 update the base images in /images with the ones from wordpress in /site-downloads
+add a description for project management
+add an image loading animation for the masonry grid: https://tympanus.net/codrops/2013/07/02/loading-effects-for-grid-items-with-css-animations/
 */
 
 
@@ -141,7 +142,7 @@ function changeService(serviceString){
   for (var i=1; i<=PHOTOS_IN[serviceString]; i++){
 
     const img = document.createElement('img');
-    img.className = "object-cover w-full mb-6";
+    img.className = "object-cover w-full mb-2.5";
     img.src = 'images/' + serviceString + '/' + i + '.jpeg';
 
     document.getElementById('services-image-grid').appendChild(img);
@@ -158,15 +159,15 @@ function changeService(serviceString){
           <div class="hidden col-span-1 sm:block"></div>
 
           <div id="services-image-grid" class="col-span-10 gap-8 columns-3">
-            <img class="object-cover w-full mb-6" src="images/geology/1.jpeg" />
-            <img class="object-cover w-full mb-6" src="images/geology/2.jpeg" />
-            <img class="object-cover w-full mb-6" src="images/geology/3.jpeg" />
-            <img class="object-cover w-full mb-6" src="images/geology/4.jpeg" />
-            <img class="object-cover w-full mb-6" src="images/geology/5.jpeg" />
-            <img class="object-cover w-full mb-6" src="images/geology/6.jpeg" />
-            <img class="object-cover w-full mb-6" src="images/geology/7.jpeg" />
-            <img class="object-cover w-full mb-6" src="images/geology/8.jpeg" />
-            <img class="object-cover w-full mb-6" src="images/geology/9.jpeg" />
+            <img class="object-cover w-full mb-2.5" src="images/geology/1.jpeg" />
+            <img class="object-cover w-full mb-2.5" src="images/geology/2.jpeg" />
+            <img class="object-cover w-full mb-2.5" src="images/geology/3.jpeg" />
+            <img class="object-cover w-full mb-2.5" src="images/geology/4.jpeg" />
+            <img class="object-cover w-full mb-2.5" src="images/geology/5.jpeg" />
+            <img class="object-cover w-full mb-2.5" src="images/geology/6.jpeg" />
+            <img class="object-cover w-full mb-2.5" src="images/geology/7.jpeg" />
+            <img class="object-cover w-full mb-2.5" src="images/geology/8.jpeg" />
+            <img class="object-cover w-full mb-2.5" src="images/geology/9.jpeg" />
           </div>
 
           <div class="hidden col-span-1 sm:block"></div>
