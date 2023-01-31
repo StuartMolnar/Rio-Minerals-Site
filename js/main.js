@@ -3,7 +3,7 @@ let SERVICE_DESCRIPTION = {'geology': 'We provide a variety of geological expert
                 'geophysics': 'Our crews have performed countless kilometers of Mag/VLF . We also manage I.P. programs worldwide.',
                 'line_cutting': 'We strive for accuracy on our grids, and ease of movement for your personnel through the bush, check out the photos.',
                 'tenure_acquisition': 'Our professional crew has been staking claims and acquiring concessions for over three decades.  We are incorporated in Canada, the USA, Jamaica, and Ireland and offer claim and concession searches and acquisition in any jurisdiction worldwide. We handle all aspects of the acquisition process for a true “no worries” job.',
-                'project_management': 'Placeholder description',
+                'project_management': 'We offer comprehensive project management services that oversee every aspect of your project from start to finish, ensuring compliance with regulations, proper communication with clients, and efficient management of all logistics. Our team will handle all necessary paperwork and ensure that everything runs smoothly, giving you a stress-free and seamless experience.',
                 'trenching': 'Whether through mechanized or manual means, we can arrange trenching and road building projects to assist your project.',
                 'drill_programs': 'Our proven expertise in coordinating drill programs around the world means that we approach your project with the professionalism and thoroughness it deserves.',
                 'camp_building': 'Convenient, safe, minimal disturbance, and most of all functional. We will build a camp anywhere tailored to your specifications.',
@@ -22,7 +22,7 @@ let SERVICE_TITLES = {'geology': 'Geology',
                       'pad_building': 'Pad Building'
 }
 
-let PHOTOS_IN = {'geology': 101,
+let PHOTOS_IN_SERVICE = {'geology': 101,
                  'geochemistry': 55,
                  'geophysics': 16,
                  'line_cutting': 20,
@@ -41,11 +41,25 @@ add image gallery lightbox
 update the base images in /images with the ones from wordpress in /site-downloads
 add a description for project management
 add an image loading animation for the masonry grid: https://tympanus.net/codrops/2013/07/02/loading-effects-for-grid-items-with-css-animations/
+fix the medium screen size to include the checkmark service list from mobile
 */
 
+//minimize navbar on scroll
+function minimizeNav() {
+  if (document.body.scrollTop > 192 || document.documentElement.scrollTop > 192) {
+    document.getElementById("navbar-full").classList.add('hidden');
+    document.getElementById("navbar-min").classList.remove('hidden');
+  } else {
+    document.getElementById("navbar-full").classList.remove('hidden');    
+    document.getElementById("navbar-min").classList.add('hidden');
+  }
+}
 
+window.onscroll = function() {minimizeNav()}
+
+//mobile menu
 const initMobileMenu = () => {
-    //mobile menu
+    
     hamburgerBtn = document.getElementById('hamburger-button');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -84,9 +98,9 @@ function initMap() {
         position: rio_office,
         map,
         title: "Rio Minerals Office",
-      });
+    });
     
-  }
+}
 
 function toggleDropdown() {
   document.getElementById('services-dropdown-list').classList.toggle("hidden");
@@ -139,7 +153,7 @@ function changeService(serviceString){
   document.getElementById('services-image-grid').innerHTML = '';
   
 
-  for (var i=1; i<=PHOTOS_IN[serviceString]; i++){
+  for (var i=1; i<=PHOTOS_IN_SERVICE[serviceString]; i++){
 
     const img = document.createElement('img');
     img.className = "object-cover w-full mb-2.5";

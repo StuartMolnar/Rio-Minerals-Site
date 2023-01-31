@@ -23,7 +23,7 @@
     --fs-45: 2.8125rem;
     --fs-80: 5rem;
 
-    --fs-body: var(--fs-16);
+    --fs-body: var(--fs-18);
     --fs-nav: var(--fs-20);
     --fs-button: var(--fs-20);
     --fs-heading-1: var(--fs-80);
@@ -46,12 +46,12 @@
         --fs-24: 1.5rem;
         --fs-35: 2.1875rem;
 
-        --fs-body: var(--fs-16);
+        --fs-body: var(--fs-18);
         --fs-nav: var(--fs-18);
         --fs-button: var(--fs-14);
         --fs-heading-1: var(--fs-35);
-        --fs-heading-2: var(--fs-24);
-        --fs-heading-3: var(--fs-22);
+        --fs-heading-2: var(--fs-28);
+        --fs-heading-3: var(--fs-25);
         --fs-heading-4: var(--fs-20);
         --fs-heading-5: var(--fs-16);
         --fs-checkmark-text: var(--fs-16);
@@ -63,7 +63,7 @@
 /* utility classes */
 
 .text-white {
-    color: var(--clr-white)
+    color: var(--clr-white);
 }
 
 .text-black-accent {
@@ -216,15 +216,6 @@
             width: 135px;
 
     }
-}
-
-
-.checkmark {
-    background-image: url(../images/checkmark-disabled.svg)
-}
-
-.checkmark-text{
-    color: #9C9C9C;
 }
 
 

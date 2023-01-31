@@ -1,4 +1,4 @@
-body::-webkit-scrollbar{
+/* body::-webkit-scrollbar{
     display: none;
     -ms-overflow-style: none;
 }
@@ -6,6 +6,7 @@ body::-webkit-scrollbar{
 html {
     scrollbar-width: none;
 }
+*/
 
 #hero-image {
     background-image: url('../images/video.png');
@@ -35,9 +36,27 @@ html {
 }
 
 #services-description-background {
-    background-image: url('../images/services-background-1.png');
+    background-image: url('../images/services-background-2.png');
 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#back-to-top-button {
+    filter: invert(66%) sepia(0%) saturate(6%) hue-rotate(153deg) brightness(97%) contrast(84%);
+}
+
+#back-to-top-button:hover {
+    filter: invert(0%) sepia(0%) saturate(1243%) hue-rotate(47deg) brightness(114%) contrast(78%);
+}
+
+
+
+.checkmark {
+    background-image: url(../images/checkmark-disabled.svg);
+}
+
+.checkmark-text{
+    color: #9C9C9C;
 }
