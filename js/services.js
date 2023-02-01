@@ -39,9 +39,7 @@ RESTRICT GOOGLE API KEY BEFORE PUBLISHING
 use node.closest(node) to close menu when clicking outside of it
 add image gallery lightbox
 update the base images in /images with the ones from wordpress in /site-downloads
-add a description for project management
 add an image loading animation for the masonry grid: https://tympanus.net/codrops/2013/07/02/loading-effects-for-grid-items-with-css-animations/
-fix the medium screen size to include the checkmark service list from mobile
 */
 
 

@@ -9,7 +9,6 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
     <script type="module" src="css/tailwind.css"></script>
-    <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/navbar.js"></script>
     <script src="js/services.js"></script>
@@ -71,7 +70,7 @@
     <section class="grid grid-cols-12 gap-4 mx-6 sm:my-6 sm:mx-0">
       <div class="hidden col-span-1 sm:block"></div>
 
-      <div class="col-span-10 fs-heading-2 fw-600 sm:col-span-6">
+      <div class="col-span-10 fs-heading-3 md:fs-heading-2 fw-600 sm:col-span-6">
         <h2 class="">We offer a range of services to meet your needs.</h2>
       </div>
 
@@ -144,9 +143,10 @@
       </container>      
     </section>
 
-    <section name="services-menu-mobile" class="block sm:hidden">
-      <container id="services-menu-mobile" class="grid grid-cols-2 mx-6 my-6">
-        <div class="flex flex-col col-span-1 gap-4">
+    <section name="services-menu-mobile" class="block lg:hidden">
+      <container id="services-menu-mobile" class="grid grid-cols-2 mx-6 my-6 sm:mx-0 sm:grid-cols-12">
+        <div class="hidden col-span-1 sm:block"></div>
+        <div class="flex flex-col col-span-1 gap-4 sm:col-span-5">
           <div class="flex items-center gap-2 checkmark-enabled fs-checkmark-text fw-500">
             <div class="checkmark h-[21px] w-[21px]"></div>
             <p class="checkmark-text">Geology</p>
@@ -168,7 +168,7 @@
           </div>
 
         </div>
-        <div class="flex flex-col col-span-1 gap-4">
+        <div class="flex flex-col col-span-1 gap-4 sm:col-span-5">
           <div class="flex items-center gap-2 checkmark-enabled fs-checkmark-text fw-500">
             <div class="checkmark h-[21px] w-[21px]"></div>
             <p class="checkmark-text">Trenching</p>
@@ -189,8 +189,11 @@
             <p class="checkmark-text">Pad Building</p>
           </div>
         </div>
+                
+        <div class="hidden col-span-1 sm:block"></div>
+        <div class="hidden col-span-1 sm:block"></div>
 
-        <div class="flex flex-col col-span-2 gap-4 my-4">
+        <div class="flex flex-col col-span-2 gap-4 my-4 sm:col-span-5">
 
           <div class="flex items-center gap-2 checkmark-enabled fs-checkmark-text fw-500">
             <div class="checkmark h-[21px] w-[21px]"></div>
@@ -203,60 +206,64 @@
           </div>
           
         </div>
-        
-
       </container>
     </section>
 
 
-    <section class="grid grid-cols-2 mx-6 my-6 leading-9 lg:hidden">
-      <div class="col-span-12 cursor-pointer dropdown">
-        <div id="services-dropdown-button" onclick="toggleDropdown()" class="flex w-full space-y-2 border">
-          <button class="px-4 basis-11/12 text-start">Geology</button>
-          <img src="images/menu-arrow.png" class="my-2 w-[20px] h-[20px]" alt="">
-        </div>
-        
-        <div id="services-dropdown-list" onclick="toggleDropdown()" class="flex flex-col hidden p-2 border">
-          <div id="service-mobile-text-geology" onclick="changeService('geology'); setServiceMobile('geology')" class="flex py-1 cursor-pointer fw-600">
-            <p class="basis-11/12 text-start">Geology</p>
-            <img src="images/menu-arrow.png" class="my-1 rotate-180 w-[20px] h-[20px]" alt="">       
-          </div>
-          <p id="service-mobile-text-geochemistry" onclick="changeService('geochemistry'); setServiceMobile('geochemistry')" class="py-1">Geochemistry</p>
-          <p id="service-mobile-text-geophysics" onclick="changeService('geophysics'); setServiceMobile('geophysics')" class="py-1">Geophysics</p>
-          <p id="service-mobile-text-line_cutting" onclick="changeService('line_cutting'); setServiceMobile('line_cutting')" class="py-1">Line Cutting</p>
-          <p id="service-mobile-text-tenure_acquisition" onclick="changeService('tenure_acquisition'); setServiceMobile('tenure_acquisition')" class="py-1">Tenure Acquisition</p>
-          <p id="service-mobile-text-project_management" onclick="changeService('project_management'); setServiceMobile('project_management')" class="py-1">Project Management</p>
-          <p id="service-mobile-text-trenching" onclick="changeService('trenching'); setServiceMobile('trenching')" class="py-1">Trenching</p>
-          <p id="service-mobile-text-drill_programs" onclick="changeService('drill_programs'); setServiceMobile('drill_programs')" class="py-1">Drill Programs</p>
-          <p id="service-mobile-text-camp_building" onclick="changeService('camp_building'); setServiceMobile('camp_building')" class="py-1">Camp Building</p>
-          <p id="service-mobile-text-pad_building" onclick="changeService('pad_building'); setServiceMobile('pad_building')" class="py-1">Pad Building</p>
-        </div>
-      </div> 
-    </section>
-
-    
 
     <section id="services-description-background" class="py-16 text-white">
       <container class="grid grid-cols-12 gap-4 px-6 sm:px-0">
         <div class="hidden col-span-1 sm:block"></div>
 
-        <h3 id="service-title" class="col-span-12 sm:col-span-10 fs-heading-3 fw-700">Geology</h3>
+        <h3 id="service-title" class="col-span-12 sm:col-span-10 fs-heading-3 fw-700 sm:fw-600">Geology</h3>
   
+
+        <!--- fix columns here -->
   
         <div class="hidden col-span-1 sm:block"></div>
       </container>
       <container class="grid grid-cols-12 gap-8 px-6 py-4 sm:px-0">
         <div class="hidden col-span-1 sm:block"></div>
 
-        <p id="service-description" class="col-span-12 sm:col-span-6 fw-400">We provide a variety of geological expertise including mapping, prospecting, assessment report writing, and designing exploration programs.</p>
+        <p id="service-description" class="col-span-12 pr-6 sm:col-span-6 fw-400">We provide a variety of geological expertise including mapping, prospecting, assessment report writing, and designing exploration programs.</p>
+        <div class="hidden col-span-1 sm:block"></div>
 
-        <div class="flex col-span-12 sm:flex-row-reverse sm:col-span-3">
+        <div class="flex col-span-12 place-items-end sm:flex-row-reverse sm:col-span-3">
           <a href="#footer">
             <button class="min-w-[155px] button-accent fs-button">Contact Us Now</button>
           </a>
         </div>
 
         <div class="hidden col-span-2 sm:block"></div>
+      </container>
+
+      
+
+      <container id="services-container" class="grid grid-cols-12 mx-6 my-6 leading-9 sm:mx-0 lg:hidden">
+        <div class="hidden col-span-1 sm:block"></div>
+        <div id="services-dropdown-background" href="#services-containe" class="col-span-12 cursor-pointer sm:col-span-10 dropdown">
+          <div id="services-dropdown-button" onclick="toggleDropdown()" class="flex w-full space-y-2 border">
+            <button class="px-4 basis-11/12 text-start text-black-accent">Geology</button>
+            <img src="images/menu-arrow.png" class="my-2 w-[20px] h-[20px]" alt="">
+          </div>
+          
+          <div id="services-dropdown-list" href="#services-containe" onclick="toggleDropdown()" class="flex flex-col hidden p-2 border">
+            <div id="service-mobile-text-geology" onclick="changeService('geology'); setServiceMobile('geology')" class="flex py-1 cursor-pointer fw-600">
+              <p class="basis-11/12 text-start text-black-accent">Geology</p>
+              <img src="images/menu-arrow.png" class="my-1 rotate-180 w-[20px] h-[20px]" alt="">       
+            </div>
+            <p id="service-mobile-text-geochemistry" onclick="changeService('geochemistry'); setServiceMobile('geochemistry')" class="py-1 text-black-accent">Geochemistry</p>
+            <p id="service-mobile-text-geophysics" onclick="changeService('geophysics'); setServiceMobile('geophysics')" class="py-1 text-black-accent">Geophysics</p>
+            <p id="service-mobile-text-line_cutting" onclick="changeService('line_cutting'); setServiceMobile('line_cutting')" class="py-1 text-black-accent" text-black-accent>Line Cutting</p>
+            <p id="service-mobile-text-tenure_acquisition" onclick="changeService('tenure_acquisition'); setServiceMobile('tenure_acquisition')" class="py-1 text-black-accent">Tenure Acquisition</p>
+            <p id="service-mobile-text-project_management" onclick="changeService('project_management'); setServiceMobile('project_management')" class="py-1 text-black-accent">Project Management</p>
+            <p id="service-mobile-text-trenching" onclick="changeService('trenching'); setServiceMobile('trenching')" class="py-1 text-black-accent">Trenching</p>
+            <p id="service-mobile-text-drill_programs" onclick="changeService('drill_programs'); setServiceMobile('drill_programs')" class="py-1 text-black-accent">Drill Programs</p>
+            <p id="service-mobile-text-camp_building" onclick="changeService('camp_building'); setServiceMobile('camp_building')" class="py-1 text-black-accent">Camp Building</p>
+            <p id="service-mobile-text-pad_building" onclick="changeService('pad_building'); setServiceMobile('pad_building')" class="py-1 text-black-accent">Pad Building</p>
+          </div>
+        </div> 
+        <div class="hidden col-span-1 sm:block"></div>
       </container>
     </section>
 

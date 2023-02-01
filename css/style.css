@@ -8,6 +8,17 @@ html {
 }
 */
 
+@media (max-width: 640px){
+    body::-webkit-scrollbar{
+        display: none;
+        -ms-overflow-style: none;
+    }
+    
+    html {
+        scrollbar-width: none;
+    }
+}
+
 #hero-image {
     background-image: url('../images/video.png');
     height: 100vh;
@@ -35,12 +46,28 @@ html {
     border: 1px solid #232341;
 }
 
+#index-hero-background {
+    background-image: url('../images/video.png');
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#index-section-1-background {
+    background-color: #232341;
+}
+
 #services-description-background {
     background-image: url('../images/services-background-2.png');
 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#services-dropdown-background {
+    background-color: #F6F5F5;
 }
 
 #back-to-top-button {
@@ -51,12 +78,3 @@ html {
     filter: invert(0%) sepia(0%) saturate(1243%) hue-rotate(47deg) brightness(114%) contrast(78%);
 }
 
-
-
-.checkmark {
-    background-image: url(../images/checkmark-disabled.svg);
-}
-
-.checkmark-text{
-    color: #9C9C9C;
-}

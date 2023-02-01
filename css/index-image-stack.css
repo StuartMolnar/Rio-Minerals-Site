@@ -1,0 +1,22 @@
+
+  // clearfix
+  .image-stack::after {
+    content: ' ';
+    display: table;
+    clear: both;
+  }
+  
+  .image-stack__item--top {
+      float: left;
+      width: 66%;
+      margin-right: -100%;
+      padding-top: 15%;
+      position: relative;
+      z-index: 1;
+  }
+  
+  .image-stack__item--bottom {
+      float: right;
+      width: 75%;
+  }
+  
