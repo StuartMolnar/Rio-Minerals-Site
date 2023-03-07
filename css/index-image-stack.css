@@ -1,34 +1,141 @@
 #index-section-1-background {
-    --div-height: 550px;
-    --div-width: 55%;
-    --div-right-offset: 50px;
+    --div-height: 500px;
+    --div-width-right: 65%;
+    --div-width-left: 45%;
+    --right-div-top-offset: 100px;
     
-    --parent-height: 700px;
-    --margin-top: calc(var(--parent-height) - (var(--div-height) + var(--div-right-offset)));
+    --parent-height: calc(var(--div-height) + var(--right-div-top-offset) + var(--parent-height-offset));
+    --parent-height-offset: 150px;
 }
 
-#index-section-1-background .parent {
+#index-section-1-background .index-parent {
   position: relative;
   height: var(--parent-height);
-  margin-top: var(--margin-top);
 }
 
-#index-section-1-background .child1 {
+#index-section-1-background .index-child-1 {
   position: absolute;
+  top: calc(var(--parent-height-offset) / 2);
   left: 0;
   height: var(--div-height);
-  width: var(--div-width);
-  background-color: #ccc;
-  top: 0;
+  width: var(--div-width-left);
+
+  background-image: url(../images/geology/24.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#index-section-1-background .child2 {
+#index-section-1-background .index-child-2 {
   position: absolute;
-  top: var(--div-right-offset);
-  left: calc(100% - var(--div-width));
+  top: calc(calc(var(--parent-height-offset) / 2) + var(--right-div-top-offset));
+  left: calc(100% - var(--div-width-right));
   height: var(--div-height);
-  width: var(--div-width);
-  background-color: #888;
+  width: var(--div-width-right);
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/geology/79.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: auto; /* Enable a vertical scrollbar if the content overflows */
+
+}
+
+#index-section-3-divs,
+#index-section-5-divs {
+    --div-height: 500px;
+    --div-width-right: 60%;
+    --div-width-left: 45%;
+    --right-div-inset: 50px;
 }
 
 
+#index-section-3-divs .index-parent,
+#index-section-5-divs .index-parent {
+    position: relative;
+    height: var(--div-height);
+  }
+  
+#index-section-3-divs .index-child-1,
+#index-section-5-divs .index-child-1 {
+    position: absolute;
+    top: calc(var(--parent-height-offset) / 2);
+    left: 0;
+    height: var(--div-height);
+    width: var(--div-width-left);
+  
+    background-image: url(../images/geochemistry/25.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+#index-section-3-divs .index-child-2,
+#index-section-5-divs .index-child-2 {
+    position: absolute;
+    top: var(--right-div-inset);
+    left: calc(100% - var(--div-width-right));
+    height: calc(var(--div-height) - (var(--right-div-inset) * 2));
+    width: var(--div-width-right);
+  
+    background: #232341;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: auto; /* Enable a vertical scrollbar if the content overflows */
+  
+}
+
+#index-section-5-divs .index-child-1 {
+    background-image: url(../images/trenching/29.jpeg);
+}
+
+#index-section-4-divs {
+    --div-height: 500px;
+    --div-width-right: 55%;
+    --div-width-left: 50%;
+    --right-div-inset: 50px;
+}
+
+
+#index-section-4-divs .index-parent {
+    position: relative;
+    height: var(--div-height);
+  }
+  
+#index-section-4-divs .index-child-1 {
+    position: absolute;
+    top: var(--right-div-inset);
+    left: 0;
+    height: calc(var(--div-height) - (var(--right-div-inset) * 2));
+    width: var(--div-width-right);
+    
+    background: #232341;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+    overflow-y: auto; /* Enable a vertical scrollbar if the content overflows */
+    z-index: 1; /* Position the left div above the right div */
+}
+  
+#index-section-4-divs .index-child-2 {
+    position: absolute;
+    top: 0;
+    left: calc(100% - var(--div-width-left));
+    height: var(--div-height);
+    width: var(--div-width-left);
+
+    background-image: url(../images/tenure_acquisition/4.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+
+.header-line {
+    height: 1px;
+    background: #FFFFFF;
+    width: 30%;
+  }

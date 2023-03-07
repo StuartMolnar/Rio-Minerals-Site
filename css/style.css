@@ -58,6 +58,14 @@ html {
     background-color: #232341;
 }
 
+#index-section-2-background {
+    background: linear-gradient(0deg, rgba(240, 240, 240, 0.6), rgba(240, 240, 240, 0.6)), url(../images/geochemistry/1.jpeg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #services-description-background {
     background-image: url('../images/services-background-2.png');
 

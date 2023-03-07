@@ -12,9 +12,3 @@ package.json:
 tailwind.config.js
   content: ['./*.html'],
 
-npm i -g serverless
-
-serverless create --template aws-nodejs --path contact-form-api
-
-cd contact-form-api
-serverless config credentials --provider provider --key key --secret secret -o
