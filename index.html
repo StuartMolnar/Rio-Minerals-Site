@@ -96,7 +96,7 @@
 
       <container class="grid grid-cols-12 my-6">
         <div class="hidden col-span-1 sm:block"></div> 
-        <div class="flex justify-center col-span-12 sm:col-span-10 gap-x-3">
+        <div class="flex justify-center col-span-12 sm:justify-start sm:col-span-10 gap-x-3">
           <a href="/services.html">
             <button class="sm:min-w-[200px] min-w-[160px] sm:min-h-[65px] min-h-[50px] button-primary fs-button">View Our Services</button>
           </a>
@@ -371,14 +371,37 @@
       </container>
     </section>
 
-    <!-- for mobile section use this structure:
+    <section>
+      <container class="grid grid-cols-12">
+        <div class="hidden col-span-1 xl:col-span-2 sm:block"></div>
+        <div class="col-span-12 px-6 my-16 sm:px-0 sm:col-span-10 xl:col-span-8">
+          <div id="world-map">
+            <div class="map-point" style="position: absolute; top: 20%; left: 10%;">
+              <div class="pop-up">
+                <p>This is the first point.</p>
+              </div>
+            </div>
+            <div class="map-point" style="position: absolute; top: 40%; left: 30%;">
+              <div class="pop-up">
+                <p>This is the second point.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden col-span-1 xl:col-span-2 sm:block"></div>
+      </container>
+    </section>
     
-    section with background image
-       inset div with image
-       div with background and text
+    
+    
+    
+    
 
-       repeat 
-    
+    <!-- the architecture of the map is working
+
+      todo: ask teresa to update the map color
+      todo: use an image for the map points
+      todo: get clarification on which map points to show and what pop-up content  
     -->
 
 

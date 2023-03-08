@@ -154,6 +154,15 @@
 #mobile-section-1 {
   background-color: #232341;
 
+  --top-div-height: 300px;
+  --bot-div-height: 550px;
+  --bot-width: 100%;
+  --top-div-offset: 25px;
+  --top-width: calc(100% - (var(--top-div-offset) * 2));
+
+  --parent-bot-offset: 0px;
+  --parent-height: calc(var(--top-div-height) + var(--bot-div-height) + var(--parent-bot-offset));
+
 }
 
 #mobile-section-1 .index-parent{
