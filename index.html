@@ -24,16 +24,14 @@
   </div> -->
 
 
-  <header id="navbar" class="text-black fs-nav fw-400 bg-white-off">
+  <header id="navbar-full" class="text-black fs-nav fw-400 bg-white-off">
     <section class="grid items-center grid-cols-12 gap-4 py-12 mx-6 sm:mx-0">
 
       <div class="hidden col-span-1 sm:block"></div>
 
       <a href="/index.html" class="col-span-7 sm:col-span-2">
         <img src="images/standard-rio-logo.svg" class="h-14 sm:h-24" alt="Rio Minerals Ltd.">
-      </a>
-
-      
+      </a>      
 
       <div class="col-span-4"></div>
         
@@ -43,7 +41,7 @@
         </button>
       </div>
       <nav class="hidden col-span-4 sm:flex sm:flex-row-reverse" aria-label="main">
-        <a href="#footer" class="px-4 no-underline hover:underline underline-offset-4">Contact</a>
+        <a href="#footer-drop-point" class="px-4 no-underline hover:underline underline-offset-4">Contact</a>
         <a href="/services.html" class="px-4 no-underline hover:underline underline-offset-4">Services</a>        
         <a href="/about.html" class="px-4 no-underline hover:underline underline-offset-4">About</a>
         <a href="/index.html" class="px-4 underline hover:underline underline-offset-4">Home</a>
@@ -53,27 +51,29 @@
 
     </section>
     <section id="mobile-menu" class="absolute top-0 flex-col items-center hidden w-full text-white origin-top bg-blue-dark fs-nav fw-500">
-      <button class="self-end px-4 py-4 text-4xl top-1">
+      <button class="self-end px-5 pb-4 text-4xl pt-14 top-1">
         &times;
       </button>
       <nav class="flex flex-col min-h-screen py-8 text-center" aria-label="mobile">
         <a href="/index.html" class="w-full py-2 no-underline hover:underline underline-offset-4">Home</a>
         <a href="/about.html" class="w-full py-2 no-underline hover:underline underline-offset-4">About</a>
         <a href="/services.html" class="w-full py-2 no-underline hover:underline underline-offset-4">Services</a>
-        <a href="#footer" class="w-full py-2 no-underline hover:underline underline-offset-4">Contact</a>
+        <a href="#footer-drop-point" class="w-full py-2 no-underline hover:underline underline-offset-4">Contact</a>
         <a href="/index.html" class="my-20 h-14">
           <img src="images/white-rio-logo 1.svg" alt="Rio Minerals Ltd.">
         </a>
       </nav>
       
     </section>
-    
-  </header>
 
+    <section id="navbar-min" class="hidden">
+      
+    </section>
+  </header>
   
   <main>
 
-    <section id="index-hero-background" class="p-6 text-white sm:px-0">
+    <section id="index-hero" class="p-6 text-white sm:px-0">
       <container class="grid grid-cols-12 my-6">
         <div class="hidden col-span-1 sm:block"></div>  
         
@@ -88,7 +88,7 @@
         <div class="hidden col-span-1 sm:block"></div>  
 
         <div class="col-span-12 sm:col-span-6">
-          <p class="fs-heading-4 fw-500">25+ years of experience, with the knowledge and determination to see your project succeed.</p>
+          <p class="fs-heading-4 fw-500 word-spacing">25+ years of experience, with the knowledge and determination to see your project succeed.</p>
         </div>
 
         <div class="hidden col-span-5 sm:block"></div>  
@@ -96,13 +96,12 @@
 
       <container class="grid grid-cols-12 my-6">
         <div class="hidden col-span-1 sm:block"></div> 
-
-        <div class="flex col-span-12 sm:col-span-10 gap-x-4">
+        <div class="flex justify-center col-span-12 sm:col-span-10 gap-x-3">
           <a href="/services.html">
             <button class="sm:min-w-[200px] min-w-[160px] sm:min-h-[65px] min-h-[50px] button-primary fs-button">View Our Services</button>
           </a>
 
-          <a href="#footer">
+          <a href="#footer-drop-point">
             <button class="sm:min-w-[200px] min-w-[160px] sm:min-h-[65px] min-h-[50px] button-accent fs-button">Contact Us Now</button>
           </a>
         </div>
@@ -110,27 +109,9 @@
         <div class="hidden col-span-1 sm:block"></div> 
       </container>
     </section>
-<!-- 
-    <section id="index-section-1-background" class="px-6 text-white sm:px-0">
-      <container name="desktop-section" class="hidden grid-cols-12 my-6 sm:grid">
-        <div class="hidden col-span-1 sm:block"></div> 
-
-        <div class="left">
-
-        </div>
-        <div class="right">
-          <h1>This is temporary content</h1>
-        </div>
-
-        <div class="hidden col-span-1 sm:block"></div> 
-      </container>
-      <container name="mobile-section" class="grid grid-cols-12 my-6 sm:hidden">
-        hello2
-      </container>
-    </section> -->
 
 
-    <section id="index-section-1-background" class="px-0 text-white">
+    <section id="desktop-section-1" class="hidden px-0 text-white sm:block">
       <container class="grid grid-cols-12">
         <div class="hidden col-span-1 sm:block"></div> 
 
@@ -138,8 +119,8 @@
           <div class="index-child-1"></div>
           <div class="index-child-2">
             <p class="m-16 mb-10 mr-40 fs-heading-3 fw-600">Proven capabilities in a variety of environments.</p>
-            <p class="mx-16 mb-10 fw-400">RIO is a versatile mineral exploration and geotechnical consulting firm specializing in full project management, mineral-property acquisition, evaluation, exploration, and development. Over the last 25+ years, we have built a highly effective and efficient mineral exploration team. Our clients gain access to the skills of our staff and network of associates and contractors.</p>
-            <a href="/services.html" class="mx-16">
+            <p class="mx-16 mb-10 fw-400 word-spacing">RIO is a versatile mineral exploration and geotechnical consulting firm specializing in full project management, mineral-property acquisition, evaluation, exploration, and development. Over the last 25+ years, we have built a highly effective and efficient mineral exploration team. Our clients gain access to the skills of our staff and network of associates and contractors.</p>
+            <a href="/about.html" class="mx-16">
               <button class="mb-16 min-w-[155px] button-secondary fs-button">Learn More</button>
             </a>
           </div>          
@@ -149,10 +130,31 @@
       </container>
     </section>
 
+    <section id="mobile-section-1" class="block text-white sm:hidden">
+      <container class="grid grid-cols-12">
+        <div class="col-span-12 index-parent">
+          <div class="index-child-1"></div>
+          <div class="flex-col px-6 index-child-2">
+            <p class="pt-12 fs-heading-3 fw-600">Proven capabilities in a variety of environments.</p>
+            <p class="pt-8 fw-400 word-spacing">RIO is a versatile mineral exploration and geotechnical consulting firm specializing in full project management, mineral-property acquisition, evaluation, exploration, and development. Over the last 25+ years, we have built a highly effective and efficient mineral exploration team. Our clients gain access to the skills of our staff and network of associates and contractors.</p>
 
-    <section id="index-section-2-background">
+            <div class="flex justify-center">
+              <a href="/about.html">
+                <button class="my-8 min-w-[155px] button-secondary fs-button">Learn More</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </container>
+    </section>
+
+
+
+
+
+    <section id="desktop-section-2" class="hidden pt-12 sm:block">
       <container class="grid grid-cols-12 p-8">
-        <div class="hidden col-span-1 sm:block"></div> 
+        <div class="hidden col-span-1 xl:col-span-2 sm:block"></div> 
 
         <div class="flex-row col-span-5 pr-16">
           <p class="fs-heading-3 fw-600 text-blue-dark">We offer a range of services to meet your needs.</p>
@@ -161,7 +163,7 @@
           </a>
         </div>
 
-        <div class="flex col-span-5">
+        <div class="flex col-span-5 xl:col-span-4">
           <div class="flex-row mx-6 my-6 space-y-4">
             <div class="flex gap-2 fs-checkmark-text fw-500">
               <img src="images/checkmark.svg" alt="">
@@ -184,7 +186,7 @@
               <p>Line Cutting</p>
             </div>
           </div>
-          <div class="flex-row mx-6 my-6 space-y-2">            
+          <div class="flex-row mx-6 my-6 space-y-4">            
             <div class="flex gap-2 fs-checkmark-text fw-500">
               <img src="images/checkmark.svg" alt="">
               <p>Trenching</p>
@@ -207,13 +209,13 @@
             </div>
           </div>
         </div>
-        <div class="hidden col-span-1 sm:block"></div> 
+        <div class="hidden col-span-1 xl:col-span-2 sm:block"></div> 
       </container>
 
-      <container id="index-section-3-divs" class="grid grid-cols-12 py-24 text-white">
-        <div class="hidden col-span-1 sm:block"></div> 
+      <container id="desktop-section-3-divs" class="grid grid-cols-12 py-24 text-white">
+        <div class="hidden col-span-1 xl:col-span-2 sm:block"></div> 
 
-        <div class="index-parent sm:col-span-10">
+        <div class="index-parent sm:col-span-10 xl:col-span-8">
           <div class="index-child-1">
 
           </div>
@@ -221,52 +223,153 @@
             
             <div class="header-line"></div>
             <p class="fs-heading-4 fw-700">Geochemistry</p>
-            <p class="fw-400">Each crew member is trained in the proper sampling techniques and handling of your samples. Samples are properly labeled, sorted, plotted, and shipped to ensure minimal contamination and to avoid the dreaded “missing sample” syndrome.</p>
+            <p class="fw-400 word-spacing">Each crew member is trained in the proper sampling techniques and handling of your samples. Samples are properly labeled, sorted, plotted, and shipped to ensure minimal contamination and to avoid the dreaded “missing sample” syndrome.</p>
           </div>          
         </div>
 
-        <div class="hidden col-span-1 sm:block"></div>
+        <div class="hidden col-span-1 xl:col-span-2 sm:block"></div>
       </container>
 
-      <container id="index-section-4-divs" class="grid grid-cols-12 py-12 text-white">
-        <div class="hidden col-span-1 sm:block"></div> 
+      <container id="desktop-section-4-divs" class="grid grid-cols-12 py-12 text-white">
+        <div class="hidden col-span-1 xl:col-span-2 sm:block"></div> 
 
-        <div class="index-parent sm:col-span-10">
+        <div class="index-parent sm:col-span-10 xl:col-span-8">
           <div class="p-12 space-y-6 index-child-1">
             
             <div class="header-line"></div>
             <p class="fs-heading-4 fw-700">Tenure Acquisition</p>
-            <p class="fw-400">Our professional crew has been staking claims and acquiring concessions for over three decades. We are incorporated in Canada, the USA, Jamaica, and Ireland and offer claim and concession searches and acquisition in any jurisdiction worldwide. We handle all aspects of the acquisition process for a true “no worries” job.</p>
+            <p class="fw-400 word-spacing">Our professional crew has been staking claims and acquiring concessions for over three decades. We are incorporated in Canada, the USA, Jamaica, and Ireland and offer claim and concession searches and acquisition in any jurisdiction worldwide. We handle all aspects of the acquisition process for a true “no worries” job.</p>
           </div>
           <div class="index-child-2">
           </div>          
         </div>
 
-        <div class="hidden col-span-1 sm:block"></div>
+        <div class="hidden col-span-1 xl:col-span-2 sm:block"></div>
       </container>
 
 
       
 
-      <container id="index-section-5-divs" class="grid grid-cols-12 py-24 text-white">
-        <div class="hidden col-span-1 sm:block"></div> 
+      <container id="desktop-section-5-divs" class="grid grid-cols-12 py-24 text-white">
+        <div class="hidden col-span-1 xl:col-span-2 sm:block"></div> 
 
-        <div class="index-parent sm:col-span-10">
+        <div class="index-parent sm:col-span-10 xl:col-span-8">
           <div class="index-child-1">
 
           </div>
           <div class="p-12 space-y-6 index-child-2">
             <div class="header-line"></div>
             <p class="fs-heading-4 fw-700">Trenching</p>
-            <p class="fw-400">Whether through mechanized or manual means, we can arrange trenching and road building projects to assist your project.</p>
+            <p class="fw-400 word-spacing">Whether through mechanized or manual means, we can arrange trenching and road building projects to assist your project.</p>
           </div>          
         </div>
 
-        <div class="hidden col-span-1 sm:block"></div>
+        <div class="hidden col-span-1 xl:col-span-2 sm:block"></div>
       </container>
 
     </section>
 
+
+    <section id="mobile-section-2" class="block sm:hidden">
+      <container class="grid grid-cols-12 p-6">
+        <div class="flex-row col-span-12">
+          <p class="fs-heading-3 fw-600 text-blue-dark">We offer a range of services to meet your needs.</p>
+          <div class="flex pt-6">
+            <div class="flex-row space-y-4">
+              <div class="flex gap-2 fs-checkmark-text fw-600">
+                <img src="images/checkmark.svg" alt="">
+                <p>Geology</p>
+              </div>
+              <div class="flex gap-2 fs-checkmark-text fw-500">
+                <img src="images/checkmark.svg" alt="">
+                <p>Geophysics</p>
+              </div>
+              <div class="flex gap-2 fs-checkmark-text fw-500">
+                <img src="images/checkmark.svg" alt="">
+                <p>Geochemistry</p>
+              </div>
+              <div class="flex gap-2 fs-checkmark-text fw-500">
+                <img src="images/checkmark.svg" alt="">
+                <p>Tenure Acquisition</p>
+              </div>
+              <div class="flex gap-2 fs-checkmark-text fw-500">
+                <img src="images/checkmark.svg" alt="">
+                <p>Line Cutting</p>
+              </div>
+            </div>
+            <div class="flex-row space-y-4">            
+              <div class="flex gap-2 fs-checkmark-text fw-500">
+                <img src="images/checkmark.svg" alt="">
+                <p>Trenching</p>
+              </div>
+              <div class="flex gap-2 fs-checkmark-text fw-100">
+                <img src="images/checkmark.svg" alt="">
+                <p>Drill Programs</p>
+              </div>
+              <div class="flex gap-2 fs-checkmark-text fw-500">
+                <img src="images/checkmark.svg" alt="">
+                <p>Camp Building</p>
+              </div>
+              <div class="flex gap-2 fs-checkmark-text fw-500">
+                <img src="images/checkmark.svg" alt="">
+                <p>Pad Building</p>
+              </div>
+              <div class="flex gap-2 fs-checkmark-text fw-500">
+                <img src="images/checkmark.svg" alt="">
+                <p>Project Management</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center">
+            <a href="/services.html">
+              <button class="min-w-[170px] min-h-[50px] button-primary fs-button mt-8">View Our Services</button>
+            </a>
+          </div>
+      </container>
+    </section>
+
+
+    
+    <section id="mobile-section-background" class="block text-white sm:hidden">
+      <container id="mobile-section-3" class="grid grid-cols-12">
+        <div class="col-span-12 index-parent">
+          <div class="index-child-1"></div>
+          <div class="p-6 space-y-6 index-child-2">
+            
+            <div class="header-line"></div>
+            <p class="fs-heading-4 fw-700">Geochemistry</p>
+            <p class="fw-400 word-spacing">Each crew member is trained in the proper sampling techniques and handling of your samples. Samples are properly labeled, sorted, plotted, and shipped to ensure minimal contamination and to avoid the dreaded “missing sample” syndrome.</p>
+          </div>
+        </div>
+      </container>
+      <container id="mobile-section-4" class="grid grid-cols-12">
+        <div class="col-span-12 index-parent">
+          <div class="index-child-1"></div>
+          
+          <div class="p-6 space-y-6 index-child-2">
+            
+            <div class="header-line"></div>
+            <p class="fs-heading-4 fw-700">Tenure Acquisition</p>
+            <p class="fw-400 word-spacing">Our professional crew has been staking claims and acquiring concessions for over three decades. We are incorporated in Canada, the USA, Jamaica, and Ireland and offer claim and concession searches and acquisition in any jurisdiction worldwide. We handle all aspects of the acquisition process for a true “no worries” job.</p>
+          </div>
+        </div>
+        </div>
+      </container>
+      <container id="mobile-section-5" class="grid grid-cols-12">
+        <div class="col-span-12 index-parent">
+          <div class="index-child-1"></div>
+          
+            <div class="p-6 space-y-6 index-child-2">
+              
+              <div class="header-line"></div>
+              <p class="fs-heading-4 fw-700">Trenching</p>
+              <p class="fw-400 word-spacing">Whether through mechanized or manual means, we can arrange trenching and road building projects to assist your project.</p>
+            </div>
+          </div>
+        </div>
+      </container>
+    </section>
 
     <!-- for mobile section use this structure:
     
@@ -292,7 +395,7 @@
 
     <section class="grid grid-cols-12 gap-4">
       <div class="hidden col-span-1 sm:block"></div>      
-      <a href="#" class="flex flex-row-reverse items-center col-span-12 gap-2 sm:col-span-10">
+      <a href="#" class="flex flex-row-reverse items-center col-span-12 gap-2 px-6 pt-6 sm:col-span-10">
         <img src="images/go-to-top-arrow.png" class="max-w-6 max-h-6" alt="">
         <p>Back to Top</p>
       </a>
@@ -303,51 +406,51 @@
   </main>
 
 
-<footer id="footer" class="fw-400">
-  
-  <div class="mx-0 my-8 divider-line"></div>
+  <footer id="footer" class="fw-400">
+    
+    <div class="mx-0 my-8 divider-line"></div>
 
-  <section class="grid grid-cols-1 gap-8 mx-6 md:grid-cols-12 md:mx-0 text-black-accent">
+    <section id="footer-drop-point" class="grid grid-cols-1 gap-8 mx-6 md:grid-cols-12 md:mx-0 text-black-accent">
 
-      <div class="hidden col-span-1 md:block"></div>
+        <div class="hidden col-span-1 md:block"></div>
 
-      <div class="flex flex-col items-start col-span-5 gap-8 mt-8">
-        <img class="h-14 md:h-24" src="images/blue-rio-logo 1.svg" alt="">
-        <p class="">Interested in our services? Contact us now for project quotes and consultation. All inquiries are kept strictly confidential. References available upon request.</p>
-        
-        <div class="flex flex-col col-span-4 gap-2">
-          <div class="flex gap-2">
-              <img class="h-7 w-5 pt-1.5" src="images/location-pin.svg" alt="">
-              <a href="https://www.google.com/maps/place/800+W+Pender+St+%23615,+Vancouver,+BC+V6C+2V6/data=!4m2!3m1!1s0x548671820d72b67f:0x40a60cccd8063eab?sa=X&ved=2ahUKEwjj9_7q5NX8AhUbGTQIHaOICCEQ8gF6BAggEAI">615-800 W. Pender Street<br>Vancouver, BC<br>Canada V6C 2V6</a>
-          </div>
-          <div class="flex gap-2">
-                <img class="h-7 w-5 pt-1.5" src="images/phone.svg" alt="">
-              <a href="tel:+16046712245">604-671-2245</a>
-          </div>
-          <div class="flex gap-2">
-              <img class="h-7 w-5 pt-1.5" src="images/mail.svg" alt="">
-              <a href="mailto:info@riominerals.com">info@riominerals.com</a>
+        <div class="flex flex-col items-start col-span-5 gap-8 mt-8">
+          <img class="h-14 md:h-24" src="images/blue-rio-logo 1.svg" alt="">
+          <p class="word-spacing">Interested in our services? Contact us now for project quotes and consultation. All inquiries are kept strictly confidential. References available upon request.</p>
+          
+          <div class="flex flex-col col-span-4 gap-2">
+            <div class="flex gap-2">
+                <img class="h-7 w-5 pt-1.5" src="images/location-pin.svg" alt="">
+                <a href="https://www.google.com/maps/place/800+W+Pender+St+%23615,+Vancouver,+BC+V6C+2V6/data=!4m2!3m1!1s0x548671820d72b67f:0x40a60cccd8063eab?sa=X&ved=2ahUKEwjj9_7q5NX8AhUbGTQIHaOICCEQ8gF6BAggEAI">615-800 W. Pender Street<br>Vancouver, BC<br>Canada V6C 2V6</a>
+            </div>
+            <div class="flex gap-2">
+                  <img class="h-7 w-5 pt-1.5" src="images/phone.svg" alt="">
+                <a href="tel:+16046712245">604-671-2245</a>
+            </div>
+            <div class="flex gap-2">
+                <img class="h-7 w-5 pt-1.5" src="images/mail.svg" alt="">
+                <a href="mailto:info@riominerals.com">info@riominerals.com</a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-span-5 mt-8">
-        <div id="map" class="w-full h-[410px]"></div>
-      </div>
+        <div class="col-span-5 mt-8">
+          <div id="map" class="w-full h-[410px]"></div>
+        </div>
 
-      <div class="hidden col-span-1 md:block"></div>
-      
-  </section>
+        <div class="hidden col-span-1 md:block"></div>
+        
+    </section>
 
-  <div id="copywrite-text" class="grid mx-6 my-6 text-center place-items-center md:mx-0 fw-400-fs-copywrite-text text-gray-dark">
-    <p>Copyright Rio Minerals Ltd. All Rights Reserved © 2022</p>
-  </div>
-</footer>
+    <div id="copywrite-text" class="grid mx-6 my-6 text-center place-items-center md:mx-0 fw-400-fs-copywrite-text text-gray-dark">
+      <p>Copyright Rio Minerals Ltd. All Rights Reserved © 2022</p>
+    </div>
+  </footer>
 
-    <!--Add a script by google -->
-  <script src=
-"https://maps.googleapis.com/maps/api/js?key=AIzaSyDTCpBFfvmVLYiOt5lNpw-_dTsfuhbxLTc&callback=initMap&libraries=&v=weekly"
-    async>
-  </script>
+  	<!--Add a script by google -->
+	<script src=
+  "https://maps.googleapis.com/maps/api/js?key=AIzaSyDTCpBFfvmVLYiOt5lNpw-_dTsfuhbxLTc&callback=initMap&libraries=&v=weekly"
+      async>
+    </script>
 </body>
 </html>

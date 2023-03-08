@@ -1,4 +1,5 @@
-#index-section-1-background {
+/* ------------------ DESKTOP ------------------ */
+#desktop-section-1 {
     --div-height: 500px;
     --div-width-right: 65%;
     --div-width-left: 45%;
@@ -8,12 +9,12 @@
     --parent-height-offset: 150px;
 }
 
-#index-section-1-background .index-parent {
+#desktop-section-1 .index-parent {
   position: relative;
   height: var(--parent-height);
 }
 
-#index-section-1-background .index-child-1 {
+#desktop-section-1 .index-child-1 {
   position: absolute;
   top: calc(var(--parent-height-offset) / 2);
   left: 0;
@@ -26,7 +27,7 @@
   background-size: cover;
 }
 
-#index-section-1-background .index-child-2 {
+#desktop-section-1 .index-child-2 {
   position: absolute;
   top: calc(calc(var(--parent-height-offset) / 2) + var(--right-div-top-offset));
   left: calc(100% - var(--div-width-right));
@@ -41,8 +42,21 @@
 
 }
 
-#index-section-3-divs,
-#index-section-5-divs {
+
+#desktop-section-1 {
+  background-color: #232341;
+}
+
+#desktop-section-2 {
+  background: linear-gradient(0deg, rgba(240, 240, 240, 0.6), rgba(240, 240, 240, 0.6)), url(../images/geochemistry/1.jpeg);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#desktop-section-3-divs,
+#desktop-section-5-divs {
     --div-height: 500px;
     --div-width-right: 60%;
     --div-width-left: 45%;
@@ -50,14 +64,14 @@
 }
 
 
-#index-section-3-divs .index-parent,
-#index-section-5-divs .index-parent {
+#desktop-section-3-divs .index-parent,
+#desktop-section-5-divs .index-parent {
     position: relative;
     height: var(--div-height);
   }
   
-#index-section-3-divs .index-child-1,
-#index-section-5-divs .index-child-1 {
+#desktop-section-3-divs .index-child-1,
+#desktop-section-5-divs .index-child-1 {
     position: absolute;
     top: calc(var(--parent-height-offset) / 2);
     left: 0;
@@ -70,8 +84,8 @@
     background-size: cover;
 }
   
-#index-section-3-divs .index-child-2,
-#index-section-5-divs .index-child-2 {
+#desktop-section-3-divs .index-child-2,
+#desktop-section-5-divs .index-child-2 {
     position: absolute;
     top: var(--right-div-inset);
     left: calc(100% - var(--div-width-right));
@@ -86,11 +100,11 @@
   
 }
 
-#index-section-5-divs .index-child-1 {
+#desktop-section-5-divs .index-child-1 {
     background-image: url(../images/trenching/29.jpeg);
 }
 
-#index-section-4-divs {
+#desktop-section-4-divs {
     --div-height: 500px;
     --div-width-right: 55%;
     --div-width-left: 50%;
@@ -98,12 +112,12 @@
 }
 
 
-#index-section-4-divs .index-parent {
+#desktop-section-4-divs .index-parent {
     position: relative;
     height: var(--div-height);
   }
   
-#index-section-4-divs .index-child-1 {
+#desktop-section-4-divs .index-child-1 {
     position: absolute;
     top: var(--right-div-inset);
     left: 0;
@@ -120,7 +134,7 @@
     z-index: 1; /* Position the left div above the right div */
 }
   
-#index-section-4-divs .index-child-2 {
+#desktop-section-4-divs .index-child-2 {
     position: absolute;
     top: 0;
     left: calc(100% - var(--div-width-left));
@@ -133,6 +147,217 @@
     background-size: cover;
   
 }
+
+
+/* ------------------ MOBILE ------------------ */
+
+#mobile-section-1 {
+  background-color: #232341;
+
+}
+
+#mobile-section-1 .index-parent{
+  position: relative;
+  height: var(--parent-height);
+}
+
+#mobile-section-1 .index-child-1 {
+  position: absolute;
+  top: var(--top-div-offset);
+  left: var(--top-div-offset);
+  height: var(--top-div-height);
+  width: var(--top-width);
+  
+  z-index: 1; /* Position the left div above the right div */
+
+  
+
+  background-image: url(../images/geology/24.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+#mobile-section-1 .index-child-2 {
+  position: absolute;
+  top: var(--top-div-height);
+  left: 0;
+  height: var(--bot-div-height);
+  width: var(--bot-width);
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/geology/79.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+/* ---- Section 2 ---- */
+#mobile-section-background {
+  background: linear-gradient(0deg, rgba(240, 240, 240, 0.6), rgba(240, 240, 240, 0.6)), url(../images/unsorted/P2120014.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#mobile-section-3 {
+  --top-div-height: 300px;
+  --bot-div-height: 300px;
+  --bot-width: 100%;
+  --top-div-offset: 25px;
+  --top-width: calc(100% - (var(--top-div-offset) * 2));
+
+  --parent-bot-offset: 0px;
+  --parent-height: calc(var(--top-div-height) + var(--bot-div-height) + var(--parent-bot-offset));
+}
+
+
+#mobile-section-3 .index-parent {
+  position: relative;
+  height: var(--parent-height);
+
+}
+
+#mobile-section-3 .index-child-1 {
+  position: absolute;
+  top: var(--top-div-offset);
+  left: var(--top-div-offset);
+  height: var(--top-div-height);
+  width: var(--top-width);
+  
+  z-index: 1; /* Position the left div above the right div */
+
+  
+
+  background-image: url(../images/geochemistry/25.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+#mobile-section-3 .index-child-2 {
+  position: absolute;
+  top: var(--top-div-height);
+  left: 0;
+  height: var(--bot-div-height);
+  width: var(--bot-width);
+
+  background: #232341;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+
+
+#mobile-section-4 {
+  --top-div-height: 300px;
+  --bot-div-height: 375px;
+  --bot-width: 100%;
+  --top-div-offset: 25px;
+  --top-width: calc(100% - (var(--top-div-offset) * 2));
+
+  --parent-bot-offset: 0px;
+  --parent-height: calc(var(--top-div-height) + var(--bot-div-height) + var(--parent-bot-offset));
+}
+
+
+#mobile-section-4 .index-parent {
+  position: relative;
+  height: var(--parent-height);
+
+}
+
+#mobile-section-4 .index-child-1 {
+  position: absolute;
+  top: var(--top-div-offset);
+  left: var(--top-div-offset);
+  height: var(--top-div-height);
+  width: var(--top-width);
+  
+  z-index: 1; /* Position the left div above the right div */
+
+  
+
+  background-image: url(../images/tenure_acquisition/4.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+#mobile-section-4 .index-child-2 {
+  position: absolute;
+  top: var(--top-div-height);
+  left: 0;
+  height: var(--bot-div-height);
+  width: var(--bot-width);
+
+  background: #232341;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+
+
+
+#mobile-section-5 {
+  --top-div-height: 300px;
+  --bot-div-height: 210px;
+  --bot-width: 100%;
+  --top-div-offset: 25px;
+  --top-width: calc(100% - (var(--top-div-offset) * 2));
+
+  --parent-bot-offset: 50px;
+  --parent-height: calc(var(--top-div-height) + var(--bot-div-height) + var(--parent-bot-offset));
+}
+
+
+#mobile-section-5 .index-parent {
+  position: relative;
+  height: var(--parent-height);
+
+}
+
+#mobile-section-5 .index-child-1 {
+  position: absolute;
+  top: var(--top-div-offset);
+  left: var(--top-div-offset);
+  height: var(--top-div-height);
+  width: var(--top-width);
+  
+  z-index: 1; /* Position the left div above the right div */
+
+  
+
+  background-image: url(../images/trenching/29.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+#mobile-section-5 .index-child-2 {
+  position: absolute;
+  top: var(--top-div-height);
+  left: 0;
+  height: var(--bot-div-height);
+  width: var(--bot-width);
+
+  background: #232341;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+
+/* ------------------ UTILITY ------------------ */
 
 .header-line {
     height: 1px;
