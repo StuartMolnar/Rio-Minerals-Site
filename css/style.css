@@ -75,6 +75,8 @@ html {
     filter: invert(0%) sepia(0%) saturate(1243%) hue-rotate(47deg) brightness(114%) contrast(78%);
 }
 
+/* --- World Map --- */
+
 #world-map {
     position: relative;
     width: 100%;
@@ -109,6 +111,7 @@ html {
     transform: translateX(20px);
     transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
     pointer-events: none;
+    z-index: 1;
   }
   
   .map-point:hover .pop-up {
