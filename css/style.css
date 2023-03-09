@@ -94,7 +94,7 @@ html {
     height: 10px;
     border-radius: 50%;
     background-color: #f44336;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    //background-color: transparent; /* Use a transparent background */
     cursor: pointer;
   }
   
@@ -119,3 +119,42 @@ html {
     transform: translateX(0);
   }
   
+  
+  @media (max-width: 640px) {
+    /* Adjust the size and position of the map-points and pop-ups for smaller screens */
+    .map-point {
+      width: 6px;
+      height: 6px;
+    }
+    
+    .pop-up {
+      width: 200px;
+      padding: 10px;
+    }
+  }
+  
+  @media (min-width: 641px) and (max-width: 1024px) {
+    /* Adjust the size and position of the map-points and pop-ups for medium-sized screens */
+    .map-point {
+      width: 8px;
+      height: 8px;
+    }
+    
+    .pop-up {
+      width: 220px;
+      padding: 12px;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    /* Adjust the size and position of the map-points and pop-ups for larger screens */
+    .map-point {
+      width: 10px;
+      height: 10px;
+    }
+    
+    .pop-up {
+      width: 250px;
+      padding: 15px;
+    }
+  }
