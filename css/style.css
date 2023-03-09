@@ -93,8 +93,8 @@ html {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #f44336;
-    //background-color: transparent; /* Use a transparent background */
+    //background-color: #f44336;
+    background-color: transparent; /* Use a transparent background */
     cursor: pointer;
   }
   
