@@ -90,8 +90,6 @@ html {
   
   .map-point {
     position: absolute;
-    width: 10px;
-    height: 10px;
     border-radius: 50%;
     //background-color: #f44336;
     background-color: transparent; /* Use a transparent background */
@@ -101,34 +99,42 @@ html {
   .pop-up {
     position: absolute;
     top: 0;
-    left: 120%;
-    width: 250px;
+    left: 130%;
+    width: auto;
     background-color: white;
-    border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    padding: 15px;
     opacity: 0;
-    transform: translateX(20px);
+    transform: translateX(100%);
     transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
     pointer-events: none;
     z-index: 1;
+    display: inline-block;
   }
+
+  #map-point-mongolia .pop-up,
+  #map-point-australia .pop-up{
+    transform: translateX(-90%);
+  }
+  
   
   .map-point:hover .pop-up {
     opacity: 1;
     transform: translateX(0);
+  }
+
+  .map-point:hover {
+    background-color: #FCB029;
   }
   
   
   @media (max-width: 640px) {
     /* Adjust the size and position of the map-points and pop-ups for smaller screens */
     .map-point {
-      width: 6px;
-      height: 6px;
+      width: 12px;
+      height: 12px;
     }
     
     .pop-up {
-      width: 200px;
       padding: 10px;
     }
   }
@@ -136,12 +142,11 @@ html {
   @media (min-width: 641px) and (max-width: 1024px) {
     /* Adjust the size and position of the map-points and pop-ups for medium-sized screens */
     .map-point {
-      width: 8px;
-      height: 8px;
+      width: 16px;
+      height: 16px;
     }
     
     .pop-up {
-      width: 220px;
       padding: 12px;
     }
   }
@@ -149,12 +154,11 @@ html {
   @media (min-width: 1025px) {
     /* Adjust the size and position of the map-points and pop-ups for larger screens */
     .map-point {
-      width: 10px;
-      height: 10px;
+      width: 20px;
+      height: 20px;
     }
     
     .pop-up {
-      width: 250px;
       padding: 15px;
     }
   }
