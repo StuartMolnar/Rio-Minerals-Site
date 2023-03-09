@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rio Minerals - About</title>    
+    <title>Rio Minerals - Home</title>    
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
     <script type="module" src="css/tailwind.css"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index-image-stack.css">
+    <link rel="stylesheet" href="css/carousel.css">
     <script src="js/navbar.js"></script>
     <script src="js/footer.js"></script>
+    <script src="js/index.js"></script>
 </head>
 <body onload="initMobileMenu()" class="min-h-screen bg-white-off text-black-accent fs-body">
 
@@ -219,7 +221,7 @@
           <div class="index-child-1">
 
           </div>
-          <div class="p-12 space-y-6 index-child-2">
+          <div class="p-[4.5rem] space-y-6 index-child-2">
             
             <div class="header-line"></div>
             <p class="fs-heading-4 fw-700">Geochemistry</p>
@@ -234,7 +236,7 @@
         <div class="hidden col-span-1 xl:col-span-2 sm:block"></div> 
 
         <div class="index-parent sm:col-span-10 xl:col-span-8">
-          <div class="p-12 space-y-6 index-child-1">
+          <div class="p-[4.5rem] space-y-6 index-child-1">
             
             <div class="header-line"></div>
             <p class="fs-heading-4 fw-700">Tenure Acquisition</p>
@@ -257,7 +259,7 @@
           <div class="index-child-1">
 
           </div>
-          <div class="p-12 space-y-6 index-child-2">
+          <div class="p-[4.5rem] space-y-6 index-child-2">
             <div class="header-line"></div>
             <p class="fs-heading-4 fw-700">Trenching</p>
             <p class="fw-400 word-spacing">Whether through mechanized or manual means, we can arrange trenching and road building projects to assist your project.</p>
@@ -272,11 +274,10 @@
 
     <section id="mobile-section-2" class="block sm:hidden">
       <container class="grid grid-cols-12 p-6">
-        <div class="flex-row col-span-12">
-          <p class="fs-heading-3 fw-600 text-blue-dark">We offer a range of services to meet your needs.</p>
-          <div class="flex pt-6">
+          <p class="fs-heading-3 fw-600 text-blue-dark col-span-12">We offer a range of services to meet your needs.</p>
+          <div class="flex pt-6 col-span-12 justify-center space-x-4">
             <div class="flex-row space-y-4">
-              <div class="flex gap-2 fs-checkmark-text fw-600">
+              <div class="flex gap-2 fs-checkmark-text fw-500">
                 <img src="images/checkmark.svg" alt="">
                 <p>Geology</p>
               </div>
@@ -320,13 +321,12 @@
               </div>
             </div>
           </div>
-
-          <div class="flex justify-center">
-            <a href="/services.html">
-              <button class="min-w-[170px] min-h-[50px] button-primary fs-button mt-8">View Our Services</button>
-            </a>
-          </div>
       </container>
+      <div class="flex justify-center">
+        <a href="/services.html">
+          <button class="min-w-[170px] min-h-[50px] button-primary fs-button mt-8">View Our Services</button>
+        </a>
+      </div>
     </section>
 
 
@@ -412,15 +412,41 @@
 
 
 
-
-
-
-
+    <div class="carousel w-full">
+      <div id="slide1" class="carousel-item relative w-full active">
+        <img src="images/geology/1.jpeg" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide4" class="btn btn-circle">❮</a> 
+          <a href="#slide2" class="btn btn-circle">❯</a>
+        </div>
+      </div> 
+      <div id="slide2" class="carousel-item relative w-full">
+        <img src="images/geology/2.jpeg" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide1" class="btn btn-circle">❮</a> 
+          <a href="#slide3" class="btn btn-circle">❯</a>
+        </div>
+      </div> 
+      <div id="slide3" class="carousel-item relative w-full">
+        <img src="images/geology/3.jpeg" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide2" class="btn btn-circle">❮</a> 
+          <a href="#slide4" class="btn btn-circle">❯</a>
+        </div>
+      </div> 
+      <div id="slide4" class="carousel-item relative w-full">
+        <img src="images/geology/4.jpeg" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide3" class="btn btn-circle">❮</a> 
+          <a href="#slide1" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+    </div>
 
 
     <section class="grid grid-cols-12 gap-4">
       <div class="hidden col-span-1 sm:block"></div>      
-      <a href="#" class="flex flex-row-reverse items-center col-span-12 gap-2 px-6 pt-6 sm:col-span-10">
+      <a id="back-to-top-button" href="#" class="flex flex-row-reverse items-center col-span-12 gap-2 px-6 sm:col-span-10">
         <img src="images/go-to-top-arrow.png" class="max-w-6 max-h-6" alt="">
         <p>Back to Top</p>
       </a>

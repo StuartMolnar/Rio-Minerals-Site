@@ -86,19 +86,21 @@
   
 #desktop-section-3-divs .index-child-2,
 #desktop-section-5-divs .index-child-2 {
-    position: absolute;
-    top: var(--right-div-inset);
-    left: calc(100% - var(--div-width-right));
-    height: calc(var(--div-height) - (var(--right-div-inset) * 2));
-    width: var(--div-width-right);
-  
-    background: #232341;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-y: auto; /* Enable a vertical scrollbar if the content overflows */
-  
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc(100% - var(--div-width-right));
+  width: var(--div-width-right);
+  background: #232341;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: auto; /* Enable a vertical scrollbar if the content overflows */
+  display: flex; /* make the div flexible in height */
+  flex-direction: column; /* stack its child elements vertically */
 }
+
+
 
 #desktop-section-5-divs .index-child-1 {
     background-image: url(../images/trenching/29.jpeg);
@@ -119,9 +121,9 @@
   
 #desktop-section-4-divs .index-child-1 {
     position: absolute;
-    top: var(--right-div-inset);
+    top: 50%;
+    transform: translateY(-50%);
     left: 0;
-    height: calc(var(--div-height) - (var(--right-div-inset) * 2));
     width: var(--div-width-right);
     
     background: #232341;
@@ -129,10 +131,12 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    
-    overflow-y: auto; /* Enable a vertical scrollbar if the content overflows */
-    z-index: 1; /* Position the left div above the right div */
+    z-index: 1;
+
+    display: flex; /* make the div flexible in height */
+    flex-direction: column; /* stack its child elements vertically */
 }
+
   
 #desktop-section-4-divs .index-child-2 {
     position: absolute;
