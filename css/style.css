@@ -110,11 +110,6 @@ html {
     z-index: 1;
     display: inline-block;
   }
-
-  #map-point-mongolia .pop-up,
-  #map-point-australia .pop-up{
-    transform: translateX(-90%);
-  }
   
   
   .map-point:hover .pop-up {
@@ -137,6 +132,11 @@ html {
     .pop-up {
       padding: 10px;
     }
+        
+    #map-point-mongolia .pop-up,
+    #map-point-australia .pop-up{
+        transform: translateX(-90%);
+    }
   }
   
   @media (min-width: 641px) and (max-width: 1024px) {
@@ -149,10 +149,15 @@ html {
     .pop-up {
       padding: 12px;
     }
+        
+    #map-point-mongolia .pop-up,
+    #map-point-australia .pop-up{
+        transform: translateX(-90%);
+    }
   }
   
   @media (min-width: 1025px) {
-    /* Adjust the size and position of the map-points and pop-ups for larger screens */
+    /* Adjust the size and position of the map-points and pop-ups for large screens */
     .map-point {
       width: 20px;
       height: 20px;
@@ -161,4 +166,37 @@ html {
     .pop-up {
       padding: 15px;
     }
+
+        
+    #map-point-mongolia .pop-up,
+    #map-point-australia .pop-up{
+        transform: translateX(-90%);
+    }
+
+  }
+
+  @media (min-width: 1600px){
+    
+    /* Adjust the size and position of the map-points and pop-ups for larger screens */
+    .map-point {
+        width: 30px;
+        height: 30px;
+      }
+      
+      .pop-up {
+        padding: 15px;
+      }
+  }
+
+  @media (min-width: 2000px){
+    
+    /* Adjust the size and position of the map-points and pop-ups for much larger screens */
+    .map-point {
+        width: 40px;
+        height: 40px;
+      }
+      
+      .pop-up {
+        padding: 15px;
+      }
   }
