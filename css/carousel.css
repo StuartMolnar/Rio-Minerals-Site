@@ -1,0 +1,20 @@
+.carousel-cell {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .carousel-cell img {
+    width: 100%;
+    height: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .carousel-nav-btn {
+    background-color:#F6F5F5; 
+    padding: 5px 10px; 
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+  }

@@ -1,12 +1,11 @@
 /* ------------------ DESKTOP ------------------ */
 #desktop-section-1 {
-    --div-height: 500px;
-    --div-width-right: 65%;
-    --div-width-left: 45%;
-    --right-div-top-offset: 100px;
-    
-    --parent-height: calc(var(--div-height) + var(--right-div-top-offset) + var(--parent-height-offset));
-    --parent-height-offset: 150px;
+  --div-height: 500px;
+  --div-width-right: 65%;
+  --div-width-left: 45%;
+  --right-div-top-offset: 100px;
+  --parent-height-offset: 150px;
+  --parent-height: calc(var(--div-height) + var(--right-div-top-offset) + var(--parent-height-offset));
 }
 
 #desktop-section-1 .index-parent {
@@ -20,7 +19,6 @@
   left: 0;
   height: var(--div-height);
   width: var(--div-width-left);
-
   background-image: url(../images/geology/24.jpeg);
   background-position: center;
   background-repeat: no-repeat;
@@ -29,128 +27,154 @@
 
 #desktop-section-1 .index-child-2 {
   position: absolute;
-  top: calc(calc(var(--parent-height-offset) / 2) + var(--right-div-top-offset));
+  top: calc(var(--parent-height-offset) / 2 + var(--right-div-top-offset));
   left: calc(100% - var(--div-width-right));
   height: var(--div-height);
   width: var(--div-width-right);
-
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/geology/79.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow-y: auto; /* Enable a vertical scrollbar if the content overflows */
-
+  overflow-y: auto;
 }
-
 
 #desktop-section-1 {
   background-color: #232341;
 }
 
-#desktop-section-2 {
-  background: linear-gradient(0deg, rgba(240, 240, 240, 0.6), rgba(240, 240, 240, 0.6)), url(../images/geochemistry/1.jpeg);
 
-  background-position: center;
+/* --- Sliding Animation --- */
+
+/* @keyframes slide-from-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes slide-from-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+.index-child-1{
+  animation: slide-from-left 1s ease-out forwards;
+}
+.index-child-2 {
+  animation: slide-from-right 1s ease-out forwards;
+} */
+/* ---------------------------- */
+
+.index-parent {
+  overflow: hidden;
+}
+
+#desktop-section-2 {
+  background: linear-gradient(0deg, rgba(240, 240, 240, 0.6), rgba(240, 240, 240, 0.6)), url(../images/index-services-background.png);
+
+  background-position: right top;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #desktop-section-3-divs,
 #desktop-section-5-divs {
-    --div-height: 500px;
-    --div-width-right: 60%;
-    --div-width-left: 45%;
-    --right-div-inset: 50px;
+  --div-height: 500px;
+  --div-width-right: 60%;
+  --div-width-left: 45%;
 }
-
 
 #desktop-section-3-divs .index-parent,
 #desktop-section-5-divs .index-parent {
-    position: relative;
-    height: var(--div-height);
-  }
-  
+  display: flex;
+  height: var(--div-height);
+  position: relative;
+}
+
 #desktop-section-3-divs .index-child-1,
 #desktop-section-5-divs .index-child-1 {
-    position: absolute;
-    top: calc(var(--parent-height-offset) / 2);
-    left: 0;
-    height: var(--div-height);
-    width: var(--div-width-left);
-  
-    background-image: url(../images/geochemistry/25.jpeg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-  
-#desktop-section-3-divs .index-child-2,
-#desktop-section-5-divs .index-child-2 {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: calc(100% - var(--div-width-right));
-  width: var(--div-width-right);
-  background: #232341;
+  height: var(--div-height);
+  width: var(--div-width-left);
+  background-image: url(../images/geochemistry/25.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow-y: auto; /* Enable a vertical scrollbar if the content overflows */
-  display: flex; /* make the div flexible in height */
-  flex-direction: column; /* stack its child elements vertically */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+#desktop-section-3-divs .index-child-2,
+#desktop-section-5-divs .index-child-2 {
+  position: absolute;
+  left: calc(100% - var(--div-width-right));
+  width: var(--div-width-right);
+  background: #232341;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  align-self: center;
+}
+
+
+
 
 
 
 #desktop-section-5-divs .index-child-1 {
-    background-image: url(../images/trenching/29.jpeg);
+    background-image: url(../images/trenching/6.jpeg);
 }
 
 #desktop-section-4-divs {
-    --div-height: 500px;
-    --div-width-right: 55%;
-    --div-width-left: 50%;
-    --right-div-inset: 50px;
+  --div-height: 500px;
+  --div-width-right: 55%;
+  --div-width-left: 52.5%;
 }
-
 
 #desktop-section-4-divs .index-parent {
-    position: relative;
-    height: var(--div-height);
-  }
-  
+  position: relative;
+  height: var(--div-height);
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
 #desktop-section-4-divs .index-child-1 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    width: var(--div-width-right);
-    
-    background: #232341;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    z-index: 1;
-
-    display: flex; /* make the div flexible in height */
-    flex-direction: column; /* stack its child elements vertically */
+  width: var(--div-width-left);
+  background: #232341;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  align-self: center;
 }
 
-  
 #desktop-section-4-divs .index-child-2 {
-    position: absolute;
-    top: 0;
-    left: calc(100% - var(--div-width-left));
-    height: var(--div-height);
-    width: var(--div-width-left);
-
-    background-image: url(../images/tenure_acquisition/4.jpeg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  
+  position: absolute;
+  top: 0;
+  left: calc(100% - var(--div-width-left));
+  height: var(--div-height);
+  width: var(--div-width-right);
+  background-image: url(../images/tenure_acquisition/4.jpeg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 
 
 /* ------------------ MOBILE ------------------ */
@@ -216,7 +240,7 @@
 
 #mobile-section-3 {
   --top-div-height: 300px;
-  --bot-div-height: 300px;
+  --bot-div-height: 325px;
   --bot-width: 100%;
   --top-div-offset: 25px;
   --top-width: calc(100% - (var(--top-div-offset) * 2));
@@ -265,10 +289,11 @@
 }
 
 
-
+/* this is using new positioning method
+   but the header line is disappearing */
 #mobile-section-4 {
   --top-div-height: 300px;
-  --bot-div-height: 375px;
+  --bot-div-height: 385px;
   --bot-width: 100%;
   --top-div-offset: 25px;
   --top-width: calc(100% - (var(--top-div-offset) * 2));
@@ -296,7 +321,7 @@
   
 
   background-image: url(../images/tenure_acquisition/4.jpeg);
-  background-position: center;
+  background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
   
@@ -321,7 +346,7 @@
 
 #mobile-section-5 {
   --top-div-height: 300px;
-  --bot-div-height: 210px;
+  --bot-div-height: 240px;
   --bot-width: 100%;
   --top-div-offset: 25px;
   --top-width: calc(100% - (var(--top-div-offset) * 2));
@@ -348,7 +373,7 @@
 
   
 
-  background-image: url(../images/trenching/29.jpeg);
+  background-image: url(../images/trenching/6.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -374,6 +399,8 @@
 
 .header-line {
     height: 1px;
+    border-width: 1px;
     background: #FFFFFF;
-    width: 30%;
+    width: 20%;
+    z-index: 2;
   }

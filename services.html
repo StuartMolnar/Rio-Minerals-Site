@@ -10,8 +10,9 @@
 
     <script type="module" src="css/tailwind.css"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
     <script src="js/navbar.js"></script>
-    <script src="js/services.js"></script>
+    <script defer src="js/services.js"></script>
     <script src="js/footer.js"></script>
 </head>
 <body onload="changeService('geology'); initMobileMenu()" class="min-h-screen bg-white-off text-black-accent fs-body">
@@ -286,7 +287,12 @@
         </div>
 
         <div class="hidden col-span-1 sm:block"></div>
-      </container>       
+      </container>   
+      
+      <!-- Lightbox container -->
+      <div id="lightbox" class="lightbox-container">
+        <img src="" alt="Lightbox Image">
+      </div>
     
     </section>
 

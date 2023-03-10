@@ -71,6 +71,59 @@ function toggleDropdown() {
     // document.getElementById('service-' + serviceString).textContent = document.getElementById('service-1').textContent;
     // document.getElementById('service-1').textContent = tempService;
   }
+
+
+// Get the lightbox container and image elements
+const lightboxContainer = document.getElementById('lightbox');
+const lightboxImage = lightboxContainer.querySelector('img');
+
+function showLightbox(event) {
+  // Get a reference to the clicked image element
+  const clickedImage = event.target;
+
+  // Set the lightbox image source to the clicked image source
+  lightboxImage.src = clickedImage.src;
+
+  // Show the lightbox container
+  lightboxContainer.style.display = 'block';
+
+  // Disable scrolling on the document body
+  document.body.style.overflow = 'hidden';
+}
+
+
+function hideLightbox() {
+  // Hide the lightbox container
+  lightboxContainer.style.display = 'none';
+
+  // Reset the lightbox image source
+  lightboxImage.src = '';
+
+  // Enable scrolling on the document body
+  document.body.style.overflow = 'auto';
+}
+
+// Add click event listeners to the lightbox container and close button to hide the lightbox
+lightboxContainer.addEventListener('click', function(event) {
+  // Only hide the lightbox if the click occurred on the background
+  if (event.target === this) {
+    hideLightbox();
+  }
+});
+
+const closeButton = document.createElement('button');
+closeButton.innerHTML = 'Close';
+closeButton.addEventListener('click', function() {
+  hideLightbox();
+});
+lightboxContainer.appendChild(closeButton);
+
+// Add keydown event listener to the document to close the lightbox on escape key press
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape' && lightboxContainer.style.display === 'block') {
+    hideLightbox();
+  }
+});
   
   function setServiceDesktop(serviceString){
     var serviceListTop = document.getElementById('services-menu-desktop-top');
@@ -99,9 +152,9 @@ function toggleDropdown() {
       const img = document.createElement('img');
       img.className = "object-cover w-full mb-2.5";
       img.src = 'images/' + serviceString + '/' + i + '.jpeg';
+      img.onclick = showLightbox;
   
       document.getElementById('services-image-grid').appendChild(img);
     }
   }
-  
   

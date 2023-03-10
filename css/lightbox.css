@@ -1,0 +1,33 @@
+  /* Hide the lightbox container by default */
+  .lightbox-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+  }
+  
+  /* Position the lightbox image in the center of the container */
+  .lightbox-container img {
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+
+#services-image-grid img{
+    cursor: pointer;
+}
+
+.carousel-cell img {
+    cursor: pointer;
+}
