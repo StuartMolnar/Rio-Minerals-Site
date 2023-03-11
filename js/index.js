@@ -84,6 +84,7 @@ function handleDivIntersect(entries) {
       } else if (entries[i].target.classList.contains('index-child-2')) {
         entries[i].target.classList.add('animate__fadeInRightBig');
       }
+      entries[i].target.style.opacity = 1;
     }
   }
 }

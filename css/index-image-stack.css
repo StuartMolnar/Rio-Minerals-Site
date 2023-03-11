@@ -175,6 +175,12 @@
   background-size: cover;
 }
 
+.index-child-1,
+.index-child-2 {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
 
 
 /* ------------------ MOBILE ------------------ */
