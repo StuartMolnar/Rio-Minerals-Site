@@ -23,7 +23,7 @@ html {
 #navbar-min {
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: #F6F5F5;
   transition: height 0.3s ease-in-out;
   position: absolute; /* add this line */
   top: 100%; /* add this line */
@@ -31,6 +31,7 @@ html {
 }
 #navbar-max {
   transition: height 0.3s ease-in-out;
+  width: 100%; /* add this line */
 }
 
 #navbar-min img {
