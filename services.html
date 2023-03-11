@@ -8,48 +8,60 @@
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-    <script type="module" src="css/tailwind.css"></script>
+    <link rel="preload" href="css/tailwind.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="css/tailwind.css" rel="stylesheet"></noscript>
+    
+    <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="css/lightbox.css">
     <script defer src="js/navbar.js"></script>
     <script defer src="js/services.js"></script>
     <script src="js/footer.js"></script>
 </head>
-<body onload="changeService('geology'); initNavbarMinimizer(); initMobileMenu()" class="min-h-screen bg-white-off text-black-accent fs-body">
+<body onload="changeService('geology'); initNavbarSpacer(); initNavbarMinimizer(); initMobileMenu(); " class="min-h-screen bg-white-off text-black-accent fs-body">
 
   <div id="navbar-spacer"></div>
 
-  <header id="navbar-full" class="text-black fs-nav fw-400 bg-white-off">
+  <header id="navbar-full" class="text-black fs-nav fw-400 bg-white-off index-navbar">
     <section id="navbar-min" class="hidden">
     <img src="../images/downward-angle.png" class="p-3 h-9 sm:h-10 navbar-min-icon" alt="">
     </section>
-    <section id="navbar-max" class="grid items-center grid-cols-12 gap-4 py-12 mx-6 sm:mx-0">
+    <section id="navbar-max" class="grid items-center grid-cols-8 gap-4 py-4 mx-6 md:grid-cols-12 sm:mx-0">
 
-      <div class="hidden col-span-1 sm:block"></div>
+      <div class="hidden col-span-1 md:block"></div>
 
-      <a href="/index.html" class="col-span-7 sm:col-span-2">
+      <a href="/index.html" class="col-span-3 pl-6 md:col-span-2 md:pl-0">
         <img src="images/standard-rio-logo.svg" class="h-14 sm:h-24" alt="Rio Minerals Ltd.">
       </a>      
 
-      <div class="col-span-4"></div>
+
         
-      <div class="flex flex-row-reverse col-span-1 hamburger-div sm:hidden">
+      <div class="flex flex-row-reverse col-span-5 mr-12 hamburger-div md:hidden">
         <button id="hamburger-button" class="cursor-pointer fw-500">
           &#9776;
         </button>
       </div>
-      <nav class="hidden col-span-4 sm:flex sm:flex-row-reverse" aria-label="main">
-        <a href="#footer-drop-point" class="px-4 no-underline hover:underline underline-offset-4">Contact</a>
-        <a href="/services.html" class="px-4 no-underline hover:underline underline-offset-4">Services</a>        
+      <nav class="hidden col-span-4 md:flex" aria-label="main">
+        <a href="/index.html" class="px-4 no-underline hover:underline underline-offset-4">Home</a>        
         <a href="/about.html" class="px-4 no-underline hover:underline underline-offset-4">About</a>
-        <a href="/index.html" class="px-4 underline hover:underline underline-offset-4">Home</a>
+        <a href="/services.html" class="px-4 underline hover:underline underline-offset-4">Services</a>
       </nav>
 
-      <div class="hidden col-span-1 sm:block"></div>
+      
+      <div class="hidden col-span-2 lg:col-span-1 md:block"></div>
+
+      <div class="hidden col-span-2 md:flex md:flex-row-reverse" aria-label="main">
+        <a href="#footer-drop-point">
+          <button class="sm:min-w-[200px] min-w-[160px] sm:min-h-[65px] min-h-[50px] button-primary fs-button">Contact Us Now</button>
+        </a>
+      </div>
+
+      <div class="hidden col-span-1 lg:col-span-2 md:block"></div>
 
     </section>
     <section id="mobile-menu" class="absolute top-0 flex-col items-center hidden w-full text-white origin-top bg-blue-dark fs-nav fw-500">
-      <button class="self-end px-5 pb-4 text-4xl pt-14 top-1">
+      <button class="self-end px-5 pt-8 pb-4 text-4xl top-1">
         &times;
       </button>
       <nav class="flex flex-col min-h-screen py-8 text-center" aria-label="mobile">
@@ -79,7 +91,7 @@
     </section>
 
 
-    <section name="services-menu-desktop" class="hidden lg:block">
+    <section name="services-menu-desktop" class="hidden mb-12 lg:block">
       <container id="services-menu-desktop-top" class="grid grid-cols-12 gap-4 mx-0 my-6 mt-12">
         <div class="col-span-1"></div>
 
@@ -303,7 +315,6 @@
         <img src="images/go-to-top-arrow.png" class="max-w-6 max-h-6" alt="">
         <p>Back to Top</p>
       </a>
-
       <div class="hidden col-span-1 sm:block"></div>
     </section>
 
@@ -311,7 +322,6 @@
   </main>
 
 
-      
   <footer id="footer" class="fw-400">
     
     <div class="mx-0 my-8 divider-line"></div>
@@ -320,21 +330,21 @@
 
         <div class="hidden col-span-1 md:block"></div>
 
-        <div class="flex flex-col items-start col-span-5 gap-8 mt-8">
+        <div class="flex flex-col items-start col-span-5 gap-8 mt-8 sm:mr-16">
           <img class="h-14 md:h-24" src="images/blue-rio-logo 1.svg" alt="">
           <p class="word-spacing">Interested in our services? Contact us now for project quotes and consultation. All inquiries are kept strictly confidential. References available upon request.</p>
           
           <div class="flex flex-col col-span-4 gap-2">
             <div class="flex gap-2">
-                <img class="h-7 w-5 pt-1.5" src="images/location-pin.svg" alt="">
+                <img class="w-5 h-6" src="images/location-pin.svg" alt="">
                 <a href="https://www.google.com/maps/place/800+W+Pender+St+%23615,+Vancouver,+BC+V6C+2V6/data=!4m2!3m1!1s0x548671820d72b67f:0x40a60cccd8063eab?sa=X&ved=2ahUKEwjj9_7q5NX8AhUbGTQIHaOICCEQ8gF6BAggEAI">615-800 W. Pender Street<br>Vancouver, BC<br>Canada V6C 2V6</a>
             </div>
             <div class="flex gap-2">
-                  <img class="h-7 w-5 pt-1.5" src="images/phone.svg" alt="">
+                  <img class="w-5 h-6" src="images/phone.svg" alt="">
                 <a href="tel:+16046712245">604-671-2245</a>
             </div>
             <div class="flex gap-2">
-                <img class="h-7 w-5 pt-1.5" src="images/mail.svg" alt="">
+                <img class="w-5 h-6" src="images/mail.svg" alt="">
                 <a href="mailto:info@riominerals.com">info@riominerals.com</a>
             </div>
           </div>
@@ -349,13 +359,13 @@
     </section>
 
     <div id="copywrite-text" class="grid mx-6 my-6 text-center place-items-center md:mx-0 fw-400-fs-copywrite-text text-gray-dark">
-      <p>Copyright Rio Minerals Ltd. All Rights Reserved © 2022</p>
+      <p>Copyright Rio Minerals Ltd. All Rights Reserved © 2023</p>
     </div>
   </footer>
 
   	<!--Add a script by google -->
 	<script src=
-  "https://maps.googleapis.com/maps/api/js?key=AIzaSyDTCpBFfvmVLYiOt5lNpw-_dTsfuhbxLTc&callback=initMap&libraries=&v=weekly"
+  "https://maps.googleapis.com/maps/api/js?key=<mykey>&callback=initMap&libraries=&v=weekly"
       async>
     </script>
 </body>

@@ -12,3 +12,4 @@ package.json:
 tailwind.config.js
   content: ['./*.html'],
 
+npx tailwindcss -i ./css/tailwind.css -o ./css/build.css --watch

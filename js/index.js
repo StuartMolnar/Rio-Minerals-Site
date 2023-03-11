@@ -63,7 +63,7 @@ if (window.innerWidth <= 640) {
   hammer.on('tap', function(event) {
     const carouselWidth = carousel.offsetWidth;
     const tapX = event.center.x;
-
+  
     if (tapX < carouselWidth * 0.3) {
       prevImage();
     } else if (tapX > carouselWidth * 0.7) {
@@ -71,6 +71,24 @@ if (window.innerWidth <= 640) {
     }
   });
 }
+
+/* Set index video height */
+const navbar = document.getElementById('navbar-full');
+const videoContainer = document.querySelector('.video-container');
+const heroSection = document.getElementById('index-hero');
+
+function setVideoHeight() {
+  const navbarHeight = navbar.offsetHeight;
+  const viewportHeight = window.innerHeight;
+  heroSection.style.height = `${viewportHeight - navbarHeight}px`;
+}
+
+// set initial video height
+setVideoHeight();
+
+// update video height on window resize
+window.addEventListener('resize', setVideoHeight);
+
 
 /* Divs Animation */
 const indexChild1 = document.querySelectorAll('.index-child-1');

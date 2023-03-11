@@ -35,7 +35,6 @@ html {
 }
 
 #navbar-min img {
-  //filter: brightness(0) invert(1);
   filter: grayscale(100%) /* convert to grayscale */
           contrast(200%) /* increase contrast to enhance the effect */
           sepia(100%) /* apply sepia to simulate a color filter */
@@ -78,26 +77,15 @@ html {
   display: block;
   width: 100%;
   height: auto;
-  background-color: white;
+  background-color:#F6F5F5;
 }
 
-
+/* .index-navbar {
+  background-color: #232341;
+} */
 
 
 /* -------------- */
-
-#hero-image {
-    background-image: url('../images/video.png');
-    height: 100vh;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#hero-image #hero {
-    //text-shadow: 0px 2px black;
-}
 
 #article-1-image {
     background-image: url('../images/index-h1-text.png')
@@ -113,12 +101,24 @@ html {
     border: 1px solid #232341;
 }
 
-#index-hero {
-    background-image: url('../images/video.png');
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
 }
 
 
@@ -135,7 +135,10 @@ html {
 }
 
 #back-to-top-button {
-    filter: invert(66%) sepia(0%) saturate(6%) hue-rotate(153deg) brightness(97%) contrast(84%);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  filter: invert(66%) sepia(0%) saturate(6%) hue-rotate(153deg) brightness(97%) contrast(84%);
 }
 
 #back-to-top-button:hover {
@@ -194,6 +197,7 @@ html {
     .map-point {
       width: 12px;
       height: 12px;
+      transform: translateX(-15%) translateY(-25%);
     }
     
     .pop-up {
@@ -202,7 +206,7 @@ html {
         
     #map-point-mongolia .pop-up,
     #map-point-australia .pop-up{
-        transform: translateX(-90%);
+        transform: translateX(-130%);
     }
   }
   
@@ -219,7 +223,7 @@ html {
         
     #map-point-mongolia .pop-up,
     #map-point-australia .pop-up{
-        transform: translateX(-90%);
+        transform: translateX(-130%);
     }
   }
   
@@ -237,7 +241,7 @@ html {
         
     #map-point-mongolia .pop-up,
     #map-point-australia .pop-up{
-        transform: translateX(-90%);
+        transform: translateX(-130%);
     }
 
   }
@@ -252,6 +256,11 @@ html {
       
       .pop-up {
         padding: 15px;
+      }
+        
+      #map-point-mongolia .pop-up,
+      #map-point-australia .pop-up{
+          transform: translateX(0);
       }
   }
 
