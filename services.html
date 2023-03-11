@@ -11,16 +11,19 @@
     <script type="module" src="css/tailwind.css"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/lightbox.css">
-    <script src="js/navbar.js"></script>
+    <script defer src="js/navbar.js"></script>
     <script defer src="js/services.js"></script>
     <script src="js/footer.js"></script>
 </head>
-<body onload="changeService('geology'); initMobileMenu()" class="min-h-screen bg-white-off text-black-accent fs-body">
+<body onload="changeService('geology'); initNavbarMinimizer(); initMobileMenu()" class="min-h-screen bg-white-off text-black-accent fs-body">
 
-  <!-- !!!CHANGE API KEY RESTRICTIONS BEFORE PUBLISHING-->
+  <div id="navbar-spacer"></div>
 
   <header id="navbar-full" class="text-black fs-nav fw-400 bg-white-off">
-    <section class="grid items-center grid-cols-12 gap-4 py-12 mx-6 sm:mx-0">
+    <section id="navbar-min" class="hidden">
+    <img src="../images/downward-angle.png" class="h-12 p-3 navbar-min-icon" alt="">
+    </section>
+    <section id="navbar-max" class="grid items-center grid-cols-12 gap-4 py-12 mx-6 sm:mx-0">
 
       <div class="hidden col-span-1 sm:block"></div>
 
@@ -30,16 +33,16 @@
 
       <div class="col-span-4"></div>
         
-      <div class="flex flex-row-reverse col-span-1 sm:hidden">
+      <div class="flex flex-row-reverse col-span-1 hamburger-div sm:hidden">
         <button id="hamburger-button" class="cursor-pointer fw-500">
           &#9776;
         </button>
       </div>
       <nav class="hidden col-span-4 sm:flex sm:flex-row-reverse" aria-label="main">
         <a href="#footer-drop-point" class="px-4 no-underline hover:underline underline-offset-4">Contact</a>
-        <a href="/services.html" class="px-4 underline hover:underline underline-offset-4">Services</a>        
+        <a href="/services.html" class="px-4 no-underline hover:underline underline-offset-4">Services</a>        
         <a href="/about.html" class="px-4 no-underline hover:underline underline-offset-4">About</a>
-        <a href="/index.html" class="px-4 no-underline hover:underline underline-offset-4">Home</a>
+        <a href="/index.html" class="px-4 underline hover:underline underline-offset-4">Home</a>
       </nav>
 
       <div class="hidden col-span-1 sm:block"></div>
@@ -61,9 +64,6 @@
       
     </section>
 
-    <section id="navbar-min" class="hidden">
-      
-    </section>
   </header>
 
 

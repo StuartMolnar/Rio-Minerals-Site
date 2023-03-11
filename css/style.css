@@ -19,6 +19,72 @@ html {
     }
 }
 
+/* --- navbar --- */
+#navbar-min {
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  transition: height 0.3s ease-in-out;
+  position: absolute; /* add this line */
+  top: 100%; /* add this line */
+  width: 100%; /* add this line */
+}
+#navbar-max {
+  transition: height 0.3s ease-in-out;
+}
+
+#navbar-min img {
+  //filter: brightness(0) invert(1);
+  filter: grayscale(100%) /* convert to grayscale */
+          contrast(200%) /* increase contrast to enhance the effect */
+          sepia(100%) /* apply sepia to simulate a color filter */
+          hue-rotate(calc((35, 35, 65) - (44, 43, 44))) /* calculate the difference between start and end colors */
+          brightness(1000%) /* increase brightness to lighten the final result */
+          saturate(10000%); /* increase saturation to restore color richness */
+}
+
+
+#navbar-full {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: auto;
+  transition: height 0.3s ease-in-out;
+  display: flex; /* add this line */
+  flex-direction: column; /* add this line */
+  align-items: center; /* add this line */
+}
+
+#navbar-full.scrolled #navbar-min .navbar-min-icon {
+  transform: rotate(0deg);
+}
+
+#navbar-full .navbar-min-expanded .navbar-min-icon {
+  transform: rotate(180deg);
+}
+
+#navbar-full.scrolled #navbar-max {
+  display: none;
+}
+
+#navbar-full.scrolled #navbar-min {
+  display: flex;
+}
+
+#navbar-full.scrolled::after {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+
+
+
+
+/* -------------- */
+
 #hero-image {
     background-image: url('../images/video.png');
     height: 100vh;

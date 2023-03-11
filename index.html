@@ -14,23 +14,20 @@
     <link rel="stylesheet" href="css/lightbox.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/animate.min.css">
-    <script src="js/navbar.js"></script>
+    <script defer src="js/navbar.js"></script>
     <script src="js/footer.js"></script>
     <script defer src="js/index.js"></script>
     <script src="js/hammer.min.js"></script>
 </head>
-<body onload="initMobileMenu()" class="min-h-screen bg-white-off text-black-accent fs-body">
+<body onload="initMobileMenu(); initNavbarMinimizer();" class="min-h-screen bg-white-off text-black-accent fs-body">
 
-  <!-- <div class="grid grid-cols-12 gap-4">
-    <div class="bg-blue-400">01</div>
-    <div class="col-span-6 bg-blue-400">06</div>
-    <div class="col-span-4 bg-blue-400">04</div>
-    <div class="col-span-1 bg-blue-400">01</div>
-  </div> -->
-
+  <div id="navbar-spacer"></div>
 
   <header id="navbar-full" class="text-black fs-nav fw-400 bg-white-off">
-    <section class="grid items-center grid-cols-12 gap-4 py-12 mx-6 sm:mx-0">
+    <section id="navbar-min" class="hidden">
+    <img src="../images/downward-angle.png" class="h-12 p-3 navbar-min-icon" alt="">
+    </section>
+    <section id="navbar-max" class="grid items-center grid-cols-12 gap-4 py-12 mx-6 sm:mx-0">
 
       <div class="hidden col-span-1 sm:block"></div>
 
@@ -40,7 +37,7 @@
 
       <div class="col-span-4"></div>
         
-      <div class="flex flex-row-reverse col-span-1 sm:hidden">
+      <div class="flex flex-row-reverse col-span-1 hamburger-div sm:hidden">
         <button id="hamburger-button" class="cursor-pointer fw-500">
           &#9776;
         </button>
@@ -71,9 +68,6 @@
       
     </section>
 
-    <section id="navbar-min" class="hidden">
-      
-    </section>
   </header>
   
   <main>
