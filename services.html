@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rio Minerals - Services</title>    
+    <link rel="icon" href="images/icon.png">
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
@@ -40,7 +41,7 @@
           &#9776;
         </button>
       </div>
-      <nav class="hidden col-span-4 md:flex" aria-label="main">
+      <nav class="items-center justify-center hidden col-span-4 md:flex" aria-label="main">
         <a href="/index.html" class="px-4 no-underline hover:underline underline-offset-4">Home</a>        
         <a href="/about.html" class="px-4 no-underline hover:underline underline-offset-4">About</a>
         <a href="/services.html" class="px-4 underline hover:underline underline-offset-4">Services</a>
@@ -302,30 +303,27 @@
     </section>
 
 
-<!-- Lightbox container -->
-<div id="lightbox" class="lightbox-container">
-  <button class="lightbox-nav-button lightbox-nav-button-prev" aria-label="Previous Image">
-    <p>❮</p>
-  </button>
-  <button class="lightbox-nav-button lightbox-nav-button-next" aria-label="Next Image">
-    <p>❯</pi>
-  </button>
-  <img src="" alt="Lightbox Image">
-  <button class="lightbox-close-button" aria-label="Close Lightbox">
-    &times;
-  </button>
-</div>
+    <!-- Lightbox container -->
+    <div id="lightbox" class="lightbox-container">
+      <button class="lightbox-nav-button lightbox-nav-button-prev" aria-label="Previous Image">
+        <p>❮</p>
+      </button>
+      <button class="lightbox-nav-button lightbox-nav-button-next" aria-label="Next Image">
+        <p>❯</pi>
+      </button>
+      <div id="lightbox-count"></div>
+      <img src="" alt="Lightbox Image">
+      <button class="lightbox-close-button" aria-label="Close Lightbox">
+        &times;
+      </button>
+    </div>
 
 
-
-    <section class="grid grid-cols-12 gap-4">
-      <div class="hidden col-span-1 sm:block"></div>      
-      <a id="back-to-top-button" href="#" class="flex flex-row-reverse items-center col-span-12 gap-2 px-6 sm:col-span-10">
-        <img src="images/go-to-top-arrow.png" class="max-w-6 max-h-6" alt="">
-        <p>Back to Top</p>
-      </a>
-      <div class="hidden col-span-1 sm:block"></div>
-    </section>
+    <a id="back-to-top-button" href="#" class="flex items-center justify-center col-span-3 gap-2 button-primary">
+      <p>Back to Top</p>
+      <img src="images/go-to-top-arrow.png" class="max-w-6 max-h-6" style="filter: invert(100%);" alt="">
+    </a>
+    
 
     
   </main>
@@ -375,6 +373,7 @@
 
 </body>  	
     
+<link rel="stylesheet" href="css/animate.min.css">
 <link rel="stylesheet" href="css/lightbox.css">
 <script src="js/footer.js"></script>
 

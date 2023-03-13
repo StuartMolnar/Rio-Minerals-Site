@@ -84,3 +84,19 @@
 .lightbox-close-button:hover {
   color: #aaa;
 }
+
+#lightbox-count {
+  position: relative;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+
+#lightbox .animate__fadeInLeftBig,
+#lightbox .animate__fadeInRightBig,
+#lightbox .animate__fadeOutLeftBig,
+#lightbox .animate__fadeOutRightBig,
+#lightbox .animate__zoomIn,
+#lightbox .animate__zoomOut {
+  animation-duration: 0.3s;
+}
