@@ -10,8 +10,8 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     
 
-    <link rel="preload" href="css/tailwind.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="css/tailwind.css" rel="stylesheet"></noscript>
+    <link rel="preload" href="css/build.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="css/build.css" rel="stylesheet"></noscript>
 
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
@@ -40,11 +40,12 @@
 
 
         
-      <div class="flex flex-row-reverse col-span-5 mr-12 hamburger-div md:hidden">
-        <button id="hamburger-button" class="cursor-pointer fw-500">
+      <div class="flex flex-row-reverse col-span-5 mr-12 hamburger-div md:hidden items-center">
+        <button id="hamburger-button" class="cursor-pointer fw-500 fs-heading-2">
           &#9776;
         </button>
       </div>
+      
       <nav class="items-center justify-center hidden col-span-4 md:flex" aria-label="main">
         <a href="/index.html" class="px-4 underline hover:underline underline-offset-4">Home</a>        
         <a href="/about.html" class="px-4 no-underline hover:underline underline-offset-4">About</a>

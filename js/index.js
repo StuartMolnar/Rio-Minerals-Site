@@ -11,12 +11,9 @@ const carouselImages = ['images/Unsorted/geochem-11.jpeg',
                         'images/trenching/1.jpeg',
                         'images/trenching/19.jpeg',
                         'images/camp_building/35.jpeg',
-                        'images/tenure_acquisition/9.jpeg',
                         'images/project_management/3.jpeg',
-                        'images/project_management/5.jpeg',
                         'images/project_management/2.jpeg',
                         'images/geophysics/1.jpeg',
-                        'images/drill_programs/6.jpeg',
                         'images/line_cutting/1.jpeg',
                         'images/geophysics/8.jpeg',
                         'images/geochemistry/1.jpeg',
@@ -35,8 +32,7 @@ const carouselImages = ['images/Unsorted/geochem-11.jpeg',
                         'images/geology/59.jpeg',
                         'images/geochemistry/13.jpeg',
                         'images/drill_programs/9.jpeg',
-                        'images/geology/3.jpeg',
-                        'images/camp_building/49.jpeg',];
+                        'images/geology/3.jpeg',];
 
 const carousel = document.querySelector('.carousel-images');
 const carouselCells = document.querySelectorAll('.carousel-cell img');
