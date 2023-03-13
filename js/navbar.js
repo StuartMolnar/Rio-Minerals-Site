@@ -56,6 +56,7 @@ const initNavbarMinimizer = () => {
     if (window.pageYOffset > scrollHeight) {
       header.classList.add('scrolled');
       navbarMax.classList.add('hidden');
+      backToTop.classList.add('flex');
       navbarMin.classList.remove('hidden');
       backToTop.classList.remove('hidden'); // remove the hidden class for back-to-top section
       const navbarMinIcon = document.querySelector('#navbar-min .navbar-min-icon');
@@ -66,6 +67,7 @@ const initNavbarMinimizer = () => {
       navbarMax.classList.remove('hidden');
       navbarMin.classList.add('hidden');
       backToTop.classList.add('hidden'); // add the hidden class for back-to-top section
+      backToTop.classList.remove('flex');
       navbarMin.style.display = 'none';
     }
   });
