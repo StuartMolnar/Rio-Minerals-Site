@@ -31,3 +31,56 @@
 .carousel-cell img {
     cursor: pointer;
 }
+
+
+
+.lightbox-nav-button {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 1);
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.lightbox-nav-button:focus,
+.lightbox-nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.lightbox-nav-button-prev {
+  left: 5%;
+}
+
+.lightbox-nav-button-next {
+  right: 5%;
+}
+
+/* .lightbox-nav-btn {
+    background-color:#F6F5F5; 
+    padding: 5px 10px; 
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+  } */
+
+
+.lightbox-close-button {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 10000;
+}
+
+.lightbox-close-button:focus,
+.lightbox-close-button:hover {
+  color: #aaa;
+}

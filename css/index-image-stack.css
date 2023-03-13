@@ -127,6 +127,7 @@
   justify-content: center;
   align-items: left;
   align-self: center;
+  overflow-y: auto;
 }
 
 
@@ -161,6 +162,7 @@
   justify-content: center;
   align-items: left;
   align-self: center;
+  overflow-y: auto;
 }
 
 #desktop-section-4-divs .index-child-2 {

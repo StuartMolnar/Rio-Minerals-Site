@@ -14,10 +14,8 @@
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="css/lightbox.css">
     <script defer src="js/navbar.js"></script>
     <script defer src="js/services.js"></script>
-    <script src="js/footer.js"></script>
 </head>
 <body onload="changeService('geology'); initNavbarSpacer(); initNavbarMinimizer(); initMobileMenu(); " class="min-h-screen bg-white-off text-black-accent fs-body">
 
@@ -300,13 +298,24 @@
 
         <div class="hidden col-span-1 sm:block"></div>
       </container>   
-      
-      <!-- Lightbox container -->
-      <div id="lightbox" class="lightbox-container">
-        <img src="" alt="Lightbox Image">
-      </div>
     
     </section>
+
+
+<!-- Lightbox container -->
+<div id="lightbox" class="lightbox-container">
+  <button class="lightbox-nav-button lightbox-nav-button-prev" aria-label="Previous Image">
+    <p>❮</p>
+  </button>
+  <button class="lightbox-nav-button lightbox-nav-button-next" aria-label="Next Image">
+    <p>❯</pi>
+  </button>
+  <img src="" alt="Lightbox Image">
+  <button class="lightbox-close-button" aria-label="Close Lightbox">
+    &times;
+  </button>
+</div>
+
 
 
     <section class="grid grid-cols-12 gap-4">
@@ -363,10 +372,13 @@
     </div>
   </footer>
 
-  	<!--Add a script by google -->
-	<script src=
-  "https://maps.googleapis.com/maps/api/js?key=<mykey>&callback=initMap&libraries=&v=weekly"
-      async>
-    </script>
-</body>
+
+</body>  	
+    
+<link rel="stylesheet" href="css/lightbox.css">
+<script src="js/footer.js"></script>
+
+<!--Add a script by google -->
+<script async src="https://maps.googleapis.com/maps/api/js?key=<mykey>&callback=initMap&libraries=&v=weekly"></script>
+
 </html>

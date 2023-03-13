@@ -92,50 +92,50 @@
     .fs-heading-1 {
         font-size: var(--fs-heading-1);
         font-style: var(--ff-header);
-        line-height: calc(var(--fs-heading-1) * 1.2);
+        line-height: 1.2;
     }
     
     .fs-heading-2 {
         font-size: var(--fs-heading-2);
         font-style: var(--ff-header);
-        line-height: calc(var(--fs-heading-2) * 1.2);
+        line-height: 1.2
     }
     
     .fs-heading-3 {
         font-size: var(--fs-heading-3);
         font-style: var(--ff-header);
-        line-height: calc(var(--fs-heading-3) * 1.2);
+        line-height: 1.2;
     }
     
     .fs-heading-4 {
         font-size: var(--fs-heading-4);
         font-style: var(--ff-header);
-        line-height: calc(var(--fs-heading-4) * 1.2);
+        line-height: 1.2;
     }
     
     .fs-heading-5 {
         font-size: var(--fs-heading-5);
         font-style: var(--ff-header);
-        line-height: calc(var(--fs-heading-5) * 1.2);
+        line-height: 1.2;
     }
     
     .fs-checkmark-text {
         font-size: var(--fs-checkmark-text);
         font-style: var(--ff-body);
-        line-height: calc(var(--fs-checkmark-text) * 1.2);
+        line-height: 1.5;
     }
     
     .fs-body {
         font-size: var(--fs-body);
         font-style: var(--ff-body);
-        line-height: calc(var(--fs-body) * 1.2);
+        line-height: 1.5;
     }
 
    
     .fs-nav {
         font-size: var(--fs-nav);
         font-style: var(--ff-body);
-        line-height: calc(var(--fs-nav) * 1.2);
+        line-height: 1.2;
     }
     
     .fs-button {    
@@ -146,7 +146,7 @@
     .fs-copywrite-text {
         font-size: var(--fs-copywrite-text);
         font-style: var(--ff-body);
-        line-height: calc(var(--fs-copywrite-text) * 1.2);
+        line-height: 1.5;
     }
     
     .fw-400 { 

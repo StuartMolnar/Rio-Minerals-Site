@@ -76,6 +76,9 @@ function toggleDropdown() {
 // Get the lightbox container and image elements
 const lightboxContainer = document.getElementById('lightbox');
 const lightboxImage = lightboxContainer.querySelector('img');
+const lightboxNavButtonPrev = lightboxContainer.querySelector('.lightbox-nav-button-prev');
+const lightboxNavButtonNext = lightboxContainer.querySelector('.lightbox-nav-button-next');
+const lightboxCloseButton = lightboxContainer.querySelector('.lightbox-close-button');
 
 function showLightbox(event) {
   // Get a reference to the clicked image element
@@ -89,8 +92,19 @@ function showLightbox(event) {
 
   // Disable scrolling on the document body
   document.body.style.overflow = 'hidden';
-}
 
+  // Get all images in the grid and the index of the clicked image
+  const images = document.querySelectorAll('#services-image-grid img');
+  const currentIndex = Array.prototype.indexOf.call(images, clickedImage);
+  
+  
+  lightboxContainer.addEventListener('click', function(event) {
+    if (event.target === this) {
+      hideLightbox();
+    }
+  });
+
+}
 
 function hideLightbox() {
   // Hide the lightbox container
@@ -103,58 +117,88 @@ function hideLightbox() {
   document.body.style.overflow = 'auto';
 }
 
-// Add click event listeners to the lightbox container and close button to hide the lightbox
-lightboxContainer.addEventListener('click', function(event) {
-  // Only hide the lightbox if the click occurred on the background
-  if (event.target === this) {
-    hideLightbox();
-  }
-});
-
-const closeButton = document.createElement('button');
-closeButton.innerHTML = 'Close';
-closeButton.addEventListener('click', function() {
+// Add click event listener to the close button to hide the lightbox
+lightboxCloseButton.addEventListener('click', function() {
   hideLightbox();
 });
-lightboxContainer.appendChild(closeButton);
 
-// Add keydown event listener to the document to close the lightbox on escape key press
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'Escape' && lightboxContainer.style.display === 'block') {
-    hideLightbox();
+// Add click event listeners to the navigation buttons to change the lightbox image
+lightboxNavButtonPrev.addEventListener('click', function() {
+  // Get all images in the grid
+  const images = document.querySelectorAll('#services-image-grid img');
+
+  // Get the current image index
+  let currentIndex = -1;
+  for (let i = 0; i < images.length; i++) {
+    if (images[i].src === lightboxImage.src) {
+      currentIndex = i;
+      break;
+    }
+  }
+
+  // Set the lightbox image source to the previous image source
+  if (currentIndex > 0) {
+    lightboxImage.src = images[currentIndex - 1].src;
   }
 });
-  
-  function setServiceDesktop(serviceString){
-    var serviceListTop = document.getElementById('services-menu-desktop-top');
-    var serviceListBottom = document.getElementById('services-menu-desktop-bottom');
-    for (var i=0; i<serviceListTop.children.length; i++){
-      serviceListTop.children[i].classList.remove('checkmark-enabled');
-      serviceListBottom.children[i].classList.remove('checkmark-enabled');
-    }
-  
-    document.getElementById('service-desktop-' + serviceString).classList.add('checkmark-enabled');
-  
-    //document.getElementById()
-  }
-  
-  function changeService(serviceString){
-  
-    document.getElementById('service-title').textContent = SERVICE_TITLES[serviceString];
-    document.getElementById('service-description').textContent = SERVICE_DESCRIPTION[serviceString];
-  
-    
-    document.getElementById('services-image-grid').innerHTML = '';
-    
-  
-    for (var i=1; i<=PHOTOS_IN_SERVICE[serviceString]; i++){
-  
-      const img = document.createElement('img');
-      img.className = "object-cover w-full mb-2.5";
-      img.src = 'images/' + serviceString + '/' + i + '.jpeg';
-      img.onclick = showLightbox;
-  
-      document.getElementById('services-image-grid').appendChild(img);
+
+lightboxNavButtonNext.addEventListener('click', function() {
+  // Get all images in the grid
+  const images = document.querySelectorAll('#services-image-grid img');
+
+  // Get the current image index
+  let currentIndex = -1;
+  for (let i = 0; i < images.length; i++) {
+    if (images[i].src === lightboxImage.src) {
+      currentIndex = i;
+      break;
     }
   }
+
+  // Set the lightbox image source to the next image source
+  if (currentIndex < images.length - 1) {
+    lightboxImage.src = images[currentIndex + 1].src;
+  }
+});
+
+
+
+
+
+
+
+
   
+function setServiceDesktop(serviceString){
+  var serviceListTop = document.getElementById('services-menu-desktop-top');
+  var serviceListBottom = document.getElementById('services-menu-desktop-bottom');
+  for (var i=0; i<serviceListTop.children.length; i++){
+    serviceListTop.children[i].classList.remove('checkmark-enabled');
+    serviceListBottom.children[i].classList.remove('checkmark-enabled');
+  }
+
+  document.getElementById('service-desktop-' + serviceString).classList.add('checkmark-enabled');
+
+  //document.getElementById()
+}
+
+function changeService(serviceString){
+
+  document.getElementById('service-title').textContent = SERVICE_TITLES[serviceString];
+  document.getElementById('service-description').textContent = SERVICE_DESCRIPTION[serviceString];
+
+  
+  document.getElementById('services-image-grid').innerHTML = '';
+  
+
+  for (var i=1; i<=PHOTOS_IN_SERVICE[serviceString]; i++){
+
+    const img = document.createElement('img');
+    img.className = "object-cover w-full mb-2.5";
+    img.src = 'images/' + serviceString + '/' + i + '.jpeg';
+    img.onclick = showLightbox;
+
+    document.getElementById('services-image-grid').appendChild(img);
+  }
+}
+

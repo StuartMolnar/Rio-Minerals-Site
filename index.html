@@ -15,13 +15,10 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="css/index-image-stack.css">
-    <link rel="stylesheet" href="css/lightbox.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <script defer src="js/navbar.js"></script>
-    <script src="js/footer.js"></script>
     <script defer src="js/index.js"></script>
-    <script src="js/hammer.min.js"></script>
 </head>
 <body onload="initMobileMenu(); initNavbarSpacer(); initNavbarMinimizer();" class="min-h-screen bg-white-off text-black-accent fs-body">
 
@@ -84,7 +81,7 @@
   
   <main>
 
-    <section id="index-hero" class="flex flex-col items-center justify-center p-6 text-white sm:px-0">
+    <section id="index-hero" class="flex flex-col justify-center p-6 text-white sm:px-0">
       <div class="video-container">
         <video autoplay muted loop preload="auto">
           <source src="images/hero-video.mp4" type="video/mp4">
@@ -495,34 +492,31 @@
 
 
     <section id="carousel">
-      <div id="carousel-images" class="relative flex flex-wrap mb-12 carousel-images">
+      <div id="carousel-images" class="relative flex mb-12 carousel-images">
         <p id="prev-btn" onclick="prevImage()" class="hidden sm:block carousel-nav-btn" style="position: absolute; top: 50%; left: 2%;">❮</p> 
         <div class="sm:w-1/3 w-fullpr-4 carousel-cell animate__animated h-[300px] sm:h-[500px]">
-          <img src="images/unsorted/geochem-11.jpeg" alt="" class="object-cover w-full" onclick="showLightbox(event)">
+          <img src="images/Unsorted/geochem-11.jpeg" alt="" class="object-cover w-full" onclick="showLightbox(event)">
         </div>
         <div class="hidden sm:block sm:w-1/3 w-fullpr-4 carousel-cell animate__animated h-[500px]">
-          <img src="images/unsorted/crew-8.jpeg" alt="" class="object-cover w-full" onclick="showLightbox(event)">
+          <img src="images/Unsorted/crew-8.jpeg" alt="" class="object-cover w-full" onclick="showLightbox(event)">
         </div>
         <div class="hidden sm:block w-full sm:w-1/3 carousel-cell animate__animated h-[500px]">
-          <img src="images/unsorted/P2120014.jpeg" alt="" class="object-cover w-full" onclick="showLightbox(event)">
+          <img src="images/Unsorted/P2120014.jpeg" alt="" class="object-cover w-full" onclick="showLightbox(event)">
         </div>
         <p id="next-btn" onclick="nextImage()" class="hidden sm:block carousel-nav-btn" style="position: absolute; top: 50%; left: 96%;">❯</p> 
       </div>
-    
-      <!-- Lightbox container -->
-      <div id="lightbox" class="lightbox-container">
-        <img src="" alt="Lightbox Image">
-      </div>
     </section>
-    
 
-    <section class="grid grid-cols-12 gap-4">
-      <div class="hidden col-span-1 sm:block"></div>      
-      <a id="back-to-top-button" href="#" class="flex flex-row-reverse items-center col-span-12 gap-2 px-6 sm:col-span-10">
-        <img src="images/go-to-top-arrow.png" class="max-w-6 max-h-6" alt="">
+    <!-- Lightbox container -->
+    <div id="lightbox" class="lightbox-container">
+      <img src="" alt="Lightbox Image">
+    </div>
+
+    <section>   
+      <a id="back-to-top-button" href="#" class="flex items-center col-span-3 gap-2 px-6 button-primary w-[500px]">
         <p>Back to Top</p>
+        <img src="images/go-to-top-arrow.png" class="max-w-6 max-h-6" style="filter: invert(100%);" alt="">
       </a>
-      <div class="hidden col-span-1 sm:block"></div>
     </section>
     
 
@@ -570,10 +564,14 @@
     </div>
   </footer>
 
-  	<!--Add a script by google -->
-	<script src=
-  "https://maps.googleapis.com/maps/api/js?key=<mykey>&callback=initMap&libraries=&v=weekly"
-      async>
-    </script>
-</body>
+
+</body>	
+    
+<link rel="stylesheet" href="css/lightbox.css">
+<script src="js/hammer.min.js"></script>
+<script src="js/footer.js"></script>
+
+<!--Add a script by google -->
+<script async src="https://maps.googleapis.com/maps/api/js?key=<mykey>&callback=initMap&libraries=&v=weekly"></script>
+
 </html>
