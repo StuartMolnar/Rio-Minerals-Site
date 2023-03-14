@@ -8,6 +8,8 @@ html {
 }
 */
 
+html, body { overflow-x: hidden; }
+
 /* width and height of scrollbar track */
 ::-webkit-scrollbar {
   width: 10px;
@@ -243,7 +245,10 @@ video {
     }
         
     #map-point-mongolia .pop-up,
-    #map-point-australia .pop-up{
+    #map-point-australia .pop-up,
+    #map-point-dominican .pop-up,
+    #map-point-albania .pop-up,
+    #map-point-djibouti .pop-up{
         transform: translateX(-130%);
     }
   }
@@ -260,7 +265,10 @@ video {
     }
         
     #map-point-mongolia .pop-up,
-    #map-point-australia .pop-up{
+    #map-point-australia .pop-up,
+    #map-point-dominican .pop-up,
+    #map-point-albania .pop-up,
+    #map-point-djibouti .pop-up{
         transform: translateX(-130%);
     }
   }
@@ -314,5 +322,7 @@ video {
         padding: 15px;
       }
   }
+
+  
 
   

@@ -43,36 +43,6 @@
 }
 
 
-/* --- Sliding Animation --- */
-
-/* @keyframes slide-from-left {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-
-@keyframes slide-from-right {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-
-.index-child-1{
-  animation: slide-from-left 1s ease-out forwards;
-}
-.index-child-2 {
-  animation: slide-from-right 1s ease-out forwards;
-} */
-/* ---------------------------- */
-
 .index-parent {
   overflow: hidden;
 }
@@ -191,7 +161,7 @@
   background-color: #232341;
 
   --top-div-height: 300px;
-  --bot-div-height: 550px;
+  --bot-div-height: 600px;
   --bot-width: 100%;
   --top-div-offset: 25px;
   --top-width: calc(100% - (var(--top-div-offset) * 2));
@@ -248,7 +218,7 @@
 
 #mobile-section-3 {
   --top-div-height: 300px;
-  --bot-div-height: 325px;
+  --bot-div-height: 375px;
   --bot-width: 100%;
   --top-div-offset: 25px;
   --top-width: calc(100% - (var(--top-div-offset) * 2));
@@ -301,7 +271,7 @@
    but the header line is disappearing */
 #mobile-section-4 {
   --top-div-height: 300px;
-  --bot-div-height: 385px;
+  --bot-div-height: 450px;
   --bot-width: 100%;
   --top-div-offset: 25px;
   --top-width: calc(100% - (var(--top-div-offset) * 2));
@@ -354,7 +324,7 @@
 
 #mobile-section-5 {
   --top-div-height: 300px;
-  --bot-div-height: 240px;
+  --bot-div-height: 260px;
   --bot-width: 100%;
   --top-div-offset: 25px;
   --top-width: calc(100% - (var(--top-div-offset) * 2));

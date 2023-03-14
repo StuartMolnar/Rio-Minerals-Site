@@ -224,6 +224,32 @@
 
 
     <section id="services-description-background" class="py-16 text-white">
+      <container id="services-container" class="grid grid-cols-12 mx-6 mb-12 leading-9 sm:mx-0 lg:hidden">
+        <div class="hidden col-span-1 sm:block"></div>
+        <div id="services-dropdown-background" href="#services-container" class="col-span-12 cursor-pointer sm:col-span-10 dropdown">
+          <div id="services-dropdown-button" onclick="toggleDropdown()" class="flex w-full space-y-2 border">
+            <button class="px-4 basis-11/12 text-start text-black-accent">Geology</button>
+            <img src="images/menu-arrow.png" class="my-2 w-[20px] h-[20px]" alt="">
+          </div>
+          
+          <div id="services-dropdown-list" href="#services-container" onclick="toggleDropdown()" class="flex flex-col hidden p-2 border">
+            <div id="service-mobile-text-geology" onclick="changeService('geology'); setServiceMobile('geology')" class="flex py-1 cursor-pointer fw-600">
+              <p class="basis-11/12 text-start text-black-accent">Geology</p>
+              <img src="images/menu-arrow.png" class="my-1 rotate-180 w-[20px] h-[20px]" alt="">       
+            </div>
+            <p id="service-mobile-text-geochemistry" onclick="changeService('geochemistry'); setServiceMobile('geochemistry')" class="py-1 text-black-accent">Geochemistry</p>
+            <p id="service-mobile-text-geophysics" onclick="changeService('geophysics'); setServiceMobile('geophysics')" class="py-1 text-black-accent">Geophysics</p>
+            <p id="service-mobile-text-line_cutting" onclick="changeService('line_cutting'); setServiceMobile('line_cutting')" class="py-1 text-black-accent" text-black-accent>Line Cutting</p>
+            <p id="service-mobile-text-tenure_acquisition" onclick="changeService('tenure_acquisition'); setServiceMobile('tenure_acquisition')" class="py-1 text-black-accent">Tenure Acquisition</p>
+            <p id="service-mobile-text-project_management" onclick="changeService('project_management'); setServiceMobile('project_management')" class="py-1 text-black-accent">Project Management</p>
+            <p id="service-mobile-text-trenching" onclick="changeService('trenching'); setServiceMobile('trenching')" class="py-1 text-black-accent">Trenching</p>
+            <p id="service-mobile-text-drill_programs" onclick="changeService('drill_programs'); setServiceMobile('drill_programs')" class="py-1 text-black-accent">Drill Programs</p>
+            <p id="service-mobile-text-camp_building" onclick="changeService('camp_building'); setServiceMobile('camp_building')" class="py-1 text-black-accent">Camp Building</p>
+            <p id="service-mobile-text-pad_building" onclick="changeService('pad_building'); setServiceMobile('pad_building')" class="py-1 text-black-accent">Pad Building</p>
+          </div>
+        </div> 
+        <div class="hidden col-span-1 sm:block"></div>
+      </container>
       <container class="grid grid-cols-12 gap-4 px-6 sm:px-0">
         <div class="hidden col-span-1 sm:block"></div>
 
@@ -251,32 +277,6 @@
 
       
 
-      <container id="services-container" class="grid grid-cols-12 mx-6 my-6 leading-9 sm:mx-0 lg:hidden">
-        <div class="hidden col-span-1 sm:block"></div>
-        <div id="services-dropdown-background" href="#services-containe" class="col-span-12 cursor-pointer sm:col-span-10 dropdown">
-          <div id="services-dropdown-button" onclick="toggleDropdown()" class="flex w-full space-y-2 border">
-            <button class="px-4 basis-11/12 text-start text-black-accent">Geology</button>
-            <img src="images/menu-arrow.png" class="my-2 w-[20px] h-[20px]" alt="">
-          </div>
-          
-          <div id="services-dropdown-list" href="#services-containe" onclick="toggleDropdown()" class="flex flex-col hidden p-2 border">
-            <div id="service-mobile-text-geology" onclick="changeService('geology'); setServiceMobile('geology')" class="flex py-1 cursor-pointer fw-600">
-              <p class="basis-11/12 text-start text-black-accent">Geology</p>
-              <img src="images/menu-arrow.png" class="my-1 rotate-180 w-[20px] h-[20px]" alt="">       
-            </div>
-            <p id="service-mobile-text-geochemistry" onclick="changeService('geochemistry'); setServiceMobile('geochemistry')" class="py-1 text-black-accent">Geochemistry</p>
-            <p id="service-mobile-text-geophysics" onclick="changeService('geophysics'); setServiceMobile('geophysics')" class="py-1 text-black-accent">Geophysics</p>
-            <p id="service-mobile-text-line_cutting" onclick="changeService('line_cutting'); setServiceMobile('line_cutting')" class="py-1 text-black-accent" text-black-accent>Line Cutting</p>
-            <p id="service-mobile-text-tenure_acquisition" onclick="changeService('tenure_acquisition'); setServiceMobile('tenure_acquisition')" class="py-1 text-black-accent">Tenure Acquisition</p>
-            <p id="service-mobile-text-project_management" onclick="changeService('project_management'); setServiceMobile('project_management')" class="py-1 text-black-accent">Project Management</p>
-            <p id="service-mobile-text-trenching" onclick="changeService('trenching'); setServiceMobile('trenching')" class="py-1 text-black-accent">Trenching</p>
-            <p id="service-mobile-text-drill_programs" onclick="changeService('drill_programs'); setServiceMobile('drill_programs')" class="py-1 text-black-accent">Drill Programs</p>
-            <p id="service-mobile-text-camp_building" onclick="changeService('camp_building'); setServiceMobile('camp_building')" class="py-1 text-black-accent">Camp Building</p>
-            <p id="service-mobile-text-pad_building" onclick="changeService('pad_building'); setServiceMobile('pad_building')" class="py-1 text-black-accent">Pad Building</p>
-          </div>
-        </div> 
-        <div class="hidden col-span-1 sm:block"></div>
-      </container>
     </section>
 
 
@@ -319,11 +319,12 @@
     </div>
 
 
-    <a id="back-to-top-button" href="#" class="items-center justify-center hidden col-span-3 gap-2 button-primary">
-      <p>Back to Top</p>
-      <img src="images/go-to-top-arrow.png" class="max-w-6 max-h-6" style="filter: invert(100%);" alt="">
-    </a>
-    
+    <container class="hidden sm:block">
+      <a id="back-to-top-button" href="#" class="items-center justify-center hidden col-span-3 gap-2 button-primary">
+        <p>Back to Top</p>
+        <img src="images/go-to-top-arrow.png" class="max-w-6 max-h-6" style="filter: invert(100%);" alt="">
+      </a>
+    </container>
     
 
     
