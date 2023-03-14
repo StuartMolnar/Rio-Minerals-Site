@@ -144,7 +144,7 @@ function hideLightbox() {
   lightboxImage.classList.remove('animate__animated', 'animate__zoomOut', 'animate__fadeInLeftBig', 'animate__fadeInRightBig', 'animate__fadeOutLeftBig', 'animate__fadeOutRightBig');
 
   // Enable scrolling on the document body
-  document.body.style.overflow = 'auto';
+  document.body.style.overflow = '';
 }
 
 lightboxCloseButton.addEventListener('click', function() {
