@@ -1,17 +1,3 @@
-//minimize navbar on scroll
-// function minimizeNav() {
-//     if (document.body.scrollTop > 192 || document.documentElement.scrollTop > 192) {
-//       document.getElementById("navbar-full").classList.add('hidden');
-//       document.getElementById("navbar-min").classList.remove('hidden');
-//     } else {
-//       document.getElementById("navbar-full").classList.remove('hidden');    
-//       document.getElementById("navbar-min").classList.add('hidden');
-//     }
-//   }
-  
-//   window.onscroll = function() {minimizeNav()}
-
-//mobile menu
 const initMobileMenu = () => {
 
     
@@ -32,6 +18,7 @@ const initMobileMenu = () => {
   
 const initNavbarMinimizer = () => {
   const header = document.getElementById('navbar-full');
+  const backToTop = document.getElementById('back-to-top-button');
 
   let lastScrollTop = 0;
 
@@ -43,15 +30,20 @@ const initNavbarMinimizer = () => {
       if (scrollTop > lastScrollTop) {
         // Scrolling down
         header.classList.add('translate-y-up');
+        backToTop.classList.remove('hidden');
+        backToTop.classList.add('flex');
       } else {
         // Scrolling up
         header.classList.remove('translate-y-up');
+        backToTop.classList.add('hidden');
+        backToTop.classList.remove('flex');
       }
     }
 
     lastScrollTop = scrollTop;
   });
 };
+
 
 
 const initNavbarSpacer = () => {
