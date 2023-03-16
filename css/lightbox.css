@@ -58,6 +58,18 @@
   right: 5%;
 }
 
+@media (max-width: 640px) {
+  .lightbox-nav-button-prev {
+    left: 0;
+    transform: scale(0.5);
+  }
+
+  .lightbox-nav-button-next {
+    right: 0;
+    transform: scale(0.5);
+  }
+}
+
 /* .lightbox-nav-btn {
     background-color:#F6F5F5; 
     padding: 5px 10px; 

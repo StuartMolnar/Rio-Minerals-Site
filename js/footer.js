@@ -1,4 +1,4 @@
-//contact page map
+//contact map
 function initMap() {
 
     // The location of Rio Minerals office

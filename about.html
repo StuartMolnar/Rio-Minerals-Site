@@ -5,7 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rio Minerals - About</title>    
+    <link rel="icon" href="images/icon.png">    
+    <meta name="keywords" content="rio minerals, mineral exploration, mining services, minerals">
     <link rel="icon" href="images/icon.png">
+
+    <meta property="og:title" content="Rio Minerals - About">
+    <meta property="og:description" content="Rio Minerals is a leading provider of mineral exploration and mining services. Learn more about our services and projects on our website.">
+    <meta property="og:image" content="https://www.riominerals.com/images/Unsorted/1_IMG_4029.jpeg">
+    <meta property="og:url" content="https://www.riominerals.com">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rio Minerals - About">
+    <meta name="twitter:description" content="Rio Minerals is a leading provider of mineral exploration and mining services. Learn more about our services and projects on our website.">
+    <meta name="twitter:image" content="https://www.riominerals.com/images/Unsorted/1_IMG_4029.jpeg">
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
@@ -16,60 +29,58 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script defer src="js/navbar.js"></script>
-    <script src="js/footer.js"></script>
+    <script async src="js/footer.js"></script>
 </head>
-<body onload="initMobileMenu();" class="min-h-screen bg-white-off text-black-accent fs-body">
+<body onload="initMobileMenu(); initNavbarSpacer(); initNavbarMinimizer();" class="min-h-screen bg-white-off text-black-accent fs-body">
 
 
   <div id="navbar-spacer"></div>
 
-  <header id="" class="text-black fs-nav fw-400 bg-white-off index-navbar">
-    <section id="navbar-min" class="hidden">
+  <header id="navbar-full" class="text-black fs-nav fw-400 bg-white-off index-navbar">
+    <!-- <section id="navbar-min" class="hidden">
     <img src="../images/downward-angle.png" class="p-3 h-9 sm:h-10 navbar-min-icon" alt="">
-    </section>
+    </section> -->
     <section id="navbar-max" class="grid items-center grid-cols-8 gap-4 py-4 mx-6 md:grid-cols-12 sm:mx-0">
 
       <div class="hidden col-span-1 md:block"></div>
 
-      <a href="/index.html" class="col-span-3 pl-6 md:col-span-2 md:pl-0">
+      <a href="/index" class="col-span-3 pl-6 md:pl-0">
         <img src="images/standard-rio-logo.svg" class="h-14 sm:h-24" alt="Rio Minerals Ltd.">
       </a>      
 
 
         
-      <div class="flex flex-row-reverse col-span-5 mr-12 hamburger-div md:hidden">
-        <button id="hamburger-button" class="cursor-pointer fw-500">
+      <div class="flex flex-row-reverse items-center col-span-5 mr-12 hamburger-div md:hidden">
+        <button id="hamburger-button" class="cursor-pointer fw-500 fs-heading-2">
           &#9776;
         </button>
       </div>
+      
       <nav class="items-center justify-center hidden col-span-4 md:flex" aria-label="main">
-        <a href="/index.html" class="px-4 no-underline hover:underline underline-offset-4">Home</a>        
-        <a href="/about.html" class="px-4 underline hover:underline underline-offset-4">About</a>
-        <a href="/services.html" class="px-4 no-underline hover:underline underline-offset-4">Services</a>
+        <a href="/index" class="px-4 no-underline hover:underline underline-offset-4">Home</a>        
+        <a href="/about" class="px-4 underline hover:underline underline-offset-4">About</a>
+        <a href="/services" class="px-4 no-underline hover:underline underline-offset-4">Services</a>
       </nav>
 
-      
-      <div class="hidden col-span-2 lg:col-span-1 md:block"></div>
 
-      <div class="hidden col-span-2 md:flex md:flex-row-reverse" aria-label="main">
+      <div class="hidden col-span-4 pr-6 md:flex md:flex-row-reverse" aria-label="main">
         <a href="#footer-drop-point">
           <button class="sm:min-w-[200px] min-w-[160px] sm:min-h-[65px] min-h-[50px] button-primary fs-button">Contact Us Now</button>
         </a>
       </div>
 
-      <div class="hidden col-span-1 lg:col-span-2 md:block"></div>
-
     </section>
+
     <section id="mobile-menu" class="absolute top-0 flex-col items-center hidden w-full text-white origin-top bg-blue-dark fs-nav fw-500">
       <button class="self-end px-12 pt-6 pb-4 text-4xl">
         &times;
       </button>
       <nav class="flex flex-col min-h-screen py-8 text-center" aria-label="mobile">
-        <a href="/index.html" class="w-full py-2 no-underline hover:underline underline-offset-4">Home</a>
-        <a href="/about.html" class="w-full py-2 no-underline hover:underline underline-offset-4">About</a>
-        <a href="/services.html" class="w-full py-2 no-underline hover:underline underline-offset-4">Services</a>
+        <a href="/index" class="w-full py-2 no-underline hover:underline underline-offset-4">Home</a>
+        <a href="/about" class="w-full py-2 no-underline hover:underline underline-offset-4">About</a>
+        <a href="/services" class="w-full py-2 no-underline hover:underline underline-offset-4">Services</a>
         <a href="#footer-drop-point" class="w-full py-2 no-underline hover:underline underline-offset-4">Contact</a>
-        <a href="/index.html" class="my-20 h-14">
+        <a href="/index" class="my-20 h-14">
           <img src="images/white-rio-logo 1.svg" alt="Rio Minerals Ltd.">
         </a>
       </nav>
@@ -194,7 +205,7 @@
 
   	<!--Add a script by google -->
 	<script src=
-  "https://maps.googleapis.com/maps/api/js?key=<mykey>&callback=initMap&libraries=&v=weekly"
+  "https://maps.googleapis.com/maps/api/js?key=AIzaSyDTCpBFfvmVLYiOt5lNpw-_dTsfuhbxLTc&callback=initMap&libraries=&v=weekly"
       async>
     </script>
 </body>

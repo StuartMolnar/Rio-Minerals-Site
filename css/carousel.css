@@ -19,5 +19,13 @@
     user-select: none;
   }
 
+  .carousel-cell {
+  overflow: hidden;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
 
-  
+.carousel-cell:not(.hidden) {
+  opacity: 1;
+}
