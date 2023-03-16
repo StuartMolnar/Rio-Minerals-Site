@@ -19,7 +19,7 @@
   left: 0;
   height: var(--div-height);
   width: var(--div-width-left);
-  background-image: url(../images/project_management/7.jpeg);
+  background-image: url(../images/geology/3.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,7 +31,7 @@
   left: calc(100% - var(--div-width-right));
   height: var(--div-height);
   width: var(--div-width-right);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/geology/78.jpeg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/project_management/7.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -187,7 +187,7 @@
 
   
 
-  background-image: url(../images/project_management/7.jpeg);
+  background-image: url(../images/geology/3.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -201,7 +201,7 @@
   height: var(--bot-div-height);
   width: var(--bot-width);
 
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/geology/78.jpeg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/project_management/7.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
