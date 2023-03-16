@@ -22,8 +22,9 @@
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-    <link rel="preload" href="css/tailwind.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="css/tailwind.css" rel="stylesheet"></noscript>   
+
+    <link rel="preload" href="css/build.css" as="style">
+    <link rel="stylesheet" href="css/build.css">
      
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
@@ -54,9 +55,9 @@
       </div>
       
       <nav class="items-center justify-center hidden col-span-4 md:flex" aria-label="main">
-        <a href="/index.html" class="px-4 no-underline hover:underline underline-offset-4">Home</a>        
-        <a href="/about.html" class="px-4 underline hover:underline underline-offset-4">About</a>
-        <a href="/services.html" class="px-4 no-underline hover:underline underline-offset-4">Services</a>
+        <a href="/index" class="px-4 no-underline hover:underline underline-offset-4">Home</a>        
+        <a href="/about" class="px-4 underline hover:underline underline-offset-4">About</a>
+        <a href="/services" class="px-4 no-underline hover:underline underline-offset-4">Services</a>
       </nav>
 
 
@@ -92,7 +93,7 @@
     <section class="grid grid-cols-12 pl-1 mt-6">
       <div class="hidden col-span-1 sm:block"></div>
 
-      <div class="col-span-12 m-6 fs-heading-2 fw-600 sm:col-span-6 sm:m-0">
+      <div class="col-span-12 px-6 pt-8 pb-6 fs-heading-2 fw-600 sm:col-span-6 sm:pt-6 lg:pb-0 sm:px-0">
         <h2 class="">Our team is trained, capable, and experienced.</h2>
       </div>
 
@@ -154,14 +155,16 @@
       <div class="hidden col-span-6 sm:block"></div>      
     </section>
     
-
+    <a id="back-to-top-button" href="#" class="items-center justify-center hidden col-span-3 gap-2 button-primary">
+      <p>Back to Top</p>
+      <img src="images/go-to-top-arrow.png" class="max-w-6 max-h-6" style="filter: invert(100%);" alt="">
+    </a>
 
   </main>
   
-
   <footer id="footer" class="fw-400">
     
-    <div class="mx-0 mb-8 divider-line"></div>
+    <div class="mx-0 my-8 divider-line"></div>
 
     <section id="footer-drop-point" class="grid grid-cols-1 gap-8 mx-6 md:grid-cols-12 md:mx-0 text-black-accent">
 
@@ -187,23 +190,27 @@
           </div>
         </div>
 
-        <div class="col-span-5 mt-8">
+         <div class="col-span-5 mt-8">
           <div id="map" class="w-full h-[410px]"></div>
         </div>
 
         <div class="hidden col-span-1 md:block"></div>
         
     </section>
-    
+
     <div id="copywrite-text" class="grid mx-6 mt-8 mb-6 text-center place-items-center md:mx-0 fw-400 fs-copywrite-text text-gray-dark">
       <p>Copyright Rio Minerals Ltd. All Rights Reserved © 2023</p>
     </div>
   </footer>
 
-  	<!--Add a script by google -->
-	<script src=
-  "https://maps.googleapis.com/maps/api/js?key=AIzaSyDTCpBFfvmVLYiOt5lNpw-_dTsfuhbxLTc&callback=initMap&libraries=&v=weekly"
-      async>
-    </script>
-</body>
+
+</body>	
+    
+<link rel="stylesheet" href="css/lightbox.css">
+<script src="js/hammer.min.js"></script>
+<script src="js/footer.js"></script>
+
+<!--Add a script by google -->
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTCpBFfvmVLYiOt5lNpw-_dTsfuhbxLTc&callback=initMap&libraries=&v=weekly"></script>
+
 </html>

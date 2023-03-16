@@ -1,3 +1,5 @@
+
+
 const carouselImages = ['images/Unsorted/geochem-11.jpeg',
                         'images/Unsorted/crew-8.jpeg',
                         'images/Unsorted/P2120014.jpeg',

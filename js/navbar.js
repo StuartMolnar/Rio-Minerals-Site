@@ -47,9 +47,20 @@ const initNavbarMinimizer = () => {
 
 
 const initNavbarSpacer = () => {
+  console.log('initNavbarSpacer');
   const navbarFull = document.getElementById('navbar-full');
   const navbarPlaceholder = document.getElementById('navbar-spacer');
   navbarPlaceholder.style.height = `${navbarFull.offsetHeight}px`;
-}
 
-  
+  const mediaQuery = window.matchMedia('(max-width: 640px)');
+  mediaQuery.addEventListener('change', () => {
+    console.log('mediaQuery change');
+    const videoContainer = document.querySelector('.video-container');
+    const indexHero = document.getElementById('index-hero');
+    navbarPlaceholder.style.height = `${navbarFull.offsetHeight}px`;
+    videoContainer.style.top = `${navbarFull.offsetHeight}px`;
+    videoContainer.style.height = `calc(100vh - ${navbarFull.offsetHeight}px)`;
+    indexHero.style.top = `${navbarFull.offsetHeight}px`;
+    indexHero.style.height = `calc(100vh - ${navbarFull.offsetHeight}px)`;
+  });
+}

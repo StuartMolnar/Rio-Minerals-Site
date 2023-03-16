@@ -114,11 +114,8 @@ html, body { overflow-x: hidden; }
     background-image: url('../images/index-h1-text.png')
 }
 
-#divider-line {
-  height: 1px;
-  background: #ADADAD;
-  width: 100%;
-}
+
+
 
 #email, #first_name, #last_name, #message {
     border: 1px solid #232341;

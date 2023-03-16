@@ -22,8 +22,8 @@
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-    <link rel="preload" href="css/tailwind.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="css/tailwind.css" rel="stylesheet"></noscript>
+    <link rel="preload" href="css/build.css" as="style">
+    <link rel="stylesheet" href="css/build.css">
     
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
@@ -55,9 +55,9 @@
       </div>
       
       <nav class="items-center justify-center hidden col-span-4 md:flex" aria-label="main">
-        <a href="/index.html" class="px-4 no-underline hover:underline underline-offset-4">Home</a>        
-        <a href="/about.html" class="px-4 no-underline hover:underline underline-offset-4">About</a>
-        <a href="/services.html" class="px-4 underline hover:underline underline-offset-4">Services</a>
+        <a href="/index" class="px-4 no-underline hover:underline underline-offset-4">Home</a>        
+        <a href="/about" class="px-4 no-underline hover:underline underline-offset-4">About</a>
+        <a href="/services" class="px-4 underline hover:underline underline-offset-4">Services</a>
       </nav>
 
 
@@ -89,7 +89,7 @@
 
 
   <main>
-    <section class="grid grid-cols-12 gap-4 mx-6 sm:my-6 sm:mx-0">
+    <section class="grid grid-cols-12 gap-4 px-6 pt-12 pb-6 sm:pt-8 lg:pb-0 sm:px-0">
       <div class="hidden col-span-1 sm:block"></div>
 
       <div class="col-span-10 fs-heading-3 md:fs-heading-2 fw-600 sm:col-span-6">
@@ -98,6 +98,8 @@
 
       <div class="hidden col-span-5 sm:block"></div>
     </section>
+
+
 
 
     <section name="services-menu-desktop" class="hidden mb-12 lg:block">
@@ -132,7 +134,7 @@
         <div class="col-span-1"></div>
       </container>
 
-      <container id="services-menu-desktop-bottom" class="grid grid-cols-12 gap-4 mx-0 my-6">
+      <container id="services-menu-desktop-bottom" class="grid grid-cols-12 gap-4 pb-4 mx-0 my-6">
         <div class="col-span-1"></div>
 
         <div id="service-desktop-project_management" onclick="changeService('project_management'); setServiceDesktop('project_management')" class="flex items-center col-span-2 gap-2 cursor-pointer hover:checkmark-enabled fs-checkmark-text fw-500">
@@ -166,7 +168,7 @@
     </section>
 
     <section name="services-menu-mobile" class="block lg:hidden">
-      <container id="services-menu-mobile" class="grid grid-cols-2 mx-6 my-6 sm:mx-0 sm:grid-cols-12">
+      <container id="services-menu-mobile" class="grid grid-cols-2 pb-4 mx-6 my-6 sm:mx-0 sm:grid-cols-12">
         <div class="hidden col-span-1 sm:block"></div>
         <div class="flex flex-col col-span-1 gap-4 sm:col-span-5">
           <div class="flex items-center gap-2 checkmark-enabled fs-checkmark-text fw-500">

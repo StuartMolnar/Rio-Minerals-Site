@@ -22,8 +22,8 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     
 
-    <link rel="preload" href="css/tailwind.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="css/tailwind.css" rel="stylesheet"></noscript>
+    <link rel="preload" href="css/build.css" as="style">
+    <link rel="stylesheet" href="css/build.css">
 
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="css/animate.min.css">
     <script defer src="js/navbar.js"></script>
     <script defer src="js/index.js"></script>
+    <script async src="js/hammer.min.js"></script>
     <script async src="js/index-carousel.js"></script>
     <script async src="js/footer.js"></script>
 </head>
@@ -57,9 +58,9 @@
       </div>
       
       <nav class="items-center justify-center hidden col-span-4 md:flex" aria-label="main">
-        <a href="/index.html" class="px-4 underline hover:underline underline-offset-4">Home</a>        
-        <a href="/about.html" class="px-4 no-underline hover:underline underline-offset-4">About</a>
-        <a href="/services.html" class="px-4 no-underline hover:underline underline-offset-4">Services</a>
+        <a href="/index" class="px-4 underline hover:underline underline-offset-4">Home</a>        
+        <a href="/about" class="px-4 no-underline hover:underline underline-offset-4">About</a>
+        <a href="/services" class="px-4 no-underline hover:underline underline-offset-4">Services</a>
       </nav>
 
 
@@ -96,7 +97,7 @@
         <source src="images/hero-video.mp4" type="video/mp4">
       </video>
     </div>
-    <section id="index-hero" class="flex flex-col justify-center p-6 text-white sm:px-0">
+    <section id="index-hero" class="flex flex-col justify-center px-6 text-white sm:px-0">
        <container id="index-content" class="mx-4 sm:mx-0">
         <div class="grid grid-cols-12 my-6">
           <div class="hidden col-span-1 sm:block"></div>  
