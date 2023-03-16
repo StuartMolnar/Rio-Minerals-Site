@@ -47,28 +47,11 @@ html, body { overflow-x: hidden; }
 
 
 /* --- navbar --- */
-#navbar-min {
-  align-items: center;
-  justify-content: center;
-  background-color: #F6F5F5;
-  transition: height 0.3s ease-in-out;
-  position: absolute; /* add this line */
-  top: 100%; /* add this line */
-  width: 100%; /* add this line */
-}
 #navbar-max {
   transition: height 0.3s ease-in-out;
   width: 100%; /* add this line */
 }
 
-#navbar-min img {
-  filter: grayscale(100%) /* convert to grayscale */
-          contrast(200%) /* increase contrast to enhance the effect */
-          sepia(100%) /* apply sepia to simulate a color filter */
-          hue-rotate(calc((35, 35, 65) - (44, 43, 44))) /* calculate the difference between start and end colors */
-          brightness(1000%) /* increase brightness to lighten the final result */
-          saturate(10000%); /* increase saturation to restore color richness */
-}
 
 
 #navbar-full {
@@ -84,21 +67,11 @@ html, body { overflow-x: hidden; }
   align-items: center; /* add this line */
 }
 
-#navbar-full.scrolled #navbar-min .navbar-min-icon {
-  transform: rotate(0deg);
-}
-
-#navbar-full .navbar-min-expanded .navbar-min-icon {
-  transform: rotate(180deg);
-}
 
 #navbar-full.scrolled #navbar-max {
   display: none;
 }
 
-#navbar-full.scrolled #navbar-min {
-  display: flex;
-}
 
 #navbar-full.scrolled::after {
   display: block;
@@ -106,6 +79,29 @@ html, body { overflow-x: hidden; }
   height: auto;
   background-color:#F6F5F5;
 }
+  
+#navbar-full {
+  background-image: url('../images/services-background-2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#navbar-max {
+  background-color: transparent;
+}
+
+/* Smooth slide effect for navbar-full */
+#navbar-full {
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+#navbar-full.translate-y-up {
+  transform: translateY(-100%);
+}
+
+
 
 /* .index-navbar {
   background-color: #232341;
@@ -321,10 +317,4 @@ video {
       .pop-up {
         padding: 15px;
       }
-  }
-
-  
-
-  #navbar-full, #navbar-min {
-    border-bottom: 2px solid #232341; /* Change the border width, style, and color as needed */
   }

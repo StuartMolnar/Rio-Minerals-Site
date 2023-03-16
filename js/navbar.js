@@ -32,46 +32,27 @@ const initMobileMenu = () => {
   
 const initNavbarMinimizer = () => {
   const header = document.getElementById('navbar-full');
-  const scrollHeight = window.innerHeight - 80; // adjust the value 80 to your preference
 
-  const navbarMin = document.getElementById('navbar-min');
-  const navbarMax = document.getElementById('navbar-max');
-  const backToTop = document.getElementById('back-to-top-button');
-
-  navbarMin.addEventListener('click', () => {
-    header.classList.toggle('scrolled');
-    navbarMax.classList.toggle('hidden');
-    navbarMin.classList.toggle('hidden');
-    backToTop.classList.toggle('hidden'); // toggle the hidden class for back-to-top section
-    const navbarMinIcon = document.querySelector('#navbar-min .navbar-min-icon');
-    if (navbarMinIcon.style.transform === 'rotate(180deg)') {
-      navbarMinIcon.style.transform = 'rotate(0deg)';
-    } else {
-      navbarMinIcon.style.transform = 'rotate(180deg)';
-    }
-    navbarMin.style.display = 'flex';
-  });
+  let lastScrollTop = 0;
 
   window.addEventListener('scroll', () => {
-    if (window.pageYOffset > scrollHeight) {
-      header.classList.add('scrolled');
-      navbarMax.classList.add('hidden');
-      backToTop.classList.add('flex');
-      navbarMin.classList.remove('hidden');
-      backToTop.classList.remove('hidden'); // remove the hidden class for back-to-top section
-      const navbarMinIcon = document.querySelector('#navbar-min .navbar-min-icon');
-      navbarMinIcon.style.transform = 'rotate(0deg)';
-      navbarMin.style.display = 'flex';
-    } else {
-      header.classList.remove('scrolled');
-      navbarMax.classList.remove('hidden');
-      navbarMin.classList.add('hidden');
-      backToTop.classList.add('hidden'); // add the hidden class for back-to-top section
-      backToTop.classList.remove('flex');
-      navbarMin.style.display = 'none';
+    const scrollTop = window.pageYOffset;
+    const scrollThreshold = window.innerHeight * 0.4;
+
+    if (scrollTop > scrollThreshold) {
+      if (scrollTop > lastScrollTop) {
+        // Scrolling down
+        header.classList.add('translate-y-up');
+      } else {
+        // Scrolling up
+        header.classList.remove('translate-y-up');
+      }
     }
+
+    lastScrollTop = scrollTop;
   });
 };
+
 
 const initNavbarSpacer = () => {
   const navbarFull = document.getElementById('navbar-full');
