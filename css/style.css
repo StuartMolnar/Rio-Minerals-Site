@@ -325,4 +325,6 @@ video {
 
   
 
-  
+  #navbar-full, #navbar-min {
+    border-bottom: 2px solid #232341; /* Change the border width, style, and color as needed */
+  }
