@@ -42,11 +42,23 @@ function showLightbox(event) {
   const countElement = document.getElementById('lightbox-count');
   countElement.textContent = '(' + (currentIndex + 1) + '/' + images.length + ')';
 
+  // Make the countElement visible
+  countElement.style.display = 'block';
+
   // Add click event listener to the lightbox container to hide it when clicked
   lightboxContainer.addEventListener('click', function(event) {
     if (event.target === this) {
       hideLightbox();
     }
+  });
+
+  
+  // Set the position of the lightbox count element
+  window.requestAnimationFrame(() => {
+    const imgWidth = lightboxImage.offsetWidth;
+    const imgHeight = lightboxImage.offsetHeight;
+    lightboxCount.style.left = `calc(50% - ${imgWidth / 2}px)`;
+    lightboxCount.style.top = `calc(50% - ${imgHeight / 2}px - 40px)`;
   });
 
   // Play the zoomIn animation
@@ -57,13 +69,6 @@ function showLightbox(event) {
     lightboxImage.classList.remove('animate__animated', 'animate__zoomIn');
   }, { once: true });
 
-  // Set the position of the lightbox count element
-  window.requestAnimationFrame(() => {
-    const imgWidth = lightboxImage.offsetWidth;
-    const imgHeight = lightboxImage.offsetHeight;
-    lightboxCount.style.left = `calc(50% - ${imgWidth / 2}px)`;
-    lightboxCount.style.top = `calc(50% - ${imgHeight / 2}px - 40px)`;
-  });
 }
 
 
@@ -103,26 +108,20 @@ lightboxNavButtonPrev.addEventListener('click', function() {
   // Get all images in the grid
   const images = document.querySelectorAll('#services-image-grid img');
 
-  // Get the current image index
-  for (let i = 0; i < images.length; i++) {
-    if (images[i].src === lightboxImage.src) {
-      currentIndex = i;
-      break;
-    }
-  }
 
   // Set the lightbox image source to the previous image source
   if (currentIndex > 0) {
-    const newImageSrc = images[currentIndex - 1].src;
+    currentIndex -= 1;
+    const newImageSrc = images[currentIndex].src;
     const direction = 'left';
 
     // Update the current image number
     const countElement = document.getElementById('lightbox-count');
-    countElement.textContent = '(' + (currentIndex) + '/' + images.length + ')';
+    countElement.textContent = '(' + (currentIndex + 1) + '/' + images.length + ')';
     
 
     fadeOut(lightboxImage, direction, function() {
-      lightboxImage.src = newImageSrc;
+      lightboxImage.src = newImageSrc.replace(/\.\w+$/, '.jpeg');
       
       // Set the position of the lightbox count element
       window.requestAnimationFrame(() => {
@@ -139,28 +138,27 @@ lightboxNavButtonPrev.addEventListener('click', function() {
 
 
 lightboxNavButtonNext.addEventListener('click', function() {
+  console.log(currentIndex);
   // Get all images in the grid
   const images = document.querySelectorAll('#services-image-grid img');
 
-  // Get the current image index
-  for (let i = 0; i < images.length; i++) {
-    if (images[i].src === lightboxImage.src) {
-      currentIndex = i;
-      break;
-    }
-  }
+
   // Set the lightbox image source to the next image source
   if (currentIndex < images.length - 1) {
-    const newImageSrc = images[currentIndex + 1].src;
+    currentIndex += 1;
+    console.log(currentIndex);
+    const newImageSrc = images[currentIndex].src;
+    console.log(newImageSrc);
     const direction = 'right';
     // Declare countElement variable
     const countElement = document.getElementById('lightbox-count');
     fadeOut(lightboxImage, direction, function() {
       // Update the current image number
-      countElement.textContent = '(' + (currentIndex + 2) + '/' + images.length + ')';
+      countElement.textContent = '(' + (currentIndex + 1) + '/' + images.length + ')';
 
       // Set the lightbox image source to the new image source
-      lightboxImage.src = newImageSrc;
+      console.log(newImageSrc);
+      lightboxImage.src = newImageSrc.replace(/\.\w+$/, '.jpeg');
 
       // Set the position of the lightbox count element
       window.requestAnimationFrame(() => {

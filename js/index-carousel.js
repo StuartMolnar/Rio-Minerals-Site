@@ -143,8 +143,6 @@ function nextImage() {
   
 
 
-let currentIndex = -1;
-
 /* ----- lightbox ----- */
 // Get the lightbox container and image elements
 const lightboxContainer = document.getElementById('lightbox');
@@ -169,9 +167,7 @@ function showLightbox(event) {
   const clickedImage = event.target;
 
   // Set the lightbox image source to the clicked image source
-  const clickedImageSrc = clickedImage.src;
-  const jpegSrc = clickedImageSrc.replace(/\.\w+$/, '.jpeg');
-  lightboxImage.src = jpegSrc;
+  lightboxImage.src = clickedImage.src;
   // Show the lightbox container
   lightboxContainer.style.display = 'block';
 
@@ -180,7 +176,7 @@ function showLightbox(event) {
 
   // Get all images in the grid and the index of the clicked image
   const images = document.querySelectorAll('#carousel-images .carousel-cell img');
-  currentIndex = Array.prototype.indexOf.call(images, clickedImage);
+  const currentIndex = Array.prototype.indexOf.call(images, clickedImage);
 
   // Display the current image number
   const countElement = document.getElementById('lightbox-count');
@@ -249,6 +245,7 @@ lightboxNavButtonPrev.addEventListener('click', function() {
   const images = document.querySelectorAll('#carousel-images .carousel-cell img');
 
   // Get the current image index
+  let currentIndex = -1;
   for (let i = 0; i < images.length; i++) {
     if (images[i].src === lightboxImage.src) {
       currentIndex = i;
@@ -289,6 +286,7 @@ lightboxNavButtonNext.addEventListener('click', function() {
   const images = document.querySelectorAll('#carousel-images .carousel-cell img');
 
   // Get the current image index
+  let currentIndex = -1;
   for (let i = 0; i < images.length; i++) {
     if (images[i].src === lightboxImage.src) {
       currentIndex = i;
