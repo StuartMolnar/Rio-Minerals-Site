@@ -73,18 +73,31 @@ function showLightbox(event) {
 
 
 
-
 function fadeIn(element, direction, countElement) {
   const animationClass = direction === 'left' ? 'animate__fadeInLeftBig' : 'animate__fadeInRightBig';
   element.classList.remove('animate__fadeInLeftBig', 'animate__fadeInRightBig', 'animate__fadeOutLeftBig', 'animate__fadeOutRightBig');
-  element.classList.add('animate__animated', animationClass);
-  element.style.display = 'block';
-  if (countElement) {
-    countElement.classList.remove('animate__fadeOutLeftBig', 'animate__fadeOutRightBig', 'animate__fadeInLeftBig', 'animate__fadeInRightBig');
-    countElement.classList.add('animate__animated', animationClass);
-    countElement.style.display = 'block';
-  }
+  
+  const newImage = new Image();
+  newImage.src = element.src;
+  newImage.onload = () => {
+    element.classList.add('animate__animated', animationClass);
+    element.style.display = 'block';
+    if (countElement) {
+      countElement.classList.remove('animate__fadeOutLeftBig', 'animate__fadeOutRightBig', 'animate__fadeInLeftBig', 'animate__fadeInRightBig');
+      countElement.classList.add('animate__animated', animationClass);
+      countElement.style.display = 'block';
+      
+      // Update the lightbox count position after the JPEG image has loaded
+      window.requestAnimationFrame(() => {
+        const imgWidth = lightboxImage.offsetWidth;
+        const imgHeight = lightboxImage.offsetHeight;
+        lightboxCount.style.left = `calc(50% - ${imgWidth / 2}px)`;
+        lightboxCount.style.top = `calc(50% - ${imgHeight / 2}px - 40px)`;
+      });
+    }
+  };
 }
+
 
 
 function hideLightbox() {
@@ -111,26 +124,17 @@ lightboxNavButtonPrev.addEventListener('click', function() {
 
   // Set the lightbox image source to the previous image source
   if (currentIndex > 0) {
-    currentIndex -= 1;
-    const newImageSrc = images[currentIndex].src;
     const direction = 'left';
 
     // Update the current image number
     const countElement = document.getElementById('lightbox-count');
-    countElement.textContent = '(' + (currentIndex + 1) + '/' + images.length + ')';
+    countElement.textContent = '(' + (currentIndex) + '/' + images.length + ')';
     
 
     fadeOut(lightboxImage, direction, function() {
-      lightboxImage.src = newImageSrc.replace(/\.\w+$/, '.jpeg');
+      currentIndex -= 1;
+      lightboxImage.src = images[currentIndex].src.replace(/\.\w+$/, '.jpeg');
       
-      // Set the position of the lightbox count element
-      window.requestAnimationFrame(() => {
-        const imgWidth = lightboxImage.offsetWidth;
-        const imgHeight = lightboxImage.offsetHeight;
-        lightboxCount.style.left = `calc(50% - ${imgWidth / 2}px)`;
-        lightboxCount.style.top = `calc(50% - ${imgHeight / 2}px - 40px)`;
-      });
-
       fadeIn(lightboxImage, direction, countElement);
     }, countElement);
   }
@@ -145,28 +149,18 @@ lightboxNavButtonNext.addEventListener('click', function() {
 
   // Set the lightbox image source to the next image source
   if (currentIndex < images.length - 1) {
-    currentIndex += 1;
-    console.log(currentIndex);
-    const newImageSrc = images[currentIndex].src;
-    console.log(newImageSrc);
     const direction = 'right';
     // Declare countElement variable
     const countElement = document.getElementById('lightbox-count');
+    
+    // Update the current image number
+    countElement.textContent = '(' + (currentIndex + 2) + '/' + images.length + ')';
+
     fadeOut(lightboxImage, direction, function() {
-      // Update the current image number
-      countElement.textContent = '(' + (currentIndex + 1) + '/' + images.length + ')';
+      currentIndex += 1;
 
       // Set the lightbox image source to the new image source
-      console.log(newImageSrc);
-      lightboxImage.src = newImageSrc.replace(/\.\w+$/, '.jpeg');
-
-      // Set the position of the lightbox count element
-      window.requestAnimationFrame(() => {
-        const imgWidth = lightboxImage.offsetWidth;
-        const imgHeight = lightboxImage.offsetHeight;
-        lightboxCount.style.left = `calc(50% - ${imgWidth / 2}px)`;
-        lightboxCount.style.top = `calc(50% - ${imgHeight / 2}px - 40px)`;
-      });
+      lightboxImage.src = images[currentIndex].src.replace(/\.\w+$/, '.jpeg');
 
       fadeIn(lightboxImage, direction, countElement); // <-- pass countElement as the third parameter
     }, countElement);

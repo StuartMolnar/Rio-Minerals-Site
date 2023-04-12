@@ -95,6 +95,7 @@ function loadImages(serviceString) {
 }
 
 async function changeService(serviceString) {
+  document.getElementById('loading-spinner-container').classList.remove('hidden');
   document.getElementById('service-title').textContent = SERVICE_TITLES[serviceString];
   document.getElementById('service-description').textContent = SERVICE_DESCRIPTION[serviceString];
 
@@ -104,6 +105,7 @@ async function changeService(serviceString) {
   document.getElementById('services-image-grid-background').classList.add('hidden');
 
   await loadImages(serviceString);
+  document.getElementById('loading-spinner-container').classList.add('hidden');
 
   // Show the services-image-grid once images are loaded
   document.getElementById('services-image-grid-background').classList.remove('hidden');
