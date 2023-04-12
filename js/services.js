@@ -34,20 +34,6 @@ let PHOTOS_IN_SERVICE = {'geology': 100,
                  'pad_building': 10
 }
 
-function preloadImages() {
-  const services = Object.keys(PHOTOS_IN_SERVICE);
-
-  for (const service of services) {
-    for (let i = 1; i <= PHOTOS_IN_SERVICE[service]; i++) {
-      const img = new Image();
-      img.src = `images/${service}/${i}.webp`;
-    }
-  }
-}
-
-window.addEventListener('DOMContentLoaded', preloadImages);
-
-
 function toggleDropdown() {
     document.getElementById('services-dropdown-list').classList.toggle("hidden");
     document.getElementById('services-dropdown-button').classList.toggle('hidden');
