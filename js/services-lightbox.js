@@ -21,7 +21,9 @@ function showLightbox(event) {
   const clickedImage = event.target;
 
   // Set the lightbox image source to the clicked image source
-  lightboxImage.src = clickedImage.src;
+  const clickedImageSrc = clickedImage.src;
+  const jpegSrc = clickedImageSrc.replace(/\.\w+$/, '.jpeg');
+  lightboxImage.src = jpegSrc;
   // Show the lightbox container
   lightboxContainer.style.display = 'block';
 
