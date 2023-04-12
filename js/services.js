@@ -34,6 +34,20 @@ let PHOTOS_IN_SERVICE = {'geology': 100,
                  'pad_building': 10
 }
 
+function preloadImages() {
+  const services = Object.keys(PHOTOS_IN_SERVICE);
+
+  for (const service of services) {
+    for (let i = 1; i <= PHOTOS_IN_SERVICE[service]; i++) {
+      const img = new Image();
+      img.src = `images/${service}/${i}.webp`;
+    }
+  }
+}
+
+window.addEventListener('DOMContentLoaded', preloadImages);
+
+
 function toggleDropdown() {
     document.getElementById('services-dropdown-list').classList.toggle("hidden");
     document.getElementById('services-dropdown-button').classList.toggle('hidden');
@@ -70,23 +84,43 @@ function setServiceDesktop(serviceString){
   //document.getElementById()
 }
 
-function changeService(serviceString){
+function loadImages(serviceString) {
+  return new Promise((resolve) => {
+    let imagesLoaded = 0;
+    const totalImages = PHOTOS_IN_SERVICE[serviceString];
 
+    for (let i = 1; i <= totalImages; i++) {
+      const img = new Image();
+
+      img.onload = () => {
+        imagesLoaded++;
+        if (imagesLoaded === totalImages) {
+          resolve();
+        }
+      };
+
+      img.src = `images/${serviceString}/${i}.webp`;
+      img.className = "object-cover w-full mb-2.5";
+      img.onclick = showLightbox;
+
+      document.getElementById('services-image-grid').appendChild(img);
+    }
+  });
+}
+
+async function changeService(serviceString) {
   document.getElementById('service-title').textContent = SERVICE_TITLES[serviceString];
   document.getElementById('service-description').textContent = SERVICE_DESCRIPTION[serviceString];
 
-  
   document.getElementById('services-image-grid').innerHTML = '';
-  
 
-  for (var i=1; i<=PHOTOS_IN_SERVICE[serviceString]; i++){
+  // Hide the services-image-grid before loading images
+  document.getElementById('services-image-grid-background').classList.add('hidden');
 
-    const img = document.createElement('img');
-    img.className = "object-cover w-full mb-2.5";
-    img.src = 'images/' + serviceString + '/' + i + '.jpeg';
-    img.onclick = showLightbox;
+  await loadImages(serviceString);
 
-    document.getElementById('services-image-grid').appendChild(img);
-  }
+  // Show the services-image-grid once images are loaded
+  document.getElementById('services-image-grid-background').classList.remove('hidden');
 }
+
 
