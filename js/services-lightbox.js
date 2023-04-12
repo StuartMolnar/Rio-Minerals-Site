@@ -6,15 +6,17 @@ const lightboxNavButtonNext = lightboxContainer.querySelector('.lightbox-nav-but
 const lightboxCloseButton = lightboxContainer.querySelector('.lightbox-close-button');
 const lightboxCount = document.getElementById('lightbox-count');
 
-  // Set the position of the lightbox count element
-  const setPosition = () => {
-    const imgWidth = lightboxImage.offsetWidth;
-    const imgHeight = lightboxImage.offsetHeight;
-    lightboxCount.style.left = `calc(50% - ${imgWidth / 2}px)`;
-    lightboxCount.style.top = `calc(50% - ${imgHeight / 2}px - 40px)`;
-  }
-  window.requestAnimationFrame(setPosition);
-  window.addEventListener('resize', setPosition);
+// Set the position of the lightbox count element
+const setPosition = () => {
+  const imgWidth = lightboxImage.offsetWidth;
+  const imgHeight = lightboxImage.offsetHeight;
+  lightboxCount.style.left = `calc(50% - ${imgWidth / 2}px)`;
+  lightboxCount.style.top = `calc(50% - ${imgHeight / 2}px - 40px)`;
+}
+window.requestAnimationFrame(setPosition);
+window.addEventListener('resize', setPosition);
+
+let currentIndex = -1;
 
 function showLightbox(event) {
   // Get a reference to the clicked image element
@@ -24,6 +26,8 @@ function showLightbox(event) {
   const clickedImageSrc = clickedImage.src;
   const jpegSrc = clickedImageSrc.replace(/\.\w+$/, '.jpeg');
   lightboxImage.src = jpegSrc;
+
+  
   // Show the lightbox container
   lightboxContainer.style.display = 'block';
 
@@ -32,7 +36,7 @@ function showLightbox(event) {
 
   // Get all images in the grid and the index of the clicked image
   const images = document.querySelectorAll('#services-image-grid img');
-  const currentIndex = Array.prototype.indexOf.call(images, clickedImage);
+  currentIndex = Array.prototype.indexOf.call(images, clickedImage);
 
   // Display the current image number
   const countElement = document.getElementById('lightbox-count');
@@ -100,7 +104,6 @@ lightboxNavButtonPrev.addEventListener('click', function() {
   const images = document.querySelectorAll('#services-image-grid img');
 
   // Get the current image index
-  let currentIndex = -1;
   for (let i = 0; i < images.length; i++) {
     if (images[i].src === lightboxImage.src) {
       currentIndex = i;
@@ -140,7 +143,6 @@ lightboxNavButtonNext.addEventListener('click', function() {
   const images = document.querySelectorAll('#services-image-grid img');
 
   // Get the current image index
-  let currentIndex = -1;
   for (let i = 0; i < images.length; i++) {
     if (images[i].src === lightboxImage.src) {
       currentIndex = i;
